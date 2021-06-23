@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>THEO</title>
-        <link>https://qshzzt.com</link>
+        <link>https://zztqsh.gitee.io</link>
         <description></description>
         <language>zh-CN,en,zh-HK,zh-TW,default</language>
         <pubDate>Tue, 22 Jun 2021 00:00:00 +0800</pubDate>
@@ -22,9 +22,9 @@
         <category>课程设计</category>
         <category>react</category>
         <item>
-            <guid isPermalink="true">https://qshzzt.com/2021/06/22/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%EF%BC%89/</guid>
+            <guid isPermalink="true">https://zztqsh.gitee.io/2021/06/22/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%EF%BC%89/</guid>
             <title>课程设计（图像识别）</title>
-            <link>https://qshzzt.com/2021/06/22/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%EF%BC%89/</link>
+            <link>https://zztqsh.gitee.io/2021/06/22/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%EF%BC%89/</link>
             <category>学习分享</category>
             <category>python</category>
             <category>图像识别</category>
@@ -174,9 +174,9 @@ root.mainloop()
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://qshzzt.com/2021/06/21/%E8%8F%9C%E8%8F%9C%E7%9A%84Python%E7%AC%94%E8%AE%B0/</guid>
+            <guid isPermalink="true">https://zztqsh.gitee.io/2021/06/21/%E8%8F%9C%E8%8F%9C%E7%9A%84Python%E7%AC%94%E8%AE%B0/</guid>
             <title>菜菜的Python笔记</title>
-            <link>https://qshzzt.com/2021/06/21/%E8%8F%9C%E8%8F%9C%E7%9A%84Python%E7%AC%94%E8%AE%B0/</link>
+            <link>https://zztqsh.gitee.io/2021/06/21/%E8%8F%9C%E8%8F%9C%E7%9A%84Python%E7%AC%94%E8%AE%B0/</link>
             <category>学习分享</category>
             <category>python</category>
             <pubDate>Mon, 21 Jun 2021 00:00:00 +0800</pubDate>
@@ -333,9 +333,9 @@ print(numbers)
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://qshzzt.com/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</guid>
+            <guid isPermalink="true">https://zztqsh.gitee.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</guid>
             <title>Qss修饰Qt</title>
-            <link>https://qshzzt.com/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</link>
+            <link>https://zztqsh.gitee.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</link>
             <category>学习笔记</category>
             <category>Qss</category>
             <category>pyqt</category>
@@ -506,9 +506,9 @@ background:rgba(196,255,255,0);
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://qshzzt.com/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+            <guid isPermalink="true">https://zztqsh.gitee.io/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
             <title>pyqt使用方法</title>
-            <link>https://qshzzt.com/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+            <link>https://zztqsh.gitee.io/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
             <category>pyqt</category>
             <category>学习分享</category>
             <category>python</category>
@@ -886,9 +886,9 @@ def exit(self):
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://qshzzt.com/2021/05/19/react%E7%AC%94%E8%AE%B0/</guid>
+            <guid isPermalink="true">https://zztqsh.gitee.io/2021/05/19/react%E7%AC%94%E8%AE%B0/</guid>
             <title>react笔记</title>
-            <link>https://qshzzt.com/2021/05/19/react%E7%AC%94%E8%AE%B0/</link>
+            <link>https://zztqsh.gitee.io/2021/05/19/react%E7%AC%94%E8%AE%B0/</link>
             <category>学习笔记</category>
             <category>react</category>
             <pubDate>Wed, 19 May 2021 00:00:00 +0800</pubDate>
@@ -1461,9 +1461,9 @@ redux文件夹:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://qshzzt.com/2021/03/07/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</guid>
+            <guid isPermalink="true">https://zztqsh.gitee.io/2021/03/07/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</guid>
             <title>学习计划</title>
-            <link>https://qshzzt.com/2021/03/07/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</link>
+            <link>https://zztqsh.gitee.io/2021/03/07/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</link>
             <category>学习计划</category>
             <pubDate>Sun, 07 Mar 2021 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;学习计划&#34;&gt;&lt;a href=&#34;#学习计划&#34; class=&#34;headerlink&#34; title=&#34;学习计划&#34;&gt;&lt;/a&gt;学习计划&lt;/h2&gt;&lt;h3 id=&#34;一、移动端页面制作和响应式实现&#34;&gt;&lt;a href=&#34;#一、移动端页面制作和响应式实现&#34; class=&#34;headerlink&#34; title=&#34;一、移动端页面制作和响应式实现&#34;&gt;&lt;/a&gt;一、移动端页面制作和响应式实现&lt;/h3&gt;&lt;h4 id=&#34;1-1-学习响应式开发相关知识点&#34;&gt;&lt;a href=&#34;#1-1-学习响应式开发相关知识点&#34; class=&#34;headerlink&#34; title=&#34;1.1 学习响应式开发相关知识点&#34;&gt;&lt;/a&gt;1.1 学习响应式开发相关知识点&lt;/h4&gt;&lt;ul&gt;
@@ -1561,9 +1561,9 @@ redux文件夹:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://qshzzt.com/2020/10/30/C%E8%AF%AD%E8%A8%80%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90%E4%BB%A3%E7%A0%81/</guid>
+            <guid isPermalink="true">https://zztqsh.gitee.io/2020/10/30/C%E8%AF%AD%E8%A8%80%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90%E4%BB%A3%E7%A0%81/</guid>
             <title>C语言生日快乐代码</title>
-            <link>https://qshzzt.com/2020/10/30/C%E8%AF%AD%E8%A8%80%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90%E4%BB%A3%E7%A0%81/</link>
+            <link>https://zztqsh.gitee.io/2020/10/30/C%E8%AF%AD%E8%A8%80%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90%E4%BB%A3%E7%A0%81/</link>
             <category>学习分享</category>
             <category>c语言</category>
             <pubDate>Fri, 30 Oct 2020 00:00:00 +0800</pubDate>
@@ -1883,9 +1883,9 @@ return 0;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://qshzzt.com/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/</guid>
+            <guid isPermalink="true">https://zztqsh.gitee.io/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/</guid>
             <title>markdown写博客</title>
-            <link>https://qshzzt.com/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/</link>
+            <link>https://zztqsh.gitee.io/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/</link>
             <category>markdown</category>
             <category>文章格式</category>
             <pubDate>Fri, 14 Aug 2020 00:00:00 +0800</pubDate>
@@ -2212,9 +2212,9 @@ tags:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://qshzzt.com/2020/08/13/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</guid>
+            <guid isPermalink="true">https://zztqsh.gitee.io/2020/08/13/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</guid>
             <title>绑定域名</title>
-            <link>https://qshzzt.com/2020/08/13/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</link>
+            <link>https://zztqsh.gitee.io/2020/08/13/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</link>
             <category>绑定域名</category>
             <pubDate>Thu, 13 Aug 2020 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;一、购买域名&#34;&gt;&lt;a href=&#34;#一、购买域名&#34; class=&#34;headerlink&#34; title=&#34;一、购买域名&#34;&gt;&lt;/a&gt;一、购买域名&lt;/h3&gt;&lt;blockquote&gt;
@@ -2253,9 +2253,9 @@ tags:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://qshzzt.com/2020/03/11/%E4%B8%80%E4%BA%9B%E8%AF%9D/</guid>
+            <guid isPermalink="true">https://zztqsh.gitee.io/2020/03/11/%E4%B8%80%E4%BA%9B%E8%AF%9D/</guid>
             <title>对“主席”的一些话</title>
-            <link>https://qshzzt.com/2020/03/11/%E4%B8%80%E4%BA%9B%E8%AF%9D/</link>
+            <link>https://zztqsh.gitee.io/2020/03/11/%E4%B8%80%E4%BA%9B%E8%AF%9D/</link>
             <category>个人感想</category>
             <pubDate>Wed, 11 Mar 2020 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;📢-对“主席”的一些话-👇👇👇&#34;&gt;&lt;a href=&#34;#📢-对“主席”的一些话-👇👇👇&#34; class=&#34;headerlink&#34; title=&#34;📢  对“主席”的一些话  👇👇👇&#34;&gt;&lt;/a&gt;📢  对“主席”的一些话  👇👇👇&lt;/h3&gt;&lt;p&gt;有一些话，我想来想去觉得还是有必要说出来：😐😐😐&lt;/p&gt;

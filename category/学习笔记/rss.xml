@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>THEO • Posts by &#34;学习笔记&#34; category</title>
-        <link>https://qshzzt.com</link>
+        <link>https://zztqsh.gitee.io</link>
         <description></description>
         <language>zh-CN,en,zh-HK,zh-TW,default</language>
         <pubDate>Sat, 19 Jun 2021 00:00:00 +0800</pubDate>
@@ -22,9 +22,9 @@
         <category>课程设计</category>
         <category>react</category>
         <item>
-            <guid isPermalink="true">https://qshzzt.com/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</guid>
+            <guid isPermalink="true">https://zztqsh.gitee.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</guid>
             <title>Qss修饰Qt</title>
-            <link>https://qshzzt.com/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</link>
+            <link>https://zztqsh.gitee.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</link>
             <category>学习笔记</category>
             <category>Qss</category>
             <category>pyqt</category>
@@ -195,9 +195,9 @@ background:rgba(196,255,255,0);
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://qshzzt.com/2021/05/19/react%E7%AC%94%E8%AE%B0/</guid>
+            <guid isPermalink="true">https://zztqsh.gitee.io/2021/05/19/react%E7%AC%94%E8%AE%B0/</guid>
             <title>react笔记</title>
-            <link>https://qshzzt.com/2021/05/19/react%E7%AC%94%E8%AE%B0/</link>
+            <link>https://zztqsh.gitee.io/2021/05/19/react%E7%AC%94%E8%AE%B0/</link>
             <category>学习笔记</category>
             <category>react</category>
             <pubDate>Wed, 19 May 2021 00:00:00 +0800</pubDate>
@@ -770,9 +770,9 @@ redux文件夹:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://qshzzt.com/2020/10/30/C%E8%AF%AD%E8%A8%80%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90%E4%BB%A3%E7%A0%81/</guid>
+            <guid isPermalink="true">https://zztqsh.gitee.io/2020/10/30/C%E8%AF%AD%E8%A8%80%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90%E4%BB%A3%E7%A0%81/</guid>
             <title>C语言生日快乐代码</title>
-            <link>https://qshzzt.com/2020/10/30/C%E8%AF%AD%E8%A8%80%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90%E4%BB%A3%E7%A0%81/</link>
+            <link>https://zztqsh.gitee.io/2020/10/30/C%E8%AF%AD%E8%A8%80%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90%E4%BB%A3%E7%A0%81/</link>
             <category>学习分享</category>
             <category>c语言</category>
             <pubDate>Fri, 30 Oct 2020 00:00:00 +0800</pubDate>

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://qshzzt.com</id>
+    <id>https://zztqsh.gitee.io</id>
     <title>THEO • Posts by &#34;关于博客&#34; category</title>
-    <link href="https://qshzzt.com" />
+    <link href="https://zztqsh.gitee.io" />
     <updated>2020-08-13T16:00:00.000Z</updated>
     <category term="学习笔记" />
     <category term="Qss" />
@@ -19,9 +19,9 @@
     <category term="课程设计" />
     <category term="react" />
     <entry>
-        <id>https://qshzzt.com/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/</id>
+        <id>https://zztqsh.gitee.io/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/</id>
         <title>markdown写博客</title>
-        <link rel="alternate" href="https://qshzzt.com/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
+        <link rel="alternate" href="https://zztqsh.gitee.io/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
         <content type="html">&lt;h2 id=&#34;第一部分-文章格式&#34;&gt;&lt;a href=&#34;#第一部分-文章格式&#34; class=&#34;headerlink&#34; title=&#34;第一部分 文章格式&#34;&gt;&lt;/a&gt;第一部分 文章格式&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;---
 layout:     //可选post
 title: 博客
@@ -348,9 +348,9 @@ tags:
         <updated>2020-08-13T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://qshzzt.com/2020/08/13/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</id>
+        <id>https://zztqsh.gitee.io/2020/08/13/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</id>
         <title>绑定域名</title>
-        <link rel="alternate" href="https://qshzzt.com/2020/08/13/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/"/>
+        <link rel="alternate" href="https://zztqsh.gitee.io/2020/08/13/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/"/>
         <content type="html">&lt;h3 id=&#34;一、购买域名&#34;&gt;&lt;a href=&#34;#一、购买域名&#34; class=&#34;headerlink&#34; title=&#34;一、购买域名&#34;&gt;&lt;/a&gt;一、购买域名&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;域名可以在&lt;a href=&#34;https://cloud.tencent.com/act/domainsales?fromSource=gwzcw.3559299.3559299.3559299&amp;utm_medium=cpc&amp;utm_id=gwzcw.3559299.3559299.3559299&#34;&gt;腾讯云&lt;/a&gt;，&lt;a href=&#34;https://www.aliyun.com/?utm_content=se_1003105700&#34;&gt;阿里云&lt;/a&gt;，&lt;a href=&#34;https://sg.godaddy.com/zh/offers/domains/godaddy-com?isc=gennbacn16&amp;countryview=1&amp;currencyType=CNY&amp;utm_source=baidu&amp;utm_medium=cpc&amp;utm_term=%E5%9F%9F%E5%90%8D%E8%B4%AD%E4%B9%B0&amp;utm_campaign=zh-cn_dom_sem_ni_nb_x_ph_001&amp;utm_content=%E5%9F%9F%E5%90%8D%E8%B4%AD%E4%B9%B0&amp;gclid=CPj39v3FnOsCFQwZvAodyXgNXQ&amp;gclsrc=ds&#34;&gt;GoDaddy&lt;/a&gt;上购买&lt;/p&gt;
 &lt;/blockquote&gt;

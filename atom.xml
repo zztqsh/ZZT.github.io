@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://qshzzt.com</id>
+    <id>https://zztqsh.gitee.io</id>
     <title>THEO</title>
-    <link href="https://qshzzt.com" />
+    <link href="https://zztqsh.gitee.io" />
     <updated>2021-06-21T16:00:00.000Z</updated>
     <category term="学习笔记" />
     <category term="Qss" />
@@ -19,9 +19,9 @@
     <category term="课程设计" />
     <category term="react" />
     <entry>
-        <id>https://qshzzt.com/2021/06/22/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%EF%BC%89/</id>
+        <id>https://zztqsh.gitee.io/2021/06/22/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%EF%BC%89/</id>
         <title>课程设计（图像识别）</title>
-        <link rel="alternate" href="https://qshzzt.com/2021/06/22/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%EF%BC%89/"/>
+        <link rel="alternate" href="https://zztqsh.gitee.io/2021/06/22/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%EF%BC%89/"/>
         <content type="html">&lt;p&gt;&lt;span id=&#34;head&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;a href=&#34;#end&#34;&gt;↓↓点击先偷偷观看最终效果↓↓&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;一、前言&#34;&gt;&lt;a href=&#34;#一、前言&#34; class=&#34;headerlink&#34; title=&#34;一、前言&#34;&gt;&lt;/a&gt;一、前言&lt;/h1&gt;&lt;p&gt;为了能够快速学习python语言，我大概花了几周的时间在自学这本《python编程从入门到实践》😵&lt;/p&gt;
 &lt;div class=&#34;img-wrap&#34;&gt;&lt;div class=&#34;img-bg&#34;&gt;&lt;img class=&#34;img lazyload&#34; src=&#34;https://raw.staticdn.net/zztqsh/picture/main/pythoon%E7%BC%96%E7%A8%8B%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.staticdn.net/zztqsh/picture/main/pythoon%E7%BC%96%E7%A8%8B%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;《python编程从入门到实践》&#34; style=&#34;width:200px;&#34;&gt;&lt;/div&gt;&lt;span class=&#34;image-caption&#34;&gt;《python编程从入门到实践》&lt;/span&gt;&lt;/div&gt;
@@ -171,9 +171,9 @@ root.mainloop()
         <updated>2021-06-21T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://qshzzt.com/2021/06/21/%E8%8F%9C%E8%8F%9C%E7%9A%84Python%E7%AC%94%E8%AE%B0/</id>
+        <id>https://zztqsh.gitee.io/2021/06/21/%E8%8F%9C%E8%8F%9C%E7%9A%84Python%E7%AC%94%E8%AE%B0/</id>
         <title>菜菜的Python笔记</title>
-        <link rel="alternate" href="https://qshzzt.com/2021/06/21/%E8%8F%9C%E8%8F%9C%E7%9A%84Python%E7%AC%94%E8%AE%B0/"/>
+        <link rel="alternate" href="https://zztqsh.gitee.io/2021/06/21/%E8%8F%9C%E8%8F%9C%E7%9A%84Python%E7%AC%94%E8%AE%B0/"/>
         <content type="html">&lt;center&gt;Hello大家好，这里是菜菜的Python笔记📖&lt;/center&gt;
 &lt;center&gt;初出茅庐的我👶，虽然还啥也不是🤣&lt;/center&gt;
 &lt;center&gt;但是只要坚持学习🧐，也总会等到成为&#34;大佬&#34;的那一天🙈&lt;/center&gt;
@@ -330,9 +330,9 @@ print(numbers)
         <updated>2021-06-20T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://qshzzt.com/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</id>
+        <id>https://zztqsh.gitee.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</id>
         <title>Qss修饰Qt</title>
-        <link rel="alternate" href="https://qshzzt.com/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/"/>
+        <link rel="alternate" href="https://zztqsh.gitee.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/"/>
         <content type="html">&lt;h2 id=&#34;一、Qss实时编译器&#34;&gt;&lt;a href=&#34;#一、Qss实时编译器&#34; class=&#34;headerlink&#34; title=&#34;一、Qss实时编译器&#34;&gt;&lt;/a&gt;一、Qss实时编译器&lt;/h2&gt;&lt;div class=&#34;note link green&#34;&gt;&lt;p&gt;QSS Editor是用于编辑和实时预览Qt样式表的工具，下载地址为如下:&lt;/p&gt;&lt;/div&gt;
 
 &lt;center&gt;&lt;div class=&#34;tag link&#34;&gt;&lt;a class=&#34;link-card&#34; title=&#34;QSS Editor下载&#34; href=&#34;https://sourceforge.net/projects/qsseditor&#34;&gt;&lt;div class=&#34;left&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&lt;p class=&#34;text&#34;&gt;QSS Editor下载&lt;/p&gt;&lt;p class=&#34;url&#34;&gt;https://sourceforge.net/projects/qsseditor&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;/center&gt;
@@ -503,9 +503,9 @@ background:rgba(196,255,255,0);
         <updated>2021-06-18T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://qshzzt.com/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</id>
+        <id>https://zztqsh.gitee.io/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</id>
         <title>pyqt使用方法</title>
-        <link rel="alternate" href="https://qshzzt.com/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+        <link rel="alternate" href="https://zztqsh.gitee.io/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
         <content type="html">&lt;center&gt;&lt;div class=&#34;tag link&#34;&gt;&lt;a class=&#34;link-card&#34; title=&#34;QT 官方文档&#34; href=&#34;https://doc.qt.io/&#34;&gt;&lt;div class=&#34;left&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&lt;p class=&#34;text&#34;&gt;QT 官方文档&lt;/p&gt;&lt;p class=&#34;url&#34;&gt;https://doc.qt.io/&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;/center&gt;   
 
 &lt;h2 id=&#34;一、基本功能&#34;&gt;&lt;a href=&#34;#一、基本功能&#34; class=&#34;headerlink&#34; title=&#34;一、基本功能&#34;&gt;&lt;/a&gt;一、基本功能&lt;/h2&gt;&lt;h3 id=&#34;1-1、建立简单的窗口&#34;&gt;&lt;a href=&#34;#1-1、建立简单的窗口&#34; class=&#34;headerlink&#34; title=&#34;1.1、建立简单的窗口&#34;&gt;&lt;/a&gt;1.1、建立简单的窗口&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;import sys
@@ -883,9 +883,9 @@ def exit(self):
         <updated>2021-06-17T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://qshzzt.com/2021/05/19/react%E7%AC%94%E8%AE%B0/</id>
+        <id>https://zztqsh.gitee.io/2021/05/19/react%E7%AC%94%E8%AE%B0/</id>
         <title>react笔记</title>
-        <link rel="alternate" href="https://qshzzt.com/2021/05/19/react%E7%AC%94%E8%AE%B0/"/>
+        <link rel="alternate" href="https://zztqsh.gitee.io/2021/05/19/react%E7%AC%94%E8%AE%B0/"/>
         <content type="html">&lt;h1 id=&#34;day01&#34;&gt;&lt;a href=&#34;#day01&#34; class=&#34;headerlink&#34; title=&#34;day01&#34;&gt;&lt;/a&gt;day01&lt;/h1&gt;&lt;h2 id=&#34;1-项目开发准备&#34;&gt;&lt;a href=&#34;#1-项目开发准备&#34; class=&#34;headerlink&#34; title=&#34;1. 项目开发准备&#34;&gt;&lt;/a&gt;1. 项目开发准备&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 描述项目
 2). 技术选型 
 3). API接口/接口文档/测试接口
@@ -1458,9 +1458,9 @@ redux文件夹:
         <updated>2021-05-18T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://qshzzt.com/2021/03/07/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</id>
+        <id>https://zztqsh.gitee.io/2021/03/07/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</id>
         <title>学习计划</title>
-        <link rel="alternate" href="https://qshzzt.com/2021/03/07/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/"/>
+        <link rel="alternate" href="https://zztqsh.gitee.io/2021/03/07/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/"/>
         <content type="html">&lt;h2 id=&#34;学习计划&#34;&gt;&lt;a href=&#34;#学习计划&#34; class=&#34;headerlink&#34; title=&#34;学习计划&#34;&gt;&lt;/a&gt;学习计划&lt;/h2&gt;&lt;h3 id=&#34;一、移动端页面制作和响应式实现&#34;&gt;&lt;a href=&#34;#一、移动端页面制作和响应式实现&#34; class=&#34;headerlink&#34; title=&#34;一、移动端页面制作和响应式实现&#34;&gt;&lt;/a&gt;一、移动端页面制作和响应式实现&lt;/h3&gt;&lt;h4 id=&#34;1-1-学习响应式开发相关知识点&#34;&gt;&lt;a href=&#34;#1-1-学习响应式开发相关知识点&#34; class=&#34;headerlink&#34; title=&#34;1.1 学习响应式开发相关知识点&#34;&gt;&lt;/a&gt;1.1 学习响应式开发相关知识点&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;viewport试口&lt;/li&gt;
 &lt;li&gt;移动端适配方案&lt;/li&gt;
@@ -1558,9 +1558,9 @@ redux文件夹:
         <updated>2021-03-06T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://qshzzt.com/2020/10/30/C%E8%AF%AD%E8%A8%80%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90%E4%BB%A3%E7%A0%81/</id>
+        <id>https://zztqsh.gitee.io/2020/10/30/C%E8%AF%AD%E8%A8%80%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90%E4%BB%A3%E7%A0%81/</id>
         <title>C语言生日快乐代码</title>
-        <link rel="alternate" href="https://qshzzt.com/2020/10/30/C%E8%AF%AD%E8%A8%80%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90%E4%BB%A3%E7%A0%81/"/>
+        <link rel="alternate" href="https://zztqsh.gitee.io/2020/10/30/C%E8%AF%AD%E8%A8%80%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90%E4%BB%A3%E7%A0%81/"/>
         <content type="html">&lt;h2 id=&#34;C语言生日快乐代码&#34;&gt;&lt;a href=&#34;#C语言生日快乐代码&#34; class=&#34;headerlink&#34; title=&#34;C语言生日快乐代码&#34;&gt;&lt;/a&gt;C语言生日快乐代码&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;#include &amp;lt;stdlib.h&amp;gt;
 #include&amp;lt;stdio.h&amp;gt; 
 #include&amp;lt;windows.h&amp;gt;
@@ -1880,9 +1880,9 @@ return 0;
         <updated>2020-10-29T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://qshzzt.com/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/</id>
+        <id>https://zztqsh.gitee.io/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/</id>
         <title>markdown写博客</title>
-        <link rel="alternate" href="https://qshzzt.com/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
+        <link rel="alternate" href="https://zztqsh.gitee.io/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
         <content type="html">&lt;h2 id=&#34;第一部分-文章格式&#34;&gt;&lt;a href=&#34;#第一部分-文章格式&#34; class=&#34;headerlink&#34; title=&#34;第一部分 文章格式&#34;&gt;&lt;/a&gt;第一部分 文章格式&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;---
 layout:     //可选post
 title: 博客
@@ -2209,9 +2209,9 @@ tags:
         <updated>2020-08-13T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://qshzzt.com/2020/08/13/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</id>
+        <id>https://zztqsh.gitee.io/2020/08/13/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</id>
         <title>绑定域名</title>
-        <link rel="alternate" href="https://qshzzt.com/2020/08/13/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/"/>
+        <link rel="alternate" href="https://zztqsh.gitee.io/2020/08/13/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/"/>
         <content type="html">&lt;h3 id=&#34;一、购买域名&#34;&gt;&lt;a href=&#34;#一、购买域名&#34; class=&#34;headerlink&#34; title=&#34;一、购买域名&#34;&gt;&lt;/a&gt;一、购买域名&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;域名可以在&lt;a href=&#34;https://cloud.tencent.com/act/domainsales?fromSource=gwzcw.3559299.3559299.3559299&amp;utm_medium=cpc&amp;utm_id=gwzcw.3559299.3559299.3559299&#34;&gt;腾讯云&lt;/a&gt;，&lt;a href=&#34;https://www.aliyun.com/?utm_content=se_1003105700&#34;&gt;阿里云&lt;/a&gt;，&lt;a href=&#34;https://sg.godaddy.com/zh/offers/domains/godaddy-com?isc=gennbacn16&amp;countryview=1&amp;currencyType=CNY&amp;utm_source=baidu&amp;utm_medium=cpc&amp;utm_term=%E5%9F%9F%E5%90%8D%E8%B4%AD%E4%B9%B0&amp;utm_campaign=zh-cn_dom_sem_ni_nb_x_ph_001&amp;utm_content=%E5%9F%9F%E5%90%8D%E8%B4%AD%E4%B9%B0&amp;gclid=CPj39v3FnOsCFQwZvAodyXgNXQ&amp;gclsrc=ds&#34;&gt;GoDaddy&lt;/a&gt;上购买&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2250,9 +2250,9 @@ tags:
         <updated>2020-08-12T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://qshzzt.com/2020/03/11/%E4%B8%80%E4%BA%9B%E8%AF%9D/</id>
+        <id>https://zztqsh.gitee.io/2020/03/11/%E4%B8%80%E4%BA%9B%E8%AF%9D/</id>
         <title>对“主席”的一些话</title>
-        <link rel="alternate" href="https://qshzzt.com/2020/03/11/%E4%B8%80%E4%BA%9B%E8%AF%9D/"/>
+        <link rel="alternate" href="https://zztqsh.gitee.io/2020/03/11/%E4%B8%80%E4%BA%9B%E8%AF%9D/"/>
         <content type="html">&lt;h3 id=&#34;📢-对“主席”的一些话-👇👇👇&#34;&gt;&lt;a href=&#34;#📢-对“主席”的一些话-👇👇👇&#34; class=&#34;headerlink&#34; title=&#34;📢  对“主席”的一些话  👇👇👇&#34;&gt;&lt;/a&gt;📢  对“主席”的一些话  👇👇👇&lt;/h3&gt;&lt;p&gt;有一些话，我想来想去觉得还是有必要说出来：😐😐😐&lt;/p&gt;
 &lt;p&gt;我进这个基地 其实先前有点害怕 😭😭😭&lt;/p&gt;
 &lt;p&gt;因为不懂如何选座位而不敢进基地，怕乱坐位置触犯了规则，但鼓起勇气向你求助之后，你的回答也让我感觉其实这个基地很随和，并没我想得那么严肃和苛刻😄&lt;br&gt;但由于基地中大部分都是男生，也让我不懂得该如何主动向他们请教😳，也怕会冒犯到，所以自己学自己的，除了少梅姐之外，也只有你会主动问我学得怎么样了，也会帮我解决我存在的一些问题，也许是因为出于好心，也许是你即将成为主席，想要通过自己的努力更好带领大家，无论怎么样都谢谢你🙏🙏🙏&lt;/p&gt;

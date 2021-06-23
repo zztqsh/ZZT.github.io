@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://zztqsh.github.io</id>
+    <title>THEO • Posts by &#34;学习计划&#34; category</title>
+    <link href="https://zztqsh.github.io" />
+    <updated>2021-03-06T16:00:00.000Z</updated>
+    <category term="学习笔记" />
+    <category term="Qss" />
+    <category term="pyqt" />
+    <category term="学习分享" />
+    <category term="c语言" />
+    <category term="markdown" />
+    <category term="文章格式" />
+    <category term="python" />
+    <category term="个人感想" />
+    <category term="学习计划" />
+    <category term="绑定域名" />
+    <category term="图像识别" />
+    <category term="课程设计" />
+    <category term="react" />
+    <entry>
+        <id>https://zztqsh.github.io/2021/03/07/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</id>
+        <title>学习计划</title>
+        <link rel="alternate" href="https://zztqsh.github.io/2021/03/07/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/"/>
+        <content type="html">&lt;h2 id=&#34;学习计划&#34;&gt;&lt;a href=&#34;#学习计划&#34; class=&#34;headerlink&#34; title=&#34;学习计划&#34;&gt;&lt;/a&gt;学习计划&lt;/h2&gt;&lt;h3 id=&#34;一、移动端页面制作和响应式实现&#34;&gt;&lt;a href=&#34;#一、移动端页面制作和响应式实现&#34; class=&#34;headerlink&#34; title=&#34;一、移动端页面制作和响应式实现&#34;&gt;&lt;/a&gt;一、移动端页面制作和响应式实现&lt;/h3&gt;&lt;h4 id=&#34;1-1-学习响应式开发相关知识点&#34;&gt;&lt;a href=&#34;#1-1-学习响应式开发相关知识点&#34; class=&#34;headerlink&#34; title=&#34;1.1 学习响应式开发相关知识点&#34;&gt;&lt;/a&gt;1.1 学习响应式开发相关知识点&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;viewport试口&lt;/li&gt;
+&lt;li&gt;移动端适配方案&lt;/li&gt;
+&lt;li&gt;移动端布局实际操作&lt;/li&gt;
+&lt;li&gt;媒介查询&lt;/li&gt;
+&lt;li&gt;移动端交互实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;1-2-响应式开发实战&#34;&gt;&lt;a href=&#34;#1-2-响应式开发实战&#34; class=&#34;headerlink&#34; title=&#34;1.2 响应式开发实战&#34;&gt;&lt;/a&gt;1.2 响应式开发实战&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;可供参考练习的响应式网站：(可以根据屏幕尺寸更改css样式)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.huawei.com/cn/&#34;&gt;华为-构建万物互联的智能世界&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.apple.com.cn/?afid=p238%7CH84sSf8S_mtid_18707vxu38484&amp;cid=aos-cn-kwha-brand&#34;&gt;Apple-官方网站&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;组件：&lt;br&gt;&lt;a href=&#34;https://www.bootcss.com/&#34;&gt;Bootstrap&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;二、ajax技术&#34;&gt;&lt;a href=&#34;#二、ajax技术&#34; class=&#34;headerlink&#34; title=&#34;二、ajax技术&#34;&gt;&lt;/a&gt;二、ajax技术&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;AJAX的作用&lt;/li&gt;
+&lt;li&gt;原生AJAX&lt;/li&gt;
+&lt;li&gt;同步与异步&lt;/li&gt;
+&lt;li&gt;http协议&lt;/li&gt;
+&lt;li&gt;AJAX的封装&lt;/li&gt;
+&lt;li&gt;jQuery的AJAX&lt;/li&gt;
+&lt;li&gt;缓存问题及解决方案&lt;/li&gt;
+&lt;li&gt;跨域请求及解决方案&lt;/li&gt;
+&lt;li&gt;前端模板引擎&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;相关学习视频：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1WC4y1b78y&#34;&gt;Web前端Ajax教程初学者零基础入门到精通全套完整版&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;相关参考教程：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.w3school.com.cn/ajax/index.asp&#34;&gt;AJAX 教程 -W3school&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.runoob.com/ajax/ajax-tutorial.html&#34;&gt;AJAX 教程 -菜鸟教程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;三、微信小程序开发&#34;&gt;&lt;a href=&#34;#三、微信小程序开发&#34; class=&#34;headerlink&#34; title=&#34;三、微信小程序开发&#34;&gt;&lt;/a&gt;三、微信小程序开发&lt;/h3&gt;&lt;h4 id=&#34;3-1-学习微信小程序开发的相关知识点&#34;&gt;&lt;a href=&#34;#3-1-学习微信小程序开发的相关知识点&#34; class=&#34;headerlink&#34; title=&#34;3.1 学习微信小程序开发的相关知识点&#34;&gt;&lt;/a&gt;3.1 学习微信小程序开发的相关知识点&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;小程序组件&lt;/li&gt;
+&lt;li&gt;小程序API&lt;/li&gt;
+&lt;li&gt;小程序云函数&lt;/li&gt;
+&lt;li&gt;wepy小程序开发框架&lt;/li&gt;
+&lt;li&gt;mpvue小程序开发框架&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;相关学习视频:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1nE41117BQ&#34;&gt;零基础玩转微信小程序&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Qb411z7wR&#34;&gt;微信小程序开发学习&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;3-2-微信小程序开发实战&#34;&gt;&lt;a href=&#34;#3-2-微信小程序开发实战&#34; class=&#34;headerlink&#34; title=&#34;3.2 微信小程序开发实战&#34;&gt;&lt;/a&gt;3.2 微信小程序开发实战&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;音乐播放器&lt;/li&gt;
+&lt;li&gt;聊天室(在线聊天系统)&lt;/li&gt;
+&lt;li&gt;点餐系统&lt;/li&gt;
+&lt;li&gt;文件的上传与下载&lt;/li&gt;
+&lt;li&gt;天气预报查询&lt;/li&gt;
+&lt;li&gt;………&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;开发指南 :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developers.weixin.qq.com/miniprogram/dev/framework/&#34;&gt;微信小程序官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;现阶段参考的学习书籍：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;《黑马程序员微信小程序开发实战》&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;四、vue框架开发&#34;&gt;&lt;a href=&#34;#四、vue框架开发&#34; class=&#34;headerlink&#34; title=&#34;四、vue框架开发&#34;&gt;&lt;/a&gt;四、vue框架开发&lt;/h3&gt;&lt;h4 id=&#34;4-1-学习vue框架开发的相关知识点&#34;&gt;&lt;a href=&#34;#4-1-学习vue框架开发的相关知识点&#34; class=&#34;headerlink&#34; title=&#34;4.1 学习vue框架开发的相关知识点&#34;&gt;&lt;/a&gt;4.1 学习vue框架开发的相关知识点&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;pre&gt;&lt;code&gt;vue组件与vue生命周期
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;pre&gt;&lt;code&gt;单文件组件与脚手架搭建
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;pre&gt;&lt;code&gt;vue路由
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;pre&gt;&lt;code&gt;vuex状态管理
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;pre&gt;&lt;code&gt;nuxt服务端渲染
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;  基于vue的ui组件库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;边学边敲，以实践为主&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="学习计划" />
+        <updated>2021-03-06T16:00:00.000Z</updated>
+    </entry>
+</feed>

@@ -1,0 +1,347 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>THEO • Posts by &#34;c语言&#34; tag</title>
+        <link>https://zztqsh.github.io</link>
+        <description></description>
+        <language>zh-CN,en,zh-HK,zh-TW,default</language>
+        <pubDate>Fri, 30 Oct 2020 00:00:00 +0800</pubDate>
+        <lastBuildDate>Fri, 30 Oct 2020 00:00:00 +0800</lastBuildDate>
+        <category>学习笔记</category>
+        <category>Qss</category>
+        <category>pyqt</category>
+        <category>学习分享</category>
+        <category>c语言</category>
+        <category>markdown</category>
+        <category>文章格式</category>
+        <category>python</category>
+        <category>个人感想</category>
+        <category>学习计划</category>
+        <category>绑定域名</category>
+        <category>图像识别</category>
+        <category>课程设计</category>
+        <category>react</category>
+        <item>
+            <guid isPermalink="true">https://zztqsh.github.io/2020/10/30/C%E8%AF%AD%E8%A8%80%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90%E4%BB%A3%E7%A0%81/</guid>
+            <title>C语言生日快乐代码</title>
+            <link>https://zztqsh.github.io/2020/10/30/C%E8%AF%AD%E8%A8%80%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90%E4%BB%A3%E7%A0%81/</link>
+            <category>学习分享</category>
+            <category>c语言</category>
+            <pubDate>Fri, 30 Oct 2020 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;C语言生日快乐代码&#34;&gt;&lt;a href=&#34;#C语言生日快乐代码&#34; class=&#34;headerlink&#34; title=&#34;C语言生日快乐代码&#34;&gt;&lt;/a&gt;C语言生日快乐代码&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;#include &amp;lt;stdlib.h&amp;gt;
+#include&amp;lt;stdio.h&amp;gt; 
+#include&amp;lt;windows.h&amp;gt;
+#include&amp;lt;conio.h&amp;gt;
+#include&amp;lt;math.h&amp;gt;
+using namespace std;
+const int A1 = 131;
+const int A2 = 147;
+const int A3 = 165;
+const int A4 = 175;
+const int A5 = 196;
+const int A6 = 220;
+const int A7 = 247;
+const int B1 = 262;
+const int B2 = 296;
+const int B3 = 330;
+const int B4 = 349;
+const int B5 = 392;
+const int B6 = 440;
+const int B7 = 494;
+const int C1 = 523;
+const int C2 = 587;
+const int C3 = 659;
+const int C4 = 698;
+const int C5 = 784;
+const int C6 = 880;
+const int C7 = 988;
+const int D1 = 1047;
+const int D2 = 1175;
+const int D3 = 1319;
+const int D4 = 1397;
+const int D5 = 1568;
+const int D6 = 1760;
+const int D7 = 1976;
+const int OneBeat = 600;
+const int HalfBeat = 300;
+extern char s_1[]=&amp;#123;&amp;quot;☆ 祝  ☆&amp;quot;&amp;#125;;
+extern char s_2[]=&amp;#123;&amp;quot;☆ 美 丽 善 良  ☆&amp;quot;&amp;#125;;
+extern char s_3[]=&amp;#123;&amp;quot;☆ 大 方 优 雅  ☆&amp;quot;&amp;#125;;
+extern char s_4[]=&amp;#123;&amp;quot;☆ 清 新 脱 俗  ☆ &amp;quot;&amp;#125;;
+extern char s_5[]=&amp;#123;&amp;quot;☆ 纯 洁 活 泼  ☆&amp;quot;&amp;#125;;
+extern char s_6[]=&amp;#123;&amp;quot;☆ 率 直 可 爱  ☆&amp;quot;&amp;#125;;
+extern char s_7[]=&amp;#123;&amp;quot;☆ 温 柔 端 庄  ☆&amp;quot;&amp;#125;;
+extern char s_8[]=&amp;#123;&amp;quot;☆ 贤 惠 婉 约  ☆&amp;quot;&amp;#125;;
+extern char s_9[]=&amp;#123;&amp;quot;☆ 气 质 干 练  ☆&amp;quot;&amp;#125;;
+extern char s_10[]=&amp;#123;&amp;quot;☆ 天 然 真 诚  ☆&amp;quot;&amp;#125;;
+extern char s_11[]=&amp;#123;&amp;quot;☆ 超 凡 脱 俗  ☆&amp;quot;&amp;#125;;
+extern char s_12[]=&amp;#123;&amp;quot;☆ 的 小 马 哥  ☆&amp;quot;&amp;#125;;
+extern char s_13[]=&amp;#123;&amp;quot;☆ 生 日 快 乐 ！！！  ☆&amp;quot;&amp;#125;;
+extern char s_14[]=&amp;#123;&amp;quot;   平安喜乐！\n&amp;quot;&amp;#125;;
+extern char s_15[]=&amp;#123;&amp;quot;万事胜意！\n&amp;quot;&amp;#125;;
+extern char s_16[]=&amp;#123;&amp;quot;THEO冰&amp;quot;&amp;#125;;
+extern char s_17[]=&amp;#123;&amp;quot;2020.10.30&amp;quot;&amp;#125;;
+extern char * ssum[]=&amp;#123;s_1,s_2,s_3,s_4,s_5,s_6,s_7,s_8,s_9,s_10,s_11,s_12,s_13,s_14,s_15,s_16,s_17&amp;#125;;
+char randk();
+char randk()&amp;#123;
+char a=0;
+a=(char) abs( rand()%16);
+if(a &amp;gt;=10)&amp;#123;
+  a-=10;
+  a+=97;
+&amp;#125;else a+=48; 
+return a;
+&amp;#125;
+int main()
+&amp;#123;
+int k;
+system(&amp;quot;color b&amp;quot;);
+printf(&amp;quot;请输入密码：\n&amp;quot;);
+scanf(&amp;quot;%d&amp;quot;,&amp;amp;k);
+int i,j=0;
+if(k==1030)&amp;#123;
+    printf(&amp;quot;\n&amp;quot;);
+    Sleep(200);printf(&amp;quot;密&amp;quot;); Sleep(200);printf(&amp;quot;码&amp;quot;);Sleep(200);printf(&amp;quot;正&amp;quot;);Sleep(200);printf(&amp;quot;确\n&amp;quot;);
+    Sleep(200);printf(&amp;quot;接&amp;quot;); Sleep(200);printf(&amp;quot;下&amp;quot;);Sleep(200);printf(&amp;quot;来&amp;quot;);Sleep(200);printf(&amp;quot;什&amp;quot;);
+    Sleep(200);printf(&amp;quot;么&amp;quot;); Sleep(200);printf(&amp;quot;都&amp;quot;);Sleep(200);printf(&amp;quot;别&amp;quot;);Sleep(200);printf(&amp;quot;动\n&amp;quot;);
+    Sleep(200);printf(&amp;quot;只&amp;quot;); Sleep(200);printf(&amp;quot;需&amp;quot;);Sleep(200);printf(&amp;quot;把&amp;quot;);Sleep(200);printf(&amp;quot;音&amp;quot;); 
+    Sleep(200);printf(&amp;quot;量&amp;quot;); Sleep(200);printf(&amp;quot;调&amp;quot;);Sleep(200);printf(&amp;quot;大\n&amp;quot;); 
+    Sleep(200);printf(&amp;quot;耐&amp;quot;); Sleep(200);printf(&amp;quot;心&amp;quot;);Sleep(200);printf(&amp;quot;等&amp;quot;);Sleep(200);printf(&amp;quot;待\n&amp;quot;);   
+    Sleep(500);
+    int i=0;
+long f=0;
+char s[10]=&amp;quot;color &amp;quot;;
+puts(&amp;quot;\n\n\n\n\n\n\n\n\n\n &amp;quot;);
+for(i=0;i&amp;lt;10;i++)&amp;#123;
+  s[6]=randk();s[7]=randk();
+  system(s);
+  printf(&amp;quot;\r★★生日快乐!★★&amp;quot;);
+  f=0;
+  while(f&amp;lt;81474400)
+          f=f+1;
+&amp;#125;
+
+puts(&amp;quot;小马哥:\n\n\n&amp;quot;);
+s[6]=&amp;#39;d&amp;#39;;
+
+//输出要说的话
+for(i=0;i&amp;lt;19;i++)&amp;#123;
+puts(&amp;quot;\n\a&amp;quot;);
+s[7]=randk();
+system(s);
+puts(*(ssum+i));
+f=0;
+while(f&amp;lt;214748325)&amp;#123;
+ f=f+1;
+ f=f-1;
+ f=f+1;
+&amp;#125;
+&amp;#125;
+getchar();
+printf(&amp;quot;\n\n\n&amp;quot;);
+Sleep(100);printf(&amp;quot;**** ****\n&amp;quot;);
+Sleep(100);printf(&amp;quot;*********   *********\n&amp;quot;);
+Sleep(100);printf(&amp;quot; ************* *************\n&amp;quot;);
+for(i=0;i&amp;lt;3;i++)
+&amp;#123;
+Sleep(100);
+for(j=0;j&amp;lt;29;j++)
+printf(&amp;quot;*&amp;quot;);
+printf(&amp;quot;\n&amp;quot;);
+&amp;#125;
+for(i=0;i&amp;lt;7;i++)
+&amp;#123;
+Sleep(100);
+for(j=0;j&amp;lt;2*(i+1)-1;j++)
+printf(&amp;quot; &amp;quot;);
+for(j=0;j&amp;lt;27-i*4;j++)
+printf(&amp;quot;*&amp;quot;);
+printf(&amp;quot;\n&amp;quot;);
+&amp;#125;
+for(i=0;i&amp;lt;14;i++)
+printf(&amp;quot; &amp;quot;);
+printf(&amp;quot;*\n&amp;quot;);
+    for(j=0;j&amp;lt;10;j++)&amp;#123;
+        for(i=0;i&amp;lt;2;i++);
+        system(&amp;quot;color d&amp;quot;);
+        for(i=0;i&amp;lt;2;i++);
+        system(&amp;quot;color a&amp;quot;);
+        for(i=0;i&amp;lt;2;i++);
+        system(&amp;quot;color c&amp;quot;);
+        for(i=0;i&amp;lt;2;i++);
+        system(&amp;quot;color b&amp;quot;);
+        for(i=0;i&amp;lt;2;i++);
+        system(&amp;quot;color f&amp;quot;);
+        for(i=0;i&amp;lt;2;i++);
+        system(&amp;quot;color e&amp;quot;);
+        j++;
+        &amp;#125;
+        printf(&amp;quot;\n\n&amp;quot;);
+     for(i=0;i&amp;lt;9;i++)&amp;#123;
+            system(&amp;quot;color d&amp;quot;);
+        &amp;#125;  
+        printf(&amp;quot; *********&amp;quot;);printf(&amp;quot;**\n&amp;quot;); system(&amp;quot;color a&amp;quot;);
+        Sleep(500);      printf(&amp;quot; *   *&amp;quot;);printf(&amp;quot;   ************&amp;quot;);   printf(&amp;quot;  ************&amp;quot;);printf(&amp;quot;   ** **\n&amp;quot;) ;system(&amp;quot;color b&amp;quot;);
+        Sleep(500);  printf(&amp;quot; *   *&amp;quot;);printf(&amp;quot;  ** **&amp;quot;);   printf(&amp;quot;   ** &amp;quot;);printf(&amp;quot; **** **   \n&amp;quot;) ; system(&amp;quot;color c&amp;quot;);  
+        Sleep(500);  printf(&amp;quot; *   *&amp;quot;);printf(&amp;quot; **  **&amp;quot;);   printf(&amp;quot;   ** &amp;quot;);printf(&amp;quot;   **** ****\n&amp;quot;) ; system(&amp;quot;color d&amp;quot;);   
+        Sleep(500);  printf(&amp;quot; ************&amp;quot;);printf(&amp;quot; ***********&amp;quot;);   printf(&amp;quot;   ** &amp;quot;);printf(&amp;quot;  ** **   **\n&amp;quot;) ;  system(&amp;quot;color e&amp;quot;); 
+        Sleep(500);  printf(&amp;quot;*&amp;quot;);printf(&amp;quot;  **  &amp;quot;); printf(&amp;quot;************&amp;quot;); printf(&amp;quot; **   *****************\n&amp;quot;) ;system(&amp;quot;color f&amp;quot;);
+        Sleep(500);  printf(&amp;quot;*&amp;quot;);printf(&amp;quot; ***********&amp;quot;);   printf(&amp;quot;   ** &amp;quot;);   printf(&amp;quot;  ****   **\n&amp;quot;) ;system(&amp;quot;color a&amp;quot;);
+        Sleep(500);  printf(&amp;quot;*************&amp;quot;);printf(&amp;quot;  **  &amp;quot;); printf(&amp;quot; ** &amp;quot;); printf(&amp;quot;  ** ** **   ** **\n&amp;quot;) ;system(&amp;quot;color b&amp;quot;);
+        Sleep(500);  printf(&amp;quot;*&amp;quot;);printf(&amp;quot;  **  &amp;quot;); printf(&amp;quot; ** *   &amp;quot;); printf(&amp;quot;  ***   **   **   *\n&amp;quot;) ; system(&amp;quot;color c&amp;quot;);
+        Sleep(500);  printf(&amp;quot;  * *&amp;quot;);printf(&amp;quot;  ** * &amp;quot;);printf(&amp;quot;**   * &amp;quot;);  printf(&amp;quot;  ****   **\n&amp;quot;) ;system(&amp;quot;color d&amp;quot;);
+        Sleep(500);  printf(&amp;quot;   **&amp;quot;);printf(&amp;quot;  **  &amp;quot;); printf(&amp;quot;************&amp;quot;); printf(&amp;quot;  ****   **\n&amp;quot;) ;system(&amp;quot;color e&amp;quot;);
+        printf(&amp;quot;\n\n&amp;quot;);
+        
+        
+        Sleep(200); printf(&amp;quot;  **   **\n &amp;quot;);system(&amp;quot;color a&amp;quot;);
+        Sleep(200);printf(&amp;quot;****\n &amp;quot;);  system(&amp;quot;color b&amp;quot;);
+        Sleep(200); printf(&amp;quot;  **  **\n&amp;quot;);  system(&amp;quot;color c&amp;quot;);
+        Sleep(200); printf(&amp;quot; **********************\n&amp;quot;);system(&amp;quot;color d&amp;quot;);
+        Sleep(200); printf(&amp;quot;   **  **\n&amp;quot;);system(&amp;quot;color e&amp;quot;);
+        Sleep(200); printf(&amp;quot;   **\n&amp;quot;);system(&amp;quot;color f&amp;quot;);
+        Sleep(200); printf(&amp;quot;   **\n&amp;quot;);system(&amp;quot;color d&amp;quot;);
+        Sleep(200); printf(&amp;quot; **********************\n&amp;quot;);system(&amp;quot;color a&amp;quot;);
+        Sleep(200); printf(&amp;quot;   **\n&amp;quot;);system(&amp;quot;color b&amp;quot;);
+        Sleep(200); printf(&amp;quot;   **\n&amp;quot;);system(&amp;quot;color c&amp;quot;);
+        Sleep(200); printf(&amp;quot;   **\n&amp;quot;);system(&amp;quot;color d&amp;quot;);
+        Sleep(200); printf(&amp;quot; **********************\n&amp;quot;);system(&amp;quot;color e&amp;quot;);
+        Sleep(200); printf(&amp;quot;\n\n&amp;quot;);
+        
+        Sleep(200);printf(&amp;quot; **********************\n&amp;quot;);system(&amp;quot;color a&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color b&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color c&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color d&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color e&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color f&amp;quot;);
+        Sleep(200);printf(&amp;quot; **********************\n&amp;quot;);system(&amp;quot;color a&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color b&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color c&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color d&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color e&amp;quot;);
+        Sleep(200);   printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color f&amp;quot;);
+        Sleep(200);printf(&amp;quot; **********************\n&amp;quot;);system(&amp;quot;color a&amp;quot;);
+        
+        printf(&amp;quot;\n\n&amp;quot;);
+        Sleep(200);printf(&amp;quot;**&amp;quot;);   printf(&amp;quot;  **\n&amp;quot;);system(&amp;quot;color a&amp;quot;);
+        Sleep(200);printf(&amp;quot;**&amp;quot;);   printf(&amp;quot;  **\n&amp;quot;);system(&amp;quot;color b&amp;quot;);
+        Sleep(200);printf(&amp;quot;   ***&amp;quot;);   printf(&amp;quot;  **\n&amp;quot;);system(&amp;quot;color c&amp;quot;);
+        Sleep(200);printf(&amp;quot;  * *** &amp;quot;); printf(&amp;quot;  ***************\n&amp;quot;);system(&amp;quot;color d&amp;quot;);
+        Sleep(200);printf(&amp;quot; ** ** *&amp;quot;); printf(&amp;quot;**  *\n&amp;quot;);system(&amp;quot;color e&amp;quot;);
+        Sleep(200);printf(&amp;quot;**  **  **&amp;quot;);   printf(&amp;quot;  **  *\n&amp;quot;);system(&amp;quot;color f&amp;quot;);
+        Sleep(200);printf(&amp;quot;**   **&amp;quot;);  printf(&amp;quot;   *****************\n&amp;quot;);system(&amp;quot;color a&amp;quot;);
+        Sleep(200);printf(&amp;quot;**&amp;quot;);   printf(&amp;quot;  **  \n&amp;quot;);system(&amp;quot;color b&amp;quot;);
+        Sleep(200);printf(&amp;quot;**&amp;quot;);   printf(&amp;quot;**  **   \n&amp;quot;);system(&amp;quot;color c&amp;quot;);
+        Sleep(200);printf(&amp;quot;**&amp;quot;);   printf(&amp;quot;  ** **  \n&amp;quot;);system(&amp;quot;color d&amp;quot;);
+        Sleep(200);printf(&amp;quot;**&amp;quot;);   printf(&amp;quot;****\n&amp;quot;);system(&amp;quot;color e&amp;quot;);
+        Sleep(200);printf(&amp;quot;**&amp;quot;);   printf(&amp;quot;  **   ** \n&amp;quot;);system(&amp;quot;color f&amp;quot;);
+        
+        printf(&amp;quot;\n\n&amp;quot;);
+        Sleep(200);printf(&amp;quot; **\n&amp;quot;);system(&amp;quot;color a&amp;quot;);
+        Sleep(200);printf(&amp;quot;  ** \n&amp;quot;);system(&amp;quot;color b&amp;quot;);
+        Sleep(200);printf(&amp;quot;   ****\n&amp;quot;);system(&amp;quot;color c&amp;quot;);
+        Sleep(200);printf(&amp;quot;**   **\n&amp;quot;);system(&amp;quot;color d&amp;quot;);
+        Sleep(200);printf(&amp;quot;  ** **\n&amp;quot;);system(&amp;quot;color e&amp;quot;);
+        Sleep(200);printf(&amp;quot;  ** **\n&amp;quot;);system(&amp;quot;color f&amp;quot;);
+        Sleep(200);printf(&amp;quot;  ** **\n&amp;quot;);system(&amp;quot;color a&amp;quot;);
+        Sleep(200);printf(&amp;quot;  ************************\n&amp;quot;);system(&amp;quot;color b&amp;quot;);
+        Sleep(200);printf(&amp;quot; **\n&amp;quot;);system(&amp;quot;color c&amp;quot;);
+        Sleep(200);printf(&amp;quot;   * **\n&amp;quot;);system(&amp;quot;color d&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **   **\n&amp;quot;);system(&amp;quot;color e&amp;quot;);
+        Sleep(200);printf(&amp;quot;**   ****\n&amp;quot;);system(&amp;quot;color f&amp;quot;);
+        Sleep(200);printf(&amp;quot;  ** ** **\n&amp;quot;);system(&amp;quot;color a&amp;quot;);
+        Sleep(200);printf(&amp;quot;** * **  **\n&amp;quot;);system(&amp;quot;color b&amp;quot;);
+        Sleep(100);printf(&amp;quot;***\n&amp;quot;);system(&amp;quot;color c&amp;quot;);
+        printf(&amp;quot;\n\n&amp;quot;);
+        
+printf(&amp;quot;**** ****\n&amp;quot;);
+printf(&amp;quot;*********   *********\n&amp;quot;);
+printf(&amp;quot; ************* *************\n&amp;quot;);
+for(i=0;i&amp;lt;3;i++)
+&amp;#123;
+Sleep(100);
+for(j=0;j&amp;lt;29;j++)
+printf(&amp;quot;*&amp;quot;);
+printf(&amp;quot;\n&amp;quot;);
+&amp;#125;
+for(i=0;i&amp;lt;7;i++)
+&amp;#123;
+Sleep(100);
+for(j=0;j&amp;lt;2*(i+1)-1;j++)
+printf(&amp;quot; &amp;quot;);
+for(j=0;j&amp;lt;27-i*4;j++)
+printf(&amp;quot;*&amp;quot;);
+printf(&amp;quot;\n&amp;quot;);
+&amp;#125;
+for(i=0;i&amp;lt;14;i++)
+printf(&amp;quot; &amp;quot;);
+printf(&amp;quot;*\n&amp;quot;);
+while(999)&amp;#123;
+        int T=1;
+Beep(C5, HalfBeat);
+Beep(C5, HalfBeat);
+Beep(C6, OneBeat);
+Beep(C5, OneBeat);
+Beep(D1, OneBeat);
+Beep(C7, OneBeat * 2);
+Beep(C5, HalfBeat);
+Beep(C5, HalfBeat);
+Beep(C6, OneBeat);
+Beep(C5, OneBeat);
+Beep(D2, OneBeat);
+Beep(D1, OneBeat * 2);
+Beep(C5, HalfBeat);
+Beep(C5, HalfBeat);
+Beep(D5, OneBeat);
+Beep(D3, OneBeat);
+Beep(D1, OneBeat);
+Beep(C7, OneBeat);
+Beep(D4, HalfBeat);
+Beep(D4, HalfBeat);
+Beep(D3, OneBeat);
+Beep(D1, OneBeat);
+Beep(D2, OneBeat);
+Beep(D1, OneBeat * 2);
+Beep(C5, HalfBeat);
+Beep(C5, HalfBeat);
+Beep(D5, OneBeat);
+Beep(D3, OneBeat);
+Beep(D1, OneBeat);
+Beep(C7, HalfBeat);
+Beep(C6, OneBeat * 2);
+Beep(D4, HalfBeat);
+Beep(D4, HalfBeat);
+Beep(D3, OneBeat);
+Beep(D1, OneBeat);
+Beep(D2, OneBeat);
+Beep(D1, OneBeat * 3);
+Sleep(500);
+        for(i=0;i&amp;lt;19999999;i++);
+        system(&amp;quot;color d&amp;quot;);
+        for(i=0;i&amp;lt;19999999;i++);
+        system(&amp;quot;color a&amp;quot;);
+        for(i=0;i&amp;lt;19999999;i++);
+        system(&amp;quot;color c&amp;quot;);
+        for(i=0;i&amp;lt;19999999;i++);
+        system(&amp;quot;color b&amp;quot;);
+        for(i=0;i&amp;lt;19999999;i++);
+        system(&amp;quot;color f&amp;quot;);
+        for(i=0;i&amp;lt;19999999;i++);
+        system(&amp;quot;color e&amp;quot;);&amp;#125;
+&amp;#125;
+        else&amp;#123;
+    Sleep(200);printf(&amp;quot;密&amp;quot;); Sleep(200);printf(&amp;quot;码&amp;quot;);Sleep(200);printf(&amp;quot;错&amp;quot;);Sleep(200);printf(&amp;quot;误！\n&amp;quot;);
+    Sleep(200);printf(&amp;quot;请&amp;quot;); Sleep(200);printf(&amp;quot;重&amp;quot;);Sleep(200);printf(&amp;quot;新&amp;quot;);Sleep(200);printf(&amp;quot;运&amp;quot;);Sleep(200);printf(&amp;quot;行&amp;quot;);
+    Sleep(200);printf(&amp;quot;并&amp;quot;); Sleep(200);printf(&amp;quot;输&amp;quot;);Sleep(200);printf(&amp;quot;入&amp;quot;);Sleep(200);printf(&amp;quot;正&amp;quot;);  
+    Sleep(200);printf(&amp;quot;确&amp;quot;); Sleep(200);printf(&amp;quot;的&amp;quot;);Sleep(200);printf(&amp;quot;密&amp;quot;);Sleep(200);printf(&amp;quot;码\n&amp;quot;);
+        &amp;#125;
+return 0;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;若要观看效果，可自行在dev-c++运行&lt;/p&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

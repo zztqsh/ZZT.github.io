@@ -1,0 +1,2276 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>THEO</title>
+        <link>https://zztqsh.github.io</link>
+        <description></description>
+        <language>zh-CN,en,zh-HK,zh-TW,default</language>
+        <pubDate>Tue, 22 Jun 2021 00:00:00 +0800</pubDate>
+        <lastBuildDate>Tue, 22 Jun 2021 00:00:00 +0800</lastBuildDate>
+        <category>学习笔记</category>
+        <category>Qss</category>
+        <category>pyqt</category>
+        <category>学习分享</category>
+        <category>c语言</category>
+        <category>markdown</category>
+        <category>文章格式</category>
+        <category>python</category>
+        <category>个人感想</category>
+        <category>学习计划</category>
+        <category>绑定域名</category>
+        <category>图像识别</category>
+        <category>课程设计</category>
+        <category>react</category>
+        <item>
+            <guid isPermalink="true">https://zztqsh.github.io/2021/06/22/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%EF%BC%89/</guid>
+            <title>课程设计（图像识别）</title>
+            <link>https://zztqsh.github.io/2021/06/22/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%EF%BC%89/</link>
+            <category>学习分享</category>
+            <category>python</category>
+            <category>图像识别</category>
+            <category>课程设计</category>
+            <pubDate>Tue, 22 Jun 2021 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;span id=&#34;head&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;a href=&#34;#end&#34;&gt;↓↓点击先偷偷观看最终效果↓↓&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;一、前言&#34;&gt;&lt;a href=&#34;#一、前言&#34; class=&#34;headerlink&#34; title=&#34;一、前言&#34;&gt;&lt;/a&gt;一、前言&lt;/h1&gt;&lt;p&gt;为了能够快速学习python语言，我大概花了几周的时间在自学这本《python编程从入门到实践》😵&lt;/p&gt;
+&lt;div class=&#34;img-wrap&#34;&gt;&lt;div class=&#34;img-bg&#34;&gt;&lt;img class=&#34;img lazyload&#34; src=&#34;https://raw.staticdn.net/zztqsh/picture/main/pythoon%E7%BC%96%E7%A8%8B%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.staticdn.net/zztqsh/picture/main/pythoon%E7%BC%96%E7%A8%8B%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;《python编程从入门到实践》&#34; style=&#34;width:200px;&#34;&gt;&lt;/div&gt;&lt;span class=&#34;image-caption&#34;&gt;《python编程从入门到实践》&lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;菜鸟就是菜鸟，总是要比别人多看几遍才能理解得透彻，因此我英语课上看，概率论课上也看😨，才微微的把python的基础法语弄明白了，一边学习顺便把一些些基础知识记录进我的”菜鸟”小本本&lt;span class=&#34;btn regular&#34;&gt;&lt;a class=&#34;button&#34; href=&#34;https://qshzzt.com/2021/06/22/菜菜的Python笔记/&#34; title=&#34;菜菜的Python笔记&#34;&gt;&lt;i class=&#34;fas fa-play-circle&#34;&gt;&lt;/i&gt;菜菜的Python笔记&lt;/a&gt;&lt;/span&gt;毕竟菜鸟总要学着自己长大👶&lt;/p&gt;
+&lt;p&gt;把Python的一些基础知识学完后，恰逢到要做一个面向对象的课程设计，而老师也允许使用Python语言进行设计，就当把这次课程设计当做Python的一次实战，一次锻炼的机会😁（真的是锻炼，折磨我好几个夜晚了🌜，黑眼圈🌚有了，痘痘也冒出了好几个😭，不过真的学到了好多）&lt;/p&gt;
+&lt;p&gt;起初没有想着要做&lt;font color=&#34;purple&#34;&gt;图像识别&lt;/font&gt;，是想做一个从图片从提取文字，发现一个Python-tesseract工具，只需要简短的代码就能够提取图片中的文字了，但是这个东西需要自行安装，还需要下载一个Tesseract-OCR应用程序，安装完后还需要修改源码中的路径，不知道是怎的，可能路径我没弄好，在使用这个工具的时候，运行后一直出现错误，提示我没有这个应用程序，之后我挣扎了许久，路径修改来修改去，突然可以运行了，可是这个工具不自带有中文字体库，我第一次使用来提取中文字体时，运行出来的结果都是一堆的问号❓，这可把我整懵了，于是又一直查资料，终于找到了解决方法，也顺利安装了中文字体库&lt;code&gt;chi_sim.traineddata&lt;/code&gt;，在提取中文字体时，也顺利提取出，但是当图片是中英文结合时，效果就不是那么理想了，而且若文字是有很多段很多行，提取出的所有文字都只显示在一行上🤣，若是效果理想，可是只是使用到了几行代码，还是借用的工具，我根本没学到什么东西，于是决定尝试另一种方向。&lt;/p&gt;
+&lt;p&gt;直到我发现了一个东西，也就是一个图像识别的界面，它的界面是这样子的：&lt;/p&gt;
+&lt;div class=&#34;img-wrap&#34;&gt;&lt;div class=&#34;img-bg&#34;&gt;&lt;img class=&#34;img lazyload&#34; src=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%8F%82%E8%80%83%E7%95%8C%E9%9D%A2.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%8F%82%E8%80%83%E7%95%8C%E9%9D%A2.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;参考界面&#34; style=&#34;width:300px;&#34;&gt;&lt;/div&gt;&lt;span class=&#34;image-caption&#34;&gt;参考界面&lt;/span&gt;&lt;/div&gt;
+
+&lt;p&gt;于是我就在想，我是不是也可以自己写这样的一个界面🤨，让用户自行选择识别类型，自行上传想要识别的图片，上传后界面就会显示出识别后的信息😬&lt;br&gt;然而写出这个界面的主人并没有把它的完整代码放出来，只是放了一部分，毕竟这也是别人的知识产权，不可能全都拿出来公开展示，于是那个代码我运行之后运行框一堆&lt;font color=&#34;red&#34;&gt;红色的错误&lt;/font&gt;，我修修补补之后运行成功了可是窗口总是会中途卡退，也许是存在逻辑错误或者是其它问题，我也不太清楚🙉，而且代码有点乱让我不懂哪里是哪里&lt;/p&gt;
+&lt;p&gt;于是我决定自己一人从 0 开始，也是那个参考界面给了我很多的想法&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我把我所想的和要实现的功能列出来：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;程序运行后弹出一个窗口&lt;/li&gt;
+&lt;li&gt;用户先&lt;strong&gt;选择图片&lt;/strong&gt;，选择图片后显示出&lt;strong&gt;图片&lt;/strong&gt;和&lt;strong&gt;图片路径&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;选择图片后，界面显示出选择识别类型的组合框；若未选择图片，界面是不会显示出识别类型的&lt;strong&gt;组合框&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;若用户选择好识别类型后，界面显示出识别的信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;把要实现的功能大概的罗列出来后，我就开始起步🚶‍♂️了，只能说祝我好运吧🙏🙏🙏&lt;/p&gt;
+&lt;h1 id=&#34;二、起步&#34;&gt;&lt;a href=&#34;#二、起步&#34; class=&#34;headerlink&#34; title=&#34;二、起步&#34;&gt;&lt;/a&gt;二、起步&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;为了能够在过程中找出是哪一个步骤哪一个功能的实现出现的问题，于是我采取把每一个功能先单独写出来，也就是每一个功能单独写一个Python文件，一个个测试，等到所有的功能都没有问题，我再把它们组合在同一个文件中。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;弹出的新窗口&lt;/strong&gt;&lt;br&gt;对于弹出的新窗口的实现，我采用的是&lt;code&gt;Python-Tkinter&lt;/code&gt;，&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;root = tkinter.Tk()
+root.title(&amp;#39;图像识别&amp;#39;)
+root.geometry(&amp;#39;600x500&amp;#39;)
+root.mainloop()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;img-wrap&#34;&gt;&lt;div class=&#34;img-bg&#34;&gt;&lt;img class=&#34;img lazyload&#34; src=&#34;https://raw.githubusercontent.com/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E5%BC%B9%E5%87%BA%E6%96%B0%E7%AA%97%E5%8F%A3.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.githubusercontent.com/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E5%BC%B9%E5%87%BA%E6%96%B0%E7%AA%97%E5%8F%A3.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;弹出的新窗口&#34; style=&#34;width:300px;&#34;&gt;&lt;/div&gt;&lt;span class=&#34;image-caption&#34;&gt;弹出的新窗口&lt;/span&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;选择图片与显示图片和图片路径&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import tkinter
+import tkinter.filedialog
+import tkinter.ttk
+from tkinter import *
+from PIL import Image
+from PIL import ImageTk
+class App():
+    # 构造函数
+    def __init__(self, master=None, value=None, name=None):
+        self.select()
+    # 选择文件
+    def select(self):
+        btn = Button(root, text=&amp;#39;点击选择文件&amp;#39;, command=self.openfile, font=12, fg=&amp;quot;white&amp;quot;, bg=&amp;quot;green&amp;quot;)
+        btn.pack(ipadx=&amp;#39;10&amp;#39;, ipady=&amp;#39;1&amp;#39;)
+    #  打开文件并显示路径
+    def openfile(self):
+        global filename
+        filename = tkinter.filedialog.askopenfilename()
+        if filename != &amp;#39;&amp;#39;:
+            lb.config(text=&amp;#39;您选择的文件是 : &amp;#39; + filename)
+            lb.pack()
+            self.showpic()
+        else:
+            lb.config(text=&amp;#39;您没有选择任何文件&amp;#39;)
+            lb.pack()
+    # 显示图片
+    def showpic(self):
+        Img = Image.open(filename)
+        Img = Img.resize((int(500), int(300)), Image.ANTIALIAS)
+        img_png = ImageTk.PhotoImage(Img)
+        label_Img = tkinter.Label(root, image=img_png)
+        label_Img.pack(anchor=&amp;#39;center&amp;#39;)
+        root.mainloop()
+
+root = tkinter.Tk()
+root.title(&amp;#39;图像识别&amp;#39;)
+root.geometry(&amp;#39;600x500&amp;#39;)
+varstring = tkinter.StringVar()
+lb = Label(root, text=&amp;#39;&amp;#39;)
+app = App()
+root.mainloop()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;gallery &#34;&gt;
+              &lt;p&gt;&lt;img src=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E9%80%89%E6%8B%A9%E5%9B%BE%E7%89%871.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E9%80%89%E6%8B%A9%E5%9B%BE%E7%89%871.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;弹出窗口界面&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E9%80%89%E6%8B%A9%E5%9B%BE%E7%89%872.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E9%80%89%E6%8B%A9%E5%9B%BE%E7%89%872.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;点击选择图片后的界面&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E9%80%89%E6%8B%A9%E5%9B%BE%E7%89%873.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E9%80%89%E6%8B%A9%E5%9B%BE%E7%89%873.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;选择好图片后的界面&#34;&gt;&lt;/p&gt;
+            &lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;组合框&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import tkinter.ttk
+class combox():
+    def __init__(self):
+        self.select()
+
+    def select(self):
+        combobox[&amp;#39;value&amp;#39;] = (&amp;#39;python&amp;#39;, &amp;#39;java&amp;#39;, &amp;#39;C&amp;#39;, &amp;#39;C++&amp;#39;)
+        combobox.current(0)
+        combobox.pack()
+        root.mainloop()
+
+root = tkinter.Tk()
+root.title(&amp;quot;组合框&amp;quot;)
+root.geometry(&amp;quot;200x200&amp;quot;)
+combobox = tkinter.ttk.Combobox(root)
+label = tkinter.Label()
+app = combox()
+root.mainloop()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;img-wrap&#34;&gt;&lt;div class=&#34;img-bg&#34;&gt;&lt;img class=&#34;img lazyload&#34; src=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E7%BB%84%E5%90%88%E6%A1%86.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E7%BB%84%E5%90%88%E6%A1%86.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;组合框&#34; style=&#34;width:300px;&#34;&gt;&lt;/div&gt;&lt;span class=&#34;image-caption&#34;&gt;组合框&lt;/span&gt;&lt;/div&gt;
+
+&lt;p&gt;好像这三个功能单独写的时候感觉没啥问题，都可以运行成功，只是界面不太美观（当然界面的美化可以等所有的功能全都写好后再进行优化），当我尝试着先将这三个功能合并在一个界面时，&lt;strong&gt;question&lt;/strong&gt;来了😩&lt;/p&gt;
+&lt;p&gt;由于点击打开图片后，需要&lt;strong&gt;显示组合框&lt;/strong&gt;，然而这个组合框一直不出现，我退出程序后，运行框提醒我&lt;font color=&#34;red&#34;&gt;_tkinter.TclError: NULL main window&lt;/font&gt;，英语不太好的我看到这个的第一反应就是&lt;strong&gt;缺乏主窗口&lt;/strong&gt;&lt;br&gt;虽然知道错误是什么，然而第一次使用&lt;code&gt;Python-Tkinter&lt;/code&gt;的我显然还是不知道该怎么解决这个&lt;strong&gt;question&lt;/strong&gt;🥺，于是疯狂找资料，找它的使用方法，可是网上给出的也都是每个功能单独在一个窗口的使用方法，而我是想搞的是一个窗口含有多个功能界面，这就让我&lt;font size=&#34;5&#34;&gt;头大&lt;/font&gt;了….&lt;/p&gt;
+&lt;p&gt;第一次尝试遇到问题是正常&lt;font size=&#34;1&#34;&gt;(离谱)&lt;/font&gt;不过了….&lt;br&gt;即使是这样我也是不会轻易放弃的&lt;font size=&#34;1&#34;&gt;（才怪）&lt;/font&gt;&lt;br&gt;我努力挣扎了两天&lt;font size=&#34;1&#34;&gt;（然而没什么用）&lt;/font&gt;&lt;br&gt;发现还有另一个python的模块可以写窗口，那就是&lt;strong&gt;无敌超神&lt;/strong&gt;的&lt;strong&gt;PyQt&lt;/strong&gt;✌✌✌&lt;br&gt;为什么❓&lt;strong&gt;无敌超神&lt;/strong&gt;❓能让我瞬间抛下&lt;code&gt;Python-Tkinter&lt;/code&gt;，让我下面细说🤣🤣🤣&lt;/p&gt;
+&lt;h1 id=&#34;三、转战QT&#34;&gt;&lt;a href=&#34;#三、转战QT&#34; class=&#34;headerlink&#34; title=&#34;三、转战QT&#34;&gt;&lt;/a&gt;三、转战QT&lt;/h1&gt;&lt;p&gt;这东西厉害就是有特定的&lt;code&gt;QMainWindow&lt;/code&gt;创建主窗口，还可以在主窗口中建立更多的界面&lt;code&gt; QtWidgets&lt;/code&gt;，通过给各个&lt;strong&gt;控件&lt;/strong&gt;设置各自的&lt;strong&gt;对象名&lt;/strong&gt;(&lt;code&gt;self.setObjectName(&amp;quot;对象名&amp;quot;))&lt;/code&gt;，还能使用&lt;code&gt;qss&lt;/code&gt;文件给控件进行美化😎😎😎，例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#对象名&amp;#123;
+  background:url(/);
+  font:10px;
+  color:white;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;qss&lt;/code&gt;的语法类似于&lt;code&gt;css&lt;/code&gt;的语法，然而&lt;code&gt;css&lt;/code&gt;的用法我在上学期学了一些基础用法，所以&lt;code&gt;qss&lt;/code&gt;对于我而言还是挺好理解的，顺便记录了一点此次完成的&lt;strong&gt;图像识别&lt;/strong&gt;需要用到的QT的用法&lt;span class=&#34;btn regular&#34;&gt;&lt;a class=&#34;button&#34; href=&#34;https://qshzzt.com/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/&#34; title=&#34;Pyqt的用法&#34;&gt;&lt;i class=&#34;fas fa-play-circle&#34;&gt;&lt;/i&gt;Pyqt的用法&lt;/a&gt;&lt;/span&gt;，还有如何使用Qss修饰Qt&lt;span class=&#34;btn regular&#34;&gt;&lt;a class=&#34;button&#34; href=&#34;https://qshzzt.com/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/&#34; title=&#34;Qss修饰Qt的用法&#34;&gt;&lt;i class=&#34;fas fa-play-circle&#34;&gt;&lt;/i&gt;Qss修饰Qt的用法&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;结合Qt的使用方法，我重新把我的想法和实现的功能改了一遍&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;程序运行后弹出一个窗口&lt;/li&gt;
+&lt;li&gt;用户自行选择识别类型（若不选择，默认是&lt;strong&gt;组合框&lt;/strong&gt;的第一个识别类型）&lt;/li&gt;
+&lt;li&gt;用户自行选择识别的图片&lt;/li&gt;
+&lt;li&gt;若用户已经选择图片，界面显示图片的路径，并显示已选择的图片，点击&lt;strong&gt;确定&lt;/strong&gt;按钮则界面显示出&lt;strong&gt;识别信息&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;若用户未选择图片就点击&lt;strong&gt;确定&lt;/strong&gt;按钮，则弹出&lt;strong&gt;新窗口&lt;/strong&gt;提醒用户先选择图片&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;初步效果&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;img-wrap&#34;&gt;&lt;div class=&#34;img-bg&#34;&gt;&lt;img class=&#34;img lazyload&#34; src=&#34;https://raw.githubusercontent.com/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%BD%AC%E6%88%98Qt/%E5%88%9D%E6%AD%A5%E7%AA%97%E5%8F%A3%E7%95%8C%E9%9D%A2.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.githubusercontent.com/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%BD%AC%E6%88%98Qt/%E5%88%9D%E6%AD%A5%E7%AA%97%E5%8F%A3%E7%95%8C%E9%9D%A2.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;初步效果&#34; style=&#34;width:800px;&#34;&gt;&lt;/div&gt;&lt;span class=&#34;image-caption&#34;&gt;初步效果&lt;/span&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;font size=&#34;1&#34;&gt;（小声逼逼）&lt;/font&gt;界面确实是丑，因为还没有放上&lt;code&gt;qss&lt;/code&gt;文件，界面的&lt;a href=&#34;#end&#34;&gt;↓↓美化后的最终效果↓↓&lt;/a&gt;要留到最后一步，关键的还是各个功能的实现，让我下面细说&lt;/p&gt;
+&lt;h1 id=&#34;四、功能的实现&#34;&gt;&lt;a href=&#34;#四、功能的实现&#34; class=&#34;headerlink&#34; title=&#34;四、功能的实现&#34;&gt;&lt;/a&gt;四、功能的实现&lt;/h1&gt;&lt;p&gt;&lt;span id=&#34;end&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;五、界面的美化&#34;&gt;&lt;a href=&#34;#五、界面的美化&#34; class=&#34;headerlink&#34; title=&#34;五、界面的美化&#34;&gt;&lt;/a&gt;五、界面的美化&lt;/h1&gt;&lt;br&gt;
+......这部分过后再写吧,累多.......
+
+&lt;p&gt;先假装展示一下最终效果图&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最终效果图&lt;/strong&gt; &lt;/p&gt;
+&lt;div class=&#34;img-wrap&#34;&gt;&lt;div class=&#34;img-bg&#34;&gt;&lt;img class=&#34;img lazyload&#34; src=&#34;https://raw.githubusercontent.com/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BE%8E%E5%8C%96%E7%95%8C%E9%9D%A2/%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C%E5%9B%BE.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.githubusercontent.com/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BE%8E%E5%8C%96%E7%95%8C%E9%9D%A2/%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C%E5%9B%BE.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;最终效果图&#34;&gt;&lt;/div&gt;&lt;span class=&#34;image-caption&#34;&gt;最终效果图&lt;/span&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;码字真的太累了，没写的内容明天再继续更新吧 ，先去玩几局斗地主…..&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;#head&#34;&gt;↑↑点击返回开头↑↑&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;&lt;div class=&#34;tag link&#34;&gt;&lt;a class=&#34;link-card&#34; title=&#34;百度AI开放平台&#34; href=&#34;https://ai.baidu.com/ai-doc/IMAGERECOGNITION/8k3e7f69o&#34;&gt;&lt;div class=&#34;left&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&lt;p class=&#34;text&#34;&gt;百度AI开放平台&lt;/p&gt;&lt;p class=&#34;url&#34;&gt;https://ai.baidu.com/ai-doc/IMAGERECOGNITION/8k3e7f69o&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;/center&gt;   
+
+
+
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://zztqsh.github.io/2021/06/21/%E8%8F%9C%E8%8F%9C%E7%9A%84Python%E7%AC%94%E8%AE%B0/</guid>
+            <title>菜菜的Python笔记</title>
+            <link>https://zztqsh.github.io/2021/06/21/%E8%8F%9C%E8%8F%9C%E7%9A%84Python%E7%AC%94%E8%AE%B0/</link>
+            <category>学习分享</category>
+            <category>python</category>
+            <pubDate>Mon, 21 Jun 2021 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;center&gt;Hello大家好，这里是菜菜的Python笔记📖&lt;/center&gt;
+&lt;center&gt;初出茅庐的我👶，虽然还啥也不是🤣&lt;/center&gt;
+&lt;center&gt;但是只要坚持学习🧐，也总会等到成为&#34;大佬&#34;的那一天🙈&lt;/center&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;center&gt;菜菜学习开始学习Python的第一本书&lt;/center&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;img-wrap&#34;&gt;&lt;div class=&#34;img-bg&#34;&gt;&lt;img class=&#34;img lazyload&#34; src=&#34;https://raw.githubusercontent.com/zztqsh/picture/main/pythoon%E7%BC%96%E7%A8%8B%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.githubusercontent.com/zztqsh/picture/main/pythoon%E7%BC%96%E7%A8%8B%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;《Python编程从入门到实践》&#34; style=&#34;height:200px;&#34;&gt;&lt;/div&gt;&lt;span class=&#34;image-caption&#34;&gt;《Python编程从入门到实践》&lt;/span&gt;&lt;/div&gt;
+&lt;center&gt;&lt;div class=&#34;tag link&#34;&gt;&lt;a class=&#34;link-card&#34; title=&#34;《Python编程从入门到实践》&#34; href=&#34;https://simingchen.github.io/pdfReader/pdf/viewer.html?file=https://raw.githubusercontent.com/zztqsh/Books/main/%E3%80%8APython%E7%BC%96%E7%A8%8B%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5%E3%80%8B.pdf&#34;&gt;&lt;div class=&#34;left&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/zztqsh/picture/main/pythoon%E7%BC%96%E7%A8%8B%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.githubusercontent.com/zztqsh/picture/main/pythoon%E7%BC%96%E7%A8%8B%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&lt;p class=&#34;text&#34;&gt;《Python编程从入门到实践》&lt;/p&gt;&lt;p class=&#34;url&#34;&gt;https://simingchen.github.io/pdfReader/pdf/viewer.html?file=https://raw.githubusercontent.com/zztqsh/Books/main/%E3%80%8APython%E7%BC%96%E7%A8%8B%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5%E3%80%8B.pdf&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;/center&gt;
+
+
+&lt;h3 id=&#34;菜菜的Python笔记&#34;&gt;&lt;a href=&#34;#菜菜的Python笔记&#34; class=&#34;headerlink&#34; title=&#34;菜菜的Python笔记&#34;&gt;&lt;/a&gt;&lt;span id=&#34;head&#34;&gt;菜菜的Python笔记&lt;/span&gt;&lt;/h3&gt;&lt;h4 id=&#34;1-字符串&#34;&gt;&lt;a href=&#34;#1-字符串&#34; class=&#34;headerlink&#34; title=&#34;1. 字符串&#34;&gt;&lt;/a&gt;1. 字符串&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;单词变换大小写&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;name = &amp;quot;Hello Ada,would you like to learn some Python today&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;单词的首字母变大写：&lt;code&gt;name.title()&lt;/code&gt;&lt;br&gt;&lt;font color=&#34;green&#34;&gt;运行结果：&lt;/font&gt;&lt;br&gt;Hello Ada,Would You Like To Learn Some Python Today&lt;/p&gt;
+&lt;p&gt;单词的字母全变小写：&lt;code&gt;name.lower()&lt;/code&gt;&lt;br&gt;&lt;font color=&#34;green&#34;&gt;运行结果：&lt;/font&gt;&lt;br&gt;hello ada,would you like to learn some python today&lt;/p&gt;
+&lt;p&gt;单词的字母全变大写：&lt;code&gt;name.upper()&lt;/code&gt;&lt;br&gt;&lt;font color=&#34;green&#34;&gt;运行结果：&lt;/font&gt;&lt;br&gt;HELLO ADA,WOULD YOU LIKE TO LEARN SOME PYTHON TODAY&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;字符中使用变量&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;name = [&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]&lt;/code&gt;&lt;br&gt;&lt;code&gt;print(f&amp;quot;It is &amp;#123;name[0]&amp;#125; &amp;#123;name[1]&amp;#125; &amp;quot;)&lt;/code&gt;&lt;br&gt;&lt;font color=&#34;green&#34;&gt;运行结果：&lt;/font&gt;&lt;br&gt;It is a b &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;剔除左右两边的空白&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;name = &amp;quot;     Ada     &amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;删除左边空白：&lt;code&gt;print(name.lstrip())&lt;/code&gt;&lt;br&gt;&lt;font color=&#34;green&#34;&gt;运行结果：&lt;/font&gt;&lt;br&gt;Ada  &lt;/p&gt;
+&lt;p&gt;删除右边空白：&lt;code&gt;print(name.rstrip())&lt;/code&gt;&lt;br&gt;&lt;font color=&#34;green&#34;&gt;运行结果：&lt;/font&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;Ada&lt;/p&gt;
+&lt;p&gt;删除两边的空白：&lt;code&gt;print(name.strip())&lt;/code&gt;&lt;br&gt;&lt;font color=&#34;green&#34;&gt;运行结果：&lt;/font&gt;&lt;br&gt;Ada&lt;/p&gt;
+&lt;h4 id=&#34;2-数&#34;&gt;&lt;a href=&#34;#2-数&#34; class=&#34;headerlink&#34; title=&#34;2. 数&#34;&gt;&lt;/a&gt;2. 数&lt;/h4&gt;&lt;p&gt;数太大用下划线区分：&lt;code&gt;number=12_000_000_000&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;给多个变量赋值：&lt;code&gt;x,y,z=1,2,3&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;3-列表&#34;&gt;&lt;a href=&#34;#3-列表&#34; class=&#34;headerlink&#34; title=&#34;3. 列表&#34;&gt;&lt;/a&gt;3. 列表&lt;/h4&gt;&lt;p&gt;1、末尾加元素：&lt;code&gt;name.append(&amp;#39;a&amp;#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;2、在列表中加元素：&lt;code&gt;name.insert(1,&amp;#39;a&amp;#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;3、删除元素：&lt;code&gt;del name[0]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;4、删除末尾元素：&lt;code&gt;del name[-1]&lt;/code&gt;或&lt;code&gt;name.pop()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;5、弹出列表中懂得任意一个位置的元素：&lt;code&gt;name1=name.pop(1)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;6、根据值删除元素：&lt;code&gt;name.remove(&amp;#39;a&amp;#39;)&lt;/code&gt;&lt;br&gt;   注：只删除第一个指定的值，若出现多次，需要使用循环&lt;/p&gt;
+&lt;p&gt;7、排序sort：&lt;br&gt;   &lt;code&gt;name.sort()&lt;/code&gt; 永久排序，按字母排序排列&lt;br&gt;   &lt;code&gt;name.sort(reverse=True)&lt;/code&gt; 永久排序，按字母反序排列&lt;br&gt;   &lt;code&gt;sorted(name)&lt;/code&gt;  临时排序&lt;br&gt;   &lt;code&gt;name.reverse()&lt;/code&gt;  按列表反序排列&lt;/p&gt;
+&lt;p&gt;8、列表的长度：&lt;code&gt;len(name)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;9、索引-1总是指向最后一个元素：&lt;code&gt;name[-1]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;操作列表&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、遍历：&lt;code&gt;for i in name&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;2、创建数值列表：&lt;code&gt;for i in range(1,11)&lt;/code&gt;&lt;br&gt;  注：输出1~10的数&lt;br&gt;  输出的偶数：&lt;code&gt;for i in range(2,11,2)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;3、统计计算&lt;br&gt;  最小值：&lt;code&gt;min(name)&lt;/code&gt;&lt;br&gt;  最大值：&lt;code&gt;max(name)&lt;/code&gt;&lt;br&gt;  求和：&lt;code&gt;sum(name)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;4、切片⭐&lt;br&gt;  &lt;code&gt;name[0:3]&lt;/code&gt; 返回索引0,1,2的元素&lt;br&gt;  &lt;code&gt;name[2:]&lt;/code&gt; 从索引2到结尾&lt;br&gt;  &lt;code&gt;name[:4]&lt;/code&gt; 从开头到索引3&lt;br&gt;  &lt;code&gt;name[0:10:2]&lt;/code&gt; 每隔2个元素提取一个元素&lt;/p&gt;
+&lt;p&gt;5、复制列表&lt;br&gt;   把副本赋值为变量：&lt;code&gt;name1=name[:]&lt;/code&gt;&lt;br&gt;   两个变量同时指向一个列表：&lt;code&gt;name1=name&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;4-元组&#34;&gt;&lt;a href=&#34;#4-元组&#34; class=&#34;headerlink&#34; title=&#34;4. 元组&#34;&gt;&lt;/a&gt;4. 元组&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;br&gt;元组也是一种序列。元组使用括弧“0”来界定，元组中各元素之间用逗号隔开。元组不支持修改或删除其所包含的元素。如果要修改，则可以使用list函数把它转化成列表。&lt;/p&gt;
+&lt;p&gt;1、创建元组&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用括弧“()”来创建，例如，&lt;code&gt;a=(1，2，3)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;使用逗号来创建，例如 &lt;code&gt;b=2,4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;使用 tuple0函数把其他种类的序列转化为元组，例如 &lt;code&gt;c= tuple(&amp;quot;Good!&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;5-语句&#34;&gt;&lt;a href=&#34;#5-语句&#34; class=&#34;headerlink&#34; title=&#34;5. 语句&#34;&gt;&lt;/a&gt;5. 语句&lt;/h4&gt;&lt;p&gt;1、语句&lt;br&gt;      for i in j:&lt;br&gt;          if i&amp;gt;j :&lt;br&gt;             print(i)&lt;br&gt;          else:&lt;br&gt;             print(j)&lt;/p&gt;
+&lt;p&gt;2、逻辑与and，逻辑或or&lt;/p&gt;
+&lt;p&gt;3、if-elif-else结构&lt;/p&gt;
+&lt;h4 id=&#34;6-字典&#34;&gt;&lt;a href=&#34;#6-字典&#34; class=&#34;headerlink&#34; title=&#34;6. 字典&#34;&gt;&lt;/a&gt;6. 字典&lt;/h4&gt;&lt;p&gt; &lt;code&gt;word=&amp;#123;&amp;#39;name&amp;#39;=&amp;#39;Ada&amp;#39;,&amp;#39;age&amp;#39;=18&amp;#125;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;1、值&lt;br&gt;  键对值：’name’为一个键，关联值为’Ada’&lt;br&gt;  修改值：&lt;code&gt;word[&amp;#39;name&amp;#39;]=&amp;#39;Bda&lt;/code&gt;&lt;br&gt;  删除值：&lt;code&gt;del word[&amp;#39;name&amp;#39;]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;2、get提示信息&lt;br&gt;  &lt;code&gt;word1=word.get(&amp;#39;num&amp;#39;,&amp;#39;no num value assigned&amp;#39;)&lt;/code&gt;&lt;br&gt;  &lt;code&gt;print(word1)&lt;/code&gt;&lt;br&gt;   若有num键则输出关联值，无num键则输出提示信息，不使用get方法，当无num键时，程序会报错&lt;/p&gt;
+&lt;p&gt;3、遍历&lt;br&gt;    for key,value in word.items():&lt;br&gt;            print(f”{key}:{value})&lt;/p&gt;
+&lt;p&gt;  遍历键：&lt;code&gt;for i in word.keys()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;  遍历值：&lt;code&gt;for i in word.values()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;4、set提取元素&lt;br&gt;  当有重复元素时，set用于提取独一无二的元素&lt;br&gt;  &lt;code&gt;for i in set(word.values())&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;7-函数&#34;&gt;&lt;a href=&#34;#7-函数&#34; class=&#34;headerlink&#34; title=&#34;7. 函数&#34;&gt;&lt;/a&gt;7. 函数&lt;/h4&gt;&lt;p&gt;1、 函数定义&lt;br&gt;   &lt;code&gt;def 函数名(形参1,形参2,...)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;2、主函数&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  if _name_==&amp;#39;__main__&amp;#39;:
+      ....
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;3、*元组名&lt;br&gt;  将实参封装在一个元组中&lt;br&gt;  （这个还不太懂，以后遇到再仔细学习）🤣&lt;/p&gt;
+&lt;h4 id=&#34;8-类&#34;&gt;&lt;a href=&#34;#8-类&#34; class=&#34;headerlink&#34; title=&#34;8. 类&#34;&gt;&lt;/a&gt;8. 类&lt;/h4&gt;&lt;p&gt;1、定义&lt;br&gt;  &lt;code&gt;class 类名:&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;2、初始化&lt;br&gt;  &lt;code&gt;def__init__(参数):&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;3、类内函数&lt;br&gt;    def func(self,m):  //self相当于一个类&lt;br&gt;        self.name=m&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;继承&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class A:
+   ....
+
+class B(A):
+      def__init__():
+         super()__init__()  //调用父类的方法
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;实例作为属性：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class A:
+   ....
+ 
+class C:
+   ....
+
+class B(A):
+      def __init__(self):
+          self.c=C()
+//调用
+B.c.name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;导入模块中的类&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;from module_name import *&lt;/code&gt; 导入模块中的所有类&lt;br&gt;别名：&lt;code&gt;from box import Box as B&lt;/code&gt; &lt;/p&gt;
+&lt;h4 id=&#34;9-文件&#34;&gt;&lt;a href=&#34;#9-文件&#34; class=&#34;headerlink&#34; title=&#34;9. 文件&#34;&gt;&lt;/a&gt;9. 文件&lt;/h4&gt;&lt;p&gt;1、读取文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;with open(&amp;#39;file.txt&amp;#39;) as file_object:
+     contents=file_object.read()
+print(contents)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、写入文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;with open(&amp;#39;file.txt&amp;#39;，&amp;#39;w&amp;#39;) as file_object:
+     file_object.write(&amp;quot; &amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;3、给文件增加内容（不是覆盖）&lt;br&gt;  以附加模式打开文件，’a’&lt;/p&gt;
+&lt;p&gt;4、存储文件（使用json格式文件）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;json.dump(要存储的数据,存储数据的文件对象)&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import json
+a=[1,2,3] 
+filename=&amp;#39;data.json&amp;#39;
+with open(filename,&amp;#39;w&amp;#39;) as f:
+# 将数字列表存储到data.json文件中
+     json.dump(a,f)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;使用json.load()将列表读取到内存中：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;filename=&amp;#39;data.json&amp;#39;
+with open(filename) as f:
+     numbers=json.load(f)
+print(numbers)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;10-测试&#34;&gt;&lt;a href=&#34;#10-测试&#34; class=&#34;headerlink&#34; title=&#34;10. 测试&#34;&gt;&lt;/a&gt;10. 测试&lt;/h4&gt;&lt;p&gt;1、断言方法&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;assertEqual(a,b)&lt;/td&gt;
+&lt;td&gt;a==b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;assertNotEqual(a,b)&lt;/td&gt;
+&lt;td&gt;a!=b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;assertTrue(x)&lt;/td&gt;
+&lt;td&gt;x为True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;asserFalse(x)&lt;/td&gt;
+&lt;td&gt;x为False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;assertIn(item,list)&lt;/td&gt;
+&lt;td&gt;item在list中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;assertNotIn*item,list)&lt;/td&gt;
+&lt;td&gt;item不在list中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+
+&lt;p&gt;&lt;a href=&#34;#head&#34;&gt;↑↑(´▽&lt;code&gt;ƪʃ♡)点击返回开头(´▽&lt;/code&gt;ƪʃ♡)↑↑&lt;/a&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://zztqsh.github.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</guid>
+            <title>Qss修饰Qt</title>
+            <link>https://zztqsh.github.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</link>
+            <category>学习笔记</category>
+            <category>Qss</category>
+            <category>pyqt</category>
+            <pubDate>Sat, 19 Jun 2021 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;一、Qss实时编译器&#34;&gt;&lt;a href=&#34;#一、Qss实时编译器&#34; class=&#34;headerlink&#34; title=&#34;一、Qss实时编译器&#34;&gt;&lt;/a&gt;一、Qss实时编译器&lt;/h2&gt;&lt;div class=&#34;note link green&#34;&gt;&lt;p&gt;QSS Editor是用于编辑和实时预览Qt样式表的工具，下载地址为如下:&lt;/p&gt;&lt;/div&gt;
+
+&lt;center&gt;&lt;div class=&#34;tag link&#34;&gt;&lt;a class=&#34;link-card&#34; title=&#34;QSS Editor下载&#34; href=&#34;https://sourceforge.net/projects/qsseditor&#34;&gt;&lt;div class=&#34;left&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&lt;p class=&#34;text&#34;&gt;QSS Editor下载&lt;/p&gt;&lt;p class=&#34;url&#34;&gt;https://sourceforge.net/projects/qsseditor&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;/center&gt;
+
+&lt;h2 id=&#34;二、在python中使用Qss修饰QT&#34;&gt;&lt;a href=&#34;#二、在python中使用Qss修饰QT&#34; class=&#34;headerlink&#34; title=&#34;二、在python中使用Qss修饰QT&#34;&gt;&lt;/a&gt;二、在python中使用Qss修饰QT&lt;/h2&gt;&lt;h3 id=&#34;2-1-读取Qss文件：&#34;&gt;&lt;a href=&#34;#2-1-读取Qss文件：&#34; class=&#34;headerlink&#34; title=&#34;2.1 读取Qss文件：&#34;&gt;&lt;/a&gt;2.1 读取Qss文件：&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;# 读取Qss文件
+class ReadQss:
+   def __init__(self):
+   pass
+
+@staticmethod
+def readQss(style):
+    with open(style, &amp;#39;r&amp;#39;) as f:
+    return f.read()
+
+styleFile = &amp;#39;D:\\program\\Programming\\Python\\KeChengSheJi\\pyqt5\\text\\test_stye.qss&amp;#39;
+qssStyle = ReadQss.readQss(styleFile)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;2-2-创建按钮，并设置属性名（-py文件）：&#34;&gt;&lt;a href=&#34;#2-2-创建按钮，并设置属性名（-py文件）：&#34; class=&#34;headerlink&#34; title=&#34;2.2 创建按钮，并设置属性名（.py文件）：&#34;&gt;&lt;/a&gt;2.2 创建按钮，并设置属性名（.py文件）：&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;mainwindow=QMainWindow()
+widget = QtWidgets.QWidget(mainwindow)
+fileselect = QtWidgets.QPushButton(self.widget2)
+#给按钮设置一个属性名称
+fileselect.setObjectName(&amp;quot;fileselect&amp;quot;)
+#给按钮装饰样式
+fileselect.setStyleSheet(qssStyle)
+fileselect.setFixedSize(150, 40)
+fileselect.setText(&amp;quot;点击打开文件夹&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;2-3-qss文件：&#34;&gt;&lt;a href=&#34;#2-3-qss文件：&#34; class=&#34;headerlink&#34; title=&#34;2.3 .qss文件：&#34;&gt;&lt;/a&gt;2.3 .qss文件：&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;#fileselect&amp;#123;
+ background-color: rgba(196,255,255,150);
+ border-style: outset;
+ border-width: 4px;
+ border-radius: 10px;
+ border-color: rgba(255, 225, 255, 150);
+ font:  17px &amp;quot;Microsoft YaHei&amp;quot;;
+ color:rgba(13,175,233,255);
+&amp;#125;
+#fileselect:hover&amp;#123;
+background-color:rgba(196,255,255, 255);
+border-color: rgba(255, 225, 255, 200);
+color:rgba(13,175,233,255);
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;三、Qss的基本属性&#34;&gt;&lt;a href=&#34;#三、Qss的基本属性&#34; class=&#34;headerlink&#34; title=&#34;三、Qss的基本属性&#34;&gt;&lt;/a&gt;三、Qss的基本属性&lt;/h2&gt;&lt;h3 id=&#34;3-1-背景属性（Background）&#34;&gt;&lt;a href=&#34;#3-1-背景属性（Background）&#34; class=&#34;headerlink&#34; title=&#34;3.1 背景属性（Background）&#34;&gt;&lt;/a&gt;3.1 背景属性（Background）&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;属性&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;background&lt;/td&gt;
+&lt;td&gt;在一个声明中设置所有的背景属性。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-attachment&lt;/td&gt;
+&lt;td&gt;设置背景图像是否固定或者随着页面的其余部分滚动。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-color&lt;/td&gt;
+&lt;td&gt;设置元素的背景颜色。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-image&lt;/td&gt;
+&lt;td&gt;设置元素的背景图像。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-position&lt;/td&gt;
+&lt;td&gt;设置背景图像的开始位置。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-repeat&lt;/td&gt;
+&lt;td&gt;设置是否及如何重复背景图像。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-clip&lt;/td&gt;
+&lt;td&gt;规定背景的绘制区域。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-origin&lt;/td&gt;
+&lt;td&gt;规定背景图片的定位区域。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-size&lt;/td&gt;
+&lt;td&gt;规定背景图片的尺寸。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;###3.2 控制大小&lt;/p&gt;
+&lt;p&gt;min-width和min-height两个属性可以用来指定一个部件的内容区域的最小大小，这两个值将影响部件的minimumSizeHint()&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;QPushButton &amp;#123;
+  min-width: 68px;
+  min-height: 28px;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果该属性没有被指定，最小大小将从部件的内容区域和当前样式中继承&lt;/p&gt;
+&lt;h3 id=&#34;3-3-处理伪类状态&#34;&gt;&lt;a href=&#34;#3-3-处理伪类状态&#34; class=&#34;headerlink&#34; title=&#34;3.3 处理伪类状态&#34;&gt;&lt;/a&gt;3.3 处理伪类状态&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;QPushButton &amp;#123;
+  border: 2px outset green;
+  background: gray;
+&amp;#125;
+QPushButton:pressed &amp;#123;
+  border-style: inset;
+&amp;#125; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;伪状态列表&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;伪状态&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;checked&lt;/td&gt;
+&lt;td&gt;button部件被选中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;disabled&lt;/td&gt;
+&lt;td&gt;部件被禁用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;enabled&lt;/td&gt;
+&lt;td&gt;部件被启用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;focus&lt;/td&gt;
+&lt;td&gt;部件获得焦点&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hover&lt;/td&gt;
+&lt;td&gt;鼠标位于部件上&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;indeterminate&lt;/td&gt;
+&lt;td&gt;checkbox或radiobutton被部分选中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;off&lt;/td&gt;
+&lt;td&gt;部件可以切换，且处于off状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;on&lt;/td&gt;
+&lt;td&gt;部件可以切换，且处于on状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pressed&lt;/td&gt;
+&lt;td&gt;部件被鼠标按下&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;unchecked&lt;/td&gt;
+&lt;td&gt;button部件未被选中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;组合框样式举例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#comboBox QAbstractItemView &amp;#123;
+outline: 1px solid rgb(217,243,255);
+color: rgb(0,140,81);
+background:url(KeChengSheJi/pyqt5/qss/img_1.png);
+selection-background-color: lightgreen;
+selection-color: white;
+&amp;#125;
+#comboBox:hover&amp;#123;
+background:rgba(196,255,255,0);
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://zztqsh.github.io/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+            <title>pyqt使用方法</title>
+            <link>https://zztqsh.github.io/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+            <category>pyqt</category>
+            <category>学习分享</category>
+            <category>python</category>
+            <pubDate>Fri, 18 Jun 2021 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;center&gt;&lt;div class=&#34;tag link&#34;&gt;&lt;a class=&#34;link-card&#34; title=&#34;QT 官方文档&#34; href=&#34;https://doc.qt.io/&#34;&gt;&lt;div class=&#34;left&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&lt;p class=&#34;text&#34;&gt;QT 官方文档&lt;/p&gt;&lt;p class=&#34;url&#34;&gt;https://doc.qt.io/&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;/center&gt;   
+
+&lt;h2 id=&#34;一、基本功能&#34;&gt;&lt;a href=&#34;#一、基本功能&#34; class=&#34;headerlink&#34; title=&#34;一、基本功能&#34;&gt;&lt;/a&gt;一、基本功能&lt;/h2&gt;&lt;h3 id=&#34;1-1、建立简单的窗口&#34;&gt;&lt;a href=&#34;#1-1、建立简单的窗口&#34; class=&#34;headerlink&#34; title=&#34;1.1、建立简单的窗口&#34;&gt;&lt;/a&gt;1.1、建立简单的窗口&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;import sys
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QApplication, QWidget
+if __name__ == &amp;#39;__main__&amp;#39;:
+app = QApplication(sys.argv)
+w = QWidget()
+w.resize(250, 150)
+w.move(300, 300)
+w.setWindowTitle(&amp;#39;Simple&amp;#39;)
+w.setGeometry(300, 300, 300, 220)
+w.setWindowIcon(QIcon(&amp;#39;pyqt使用方法/pic/提示.png&amp;#39;))
+w.show()
+sys.exit(app.exec_())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/.io//1.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;/.io//1.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;示例窗口&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;app = QApplication(sys.argv)&lt;/code&gt;:&lt;br&gt;每个PyQt5应用都必须创建一个应用对象。sys.argv是一组命令行参数的列表。Python可以在shell里运行，这个参数提供对脚本控制的功能。&lt;br&gt;&lt;code&gt;w = QWidget()&lt;/code&gt;:&lt;br&gt;QWidge控件是一个用户界面的基本控件，它提供了基本的应用构造器。默认情况下，构造器是没有父级的，没有父级的构造器被称为窗口（window）&lt;br&gt;&lt;code&gt;w.resize(250, 150)&lt;/code&gt;:&lt;br&gt;resize()方法能改变控件的大小，这里的意思是窗口宽250px，高150px&lt;br&gt;&lt;code&gt;w.move(300, 300)&lt;/code&gt;:&lt;br&gt;move()是修改控件位置的的方法。它把控件放置到屏幕坐标的(300, 300)的位置。注：屏幕坐标系的原点是屏幕的左上角&lt;br&gt;&lt;code&gt;w.setGeometry(300, 300, 300, 220)&lt;/code&gt;:&lt;br&gt;把窗口放到屏幕上并且设置窗口大小。参数分别代表屏幕坐标的x、y和窗口大小的宽、高（是resize和move的集合体）&lt;br&gt;&lt;code&gt;w.setWindowTitle(&amp;#39;Simple&amp;#39;)&lt;/code&gt;:&lt;br&gt;给窗口添加了一个标题，标题在标题栏展示&lt;br&gt;&lt;code&gt;w.show()&lt;/code&gt;:&lt;br&gt;show()能让控件在桌面上显示出来。控件在内存里创建，之后才能在显示器上显示出来&lt;br&gt;&lt;code&gt;sys.exit(app.exec_())&lt;/code&gt;:&lt;br&gt;当调用exit()方法或直接销毁主控件时，主循环就会结束。sys.exit()方法能确保主循环安全退出&lt;/p&gt;
+&lt;h3 id=&#34;1-2、控件&#34;&gt;&lt;a href=&#34;#1-2、控件&#34; class=&#34;headerlink&#34; title=&#34;1.2、控件&#34;&gt;&lt;/a&gt;1.2、控件&lt;/h3&gt;&lt;h4 id=&#34;1-2-1、按钮&#34;&gt;&lt;a href=&#34;#1-2-1、按钮&#34; class=&#34;headerlink&#34; title=&#34;1.2.1、按钮&#34;&gt;&lt;/a&gt;1.2.1、按钮&lt;/h4&gt;&lt;p&gt;创建按钮：第一个参数是按钮的文本，第二个参数是按钮的父级组件：&lt;br&gt;   &lt;code&gt;  qbtn = QPushButton(&amp;#39;按钮&amp;#39;, self)&lt;/code&gt;&lt;br&gt;按钮绑定事件：&lt;br&gt;    &lt;code&gt;qbtn.clicked.connect(function)&lt;/code&gt;&lt;br&gt;给按钮添加提示语：&lt;br&gt;&lt;code&gt;QToolTip.setFont(QFont(&amp;#39;SansSerif&amp;#39;, 10))&lt;/code&gt;&lt;br&gt;&lt;code&gt;qbtn.setToolTip(&amp;#39;This is a &amp;lt;b&amp;gt;QPushButton&amp;lt;/b&amp;gt; widget&amp;#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;tag link&#34;&gt;&lt;a class=&#34;link-card&#34; title=&#34;QPushButton 按钮控件&#34; href=&#34;https://blog.csdn.net/qq_17351161/article/details/102907200?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162403539316780255224798%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&amp;request_id=162403539316780255224798&amp;biz_id=0&amp;spm=1018.2226.3001.4450&#34;&gt;&lt;div class=&#34;left&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&lt;p class=&#34;text&#34;&gt;QPushButton 按钮控件&lt;/p&gt;&lt;p class=&#34;url&#34;&gt;https://blog.csdn.net/qq_17351161/article/details/102907200?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162403539316780255224798%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&amp;request_id=162403539316780255224798&amp;biz_id=0&amp;spm=1018.2226.3001.4450&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;1-2-2、图像控件-QPixmap&#34;&gt;&lt;a href=&#34;#1-2-2、图像控件-QPixmap&#34; class=&#34;headerlink&#34; title=&#34;1.2.2、图像控件 QPixmap&#34;&gt;&lt;/a&gt;1.2.2、图像控件 QPixmap&lt;/h4&gt;&lt;p&gt;创建一个QPixmap 对象，它将传入的文件名作为参数:&lt;br&gt;&lt;code&gt;pixmap = QPixmap(&amp;quot;icon.png&amp;quot;)&lt;/code&gt;&lt;br&gt;将pixmap放到QLabel控件中:&lt;br&gt;&lt;code&gt;lbl = QLabel(self)&lt;/code&gt;&lt;br&gt;&lt;code&gt;lbl.setPixmap(pixmap)&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;1-2-3、文本框-QLineEdit&#34;&gt;&lt;a href=&#34;#1-2-3、文本框-QLineEdit&#34; class=&#34;headerlink&#34; title=&#34;1.2.3、文本框 QLineEdit&#34;&gt;&lt;/a&gt;1.2.3、文本框 QLineEdit&lt;/h4&gt;&lt;p&gt;创建一个QLineEdit对象：&lt;br&gt;&lt;code&gt;qle = QLineEdit(self)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文本的设置与获取&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;API&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;setText()&lt;/td&gt;
+&lt;td&gt;插入文本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;text()&lt;/td&gt;
+&lt;td&gt;获取文本内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;displayText()&lt;/td&gt;
+&lt;td&gt;获取文本显示的内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;显示模式&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;API&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;setEchoMode(QLineEdit_EchoMode)&lt;/td&gt;
+&lt;td&gt;设置显示模式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;echoMode()&lt;/td&gt;
+&lt;td&gt;获取文本框输入模式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;QLineEdit_EchoMode&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;Normal&lt;/td&gt;
+&lt;td&gt;普通模式，显示输入的值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NoEcho&lt;/td&gt;
+&lt;td&gt;不输出&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Password&lt;/td&gt;
+&lt;td&gt;密文显示，显示都是星号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PasswordEchoOnEdit&lt;/td&gt;
+&lt;td&gt;输入时候显示，结束后密文&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;输入限制&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;相关API&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;setMaxLength(int)&lt;/td&gt;
+&lt;td&gt;这是最大长度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;maxLength()&lt;/td&gt;
+&lt;td&gt;获取最长度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;setReadOnly(bool)&lt;/td&gt;
+&lt;td&gt;设置只读&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;isReadOnly()&lt;/td&gt;
+&lt;td&gt;获取是否只读&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;setValidator(QValidator)&lt;/td&gt;
+&lt;td&gt;设置验证器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;setInputMask(mask_str)&lt;/td&gt;
+&lt;td&gt;掩码验证&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hasAcceptableInput()&lt;/td&gt;
+&lt;td&gt;文本是否通过验证&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;文本框的编辑状态&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;相关API&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;isModified(bool)&lt;/td&gt;
+&lt;td&gt;是否被编辑&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;setModified()&lt;/td&gt;
+&lt;td&gt;设置编辑状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;div class=&#34;tag link&#34;&gt;&lt;a class=&#34;link-card&#34; title=&#34;QLineEdit 单行文本输入&#34; href=&#34;https://blog.csdn.net/qq_17351161/article/details/102954815&#34;&gt;&lt;div class=&#34;left&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&lt;p class=&#34;text&#34;&gt;QLineEdit 单行文本输入&lt;/p&gt;&lt;p class=&#34;url&#34;&gt;https://blog.csdn.net/qq_17351161/article/details/102954815&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;二、布局管理&#34;&gt;&lt;a href=&#34;#二、布局管理&#34; class=&#34;headerlink&#34; title=&#34;二、布局管理&#34;&gt;&lt;/a&gt;二、布局管理&lt;/h2&gt;&lt;h3 id=&#34;2-1、水平布局&#34;&gt;&lt;a href=&#34;#2-1、水平布局&#34; class=&#34;headerlink&#34; title=&#34;2.1、水平布局&#34;&gt;&lt;/a&gt;2.1、水平布局&lt;/h3&gt;&lt;h4 id=&#34;水平对齐&#34;&gt;&lt;a href=&#34;#水平对齐&#34; class=&#34;headerlink&#34; title=&#34;水平对齐&#34;&gt;&lt;/a&gt;水平对齐&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;layout = QHBoxLayout()
+layout.addWidget(QPushButton(str(1))
+layout.addWidget(QPushButton(str(2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;水平居中对齐&#34;&gt;&lt;a href=&#34;#水平居中对齐&#34; class=&#34;headerlink&#34; title=&#34;水平居中对齐&#34;&gt;&lt;/a&gt;水平居中对齐&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;layout = QHBoxLayout()
+layout.addStretch(1) # 前面增加一行
+layout.addWidget(QPushButton(str(1))
+layout.addWidget(QPushButton(str(2))
+layout.addStretch(1) #后面增加一行
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;水平两端对齐&#34;&gt;&lt;a href=&#34;#水平两端对齐&#34; class=&#34;headerlink&#34; title=&#34;水平两端对齐&#34;&gt;&lt;/a&gt;水平两端对齐&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;layout = QHBoxLayout()
+layout.addWidget(QPushButton(str(1))
+layout.addStretch(1)  # 添加行
+layout.addWidget(QPushButton(str(2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;布局对齐方式&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;QtCore.Qt.AlignLeft&lt;/td&gt;
+&lt;td&gt;水平方向居左对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QtCore.Qt.AlignRight&lt;/td&gt;
+&lt;td&gt;水平方向居右对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QtCore.Qt.AlignCenter&lt;/td&gt;
+&lt;td&gt;水平方向居中对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QtCore.Qt.AlignJustify&lt;/td&gt;
+&lt;td&gt;水平方向两端对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QtCore.Qt.AlignTop&lt;/td&gt;
+&lt;td&gt;垂直方向靠上对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QtCore.Qt.AlignBottom&lt;/td&gt;
+&lt;td&gt;垂直方向靠下对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QtCore.Qt.AlignVCenter&lt;/td&gt;
+&lt;td&gt;垂直方向居中对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h3 id=&#34;2-2、垂直布局&#34;&gt;&lt;a href=&#34;#2-2、垂直布局&#34; class=&#34;headerlink&#34; title=&#34;2.2、垂直布局&#34;&gt;&lt;/a&gt;2.2、垂直布局&lt;/h3&gt;&lt;h4 id=&#34;垂直对齐&#34;&gt;&lt;a href=&#34;#垂直对齐&#34; class=&#34;headerlink&#34; title=&#34;垂直对齐&#34;&gt;&lt;/a&gt;垂直对齐&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;layout = QVBoxLayout()
+layout.addWidget(QPushButton(str(1))
+layout.addWidget(QPushButton(str(2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;垂直顶部对齐&#34;&gt;&lt;a href=&#34;#垂直顶部对齐&#34; class=&#34;headerlink&#34; title=&#34;垂直顶部对齐&#34;&gt;&lt;/a&gt;垂直顶部对齐&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;layout = QVBoxLayout()
+layout.addWidget(QPushButton(str(1))
+layout.addWidget(QPushButton(str(2))
+layout.addStretch(1)  # 添加行
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;垂直底部对齐&#34;&gt;&lt;a href=&#34;#垂直底部对齐&#34; class=&#34;headerlink&#34; title=&#34;垂直底部对齐&#34;&gt;&lt;/a&gt;垂直底部对齐&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;layout = QVBoxLayout()
+layout.addStretch(1)  # 添加行
+layout.addWidget(QPushButton(str(1))
+layout.addWidget(QPushButton(str(2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;垂直居中对齐&#34;&gt;&lt;a href=&#34;#垂直居中对齐&#34; class=&#34;headerlink&#34; title=&#34;垂直居中对齐&#34;&gt;&lt;/a&gt;垂直居中对齐&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;layout = QVBoxLayout()
+layout.addStretch(1)  # 添加行
+layout.addWidget(QPushButton(str(1))
+layout.addWidget(QPushButton(str(2))
+layout.addStretch(1)  # 添加行
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;垂直两端对齐&#34;&gt;&lt;a href=&#34;#垂直两端对齐&#34; class=&#34;headerlink&#34; title=&#34;垂直两端对齐&#34;&gt;&lt;/a&gt;垂直两端对齐&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;layout = QVBoxLayout()
+layout.addWidget(QPushButton(str(1))
+layout.addStretch(1)  # 添加行
+layout.addWidget(QPushButton(str(2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;增加两个控件的距离（两个按钮之间的距离）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;layout = QHBoxLayout()
+layout.addWidget(QPushButton(str(1))
+layout.addSpacing(100)
+layout.addWidget(QPushButton(str(2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;tag link&#34;&gt;&lt;a class=&#34;link-card&#34; title=&#34;QT 布局管理&#34; href=&#34;https://cloud.tencent.com/developer/article/1437295&#34;&gt;&lt;div class=&#34;left&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&lt;p class=&#34;text&#34;&gt;QT 布局管理&lt;/p&gt;&lt;p class=&#34;url&#34;&gt;https://cloud.tencent.com/developer/article/1437295&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;三、对话框&#34;&gt;&lt;a href=&#34;#三、对话框&#34; class=&#34;headerlink&#34; title=&#34;三、对话框&#34;&gt;&lt;/a&gt;三、对话框&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;常用方法&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方法&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;information(QWidget parent,title,text,buttons,defaultButton)&lt;/td&gt;
+&lt;td&gt;弹出消息对话框，参数解释：parent（指定的父窗口控件），title（对话框标题），text（对话框文本），buttons（多个标准按钮，默认设为OK按钮），defaultButton（默认选中的标准按钮，默认是第一个标准按钮）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;question(QWidget parent,title,text,buttons,defaultButton)&lt;/td&gt;
+&lt;td&gt;弹出问答对话框&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;warning(QWidget parent,title,text,buttons,defaultButton)&lt;/td&gt;
+&lt;td&gt;弹出警告对话框&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;critical(QWidget parent,title,text,buttons,defaultButton)&lt;/td&gt;
+&lt;td&gt;弹出严重错误对话框&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;about(QWidget parent,title,text)&lt;/td&gt;
+&lt;td&gt;弹出关于对话框&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;setTitle()&lt;/td&gt;
+&lt;td&gt;设置标题&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;setText()&lt;/td&gt;
+&lt;td&gt;设置消息正文&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;setIcon()&lt;/td&gt;
+&lt;td&gt;设置弹出对话框的图片&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;标准按钮类型&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;QMessage.OK&lt;/td&gt;
+&lt;td&gt;同意操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QMessage.Cancel&lt;/td&gt;
+&lt;td&gt;取消操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QMessage.Yes&lt;/td&gt;
+&lt;td&gt;同意操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QMessage.No&lt;/td&gt;
+&lt;td&gt;取消操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QMessage.Abort&lt;/td&gt;
+&lt;td&gt;终止操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QMessage.Retry&lt;/td&gt;
+&lt;td&gt;重试操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QMessage.Ignore&lt;/td&gt;
+&lt;td&gt;忽略操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;创建对话框：&lt;br&gt;&lt;code&gt;reply = QMessageBox.information(self,&amp;quot;消息对话框&amp;quot;,&amp;quot;消息对话框正文&amp;quot;,QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;例如：点击关闭窗口后提示”是否要退出程序”&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    # 关闭按钮
+    self.exitbutton = QtWidgets.QPushButton(self.widget3)
+    self.exitbutton.setFixedSize(90, 40)
+    self.exitbutton.setText(&amp;quot;关闭&amp;quot;)
+    self.exitbutton.setObjectName(&amp;quot;exitbutton&amp;quot;)
+    self.exitbutton.setStyleSheet(qssStyle)
+    self.exitbutton.clicked.connect(self.exit)
+
+def exit(self):
+    # 点击关闭按钮后提示是否要关闭窗口
+    self.closeWindow = QtWidgets.QMessageBox(mainwindow)
+    self.okbtn =QtWidgets.QPushButton(QObject.tr(self,&amp;quot;确定&amp;quot;))
+    self.okbtn.setObjectName(&amp;quot;okbtn&amp;quot;)
+    self.okbtn.setStyleSheet(qssStyle)
+    self.canclebtn = QtWidgets.QPushButton(QObject.tr(self, &amp;quot;取消&amp;quot;))
+    self.canclebtn.setObjectName(&amp;quot;canclebtn&amp;quot;)
+    self.canclebtn.setStyleSheet(qssStyle)
+    self.closeWindow.addButton(self.okbtn,QMessageBox.AcceptRole)
+    self.closeWindow.addButton(self.canclebtn, QMessageBox.RejectRole)
+    self.closeWindow.setWindowTitle(&amp;quot;提示&amp;quot;)
+    self.closeWindow.setText(&amp;quot;    确定退出程序？&amp;quot;)
+    self.closeWindow.setWindowIcon(QIcon(&amp;quot;KeChengSheJi/pyqt5/text/pic/提示.png&amp;quot;))
+    self.closeWindow.setIconPixmap(QPixmap(&amp;quot;KeChengSheJi/pyqt5/text/pic/提示 (1).png&amp;quot;).scaled(30, 30))
+    self.closeWindow.setObjectName(&amp;quot;closeWindow&amp;quot;)
+    self.closeWindow.setStyleSheet(qssStyle)
+    self.closeWindow.show()
+    # 点击确定按钮后关闭整个程序
+    self.okbtn.clicked.connect(mainwindow.close)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;tag link&#34;&gt;&lt;a class=&#34;link-card&#34; title=&#34;QMessageBox弹出式对话框&#34; href=&#34;https://blog.csdn.net/qq_44880255/article/details/106967619&#34;&gt;&lt;div class=&#34;left&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&lt;p class=&#34;text&#34;&gt;QMessageBox弹出式对话框&lt;/p&gt;&lt;p class=&#34;url&#34;&gt;https://blog.csdn.net/qq_44880255/article/details/106967619&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;3-1、文件选择对话框&#34;&gt;&lt;a href=&#34;#3-1、文件选择对话框&#34; class=&#34;headerlink&#34; title=&#34;3.1、文件选择对话框&#34;&gt;&lt;/a&gt;3.1、文件选择对话框&lt;/h3&gt;&lt;p&gt;例如：选择图片&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;fname = QFileDialog.getOpenFileName(self, &amp;quot;选择文件&amp;quot;, &amp;quot;/&amp;quot;, &amp;quot;Image Files(*.jpg;*.png)&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-2、消息对话框&#34;&gt;&lt;a href=&#34;#3-2、消息对话框&#34; class=&#34;headerlink&#34; title=&#34;3.2、消息对话框&#34;&gt;&lt;/a&gt;3.2、消息对话框&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;    btn = QPushButton()
+    btn.setText(&amp;#39;弹出消息对话框&amp;#39;)
+    btn.clicked.connect(show)
+    def show():
+         reply = QMessageBox.information(self,&amp;quot;消息对话框&amp;quot;,&amp;quot;消息对话框正文&amp;quot;,QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-3、消息提问框&#34;&gt;&lt;a href=&#34;#3-3、消息提问框&#34; class=&#34;headerlink&#34; title=&#34;3.3、消息提问框&#34;&gt;&lt;/a&gt;3.3、消息提问框&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;    btn = QPushButton()
+    btn.setText(&amp;#39;弹出消息对话框&amp;#39;)
+    btn.clicked.connect(show)
+    def show():
+         reply = QMessageBox.question(self,&amp;quot;消息提问框&amp;quot;,&amp;quot;消息提问框正文&amp;quot;,QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-4、警告对话框&#34;&gt;&lt;a href=&#34;#3-4、警告对话框&#34; class=&#34;headerlink&#34; title=&#34;3.4、警告对话框&#34;&gt;&lt;/a&gt;3.4、警告对话框&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;    btn = QPushButton()
+    btn.setText(&amp;#39;弹出警告对话框&amp;#39;)
+    btn.clicked.connect(show)
+    def show():
+         reply = QMessageBox.warning(self,&amp;quot;警告对话框&amp;quot;,&amp;quot;警告对话框正文&amp;quot;,QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-5、严重错误对话框&#34;&gt;&lt;a href=&#34;#3-5、严重错误对话框&#34; class=&#34;headerlink&#34; title=&#34;3.5、严重错误对话框&#34;&gt;&lt;/a&gt;3.5、严重错误对话框&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;    btn = QPushButton()
+    btn.setText(&amp;#39;弹出严重错误对话框&amp;#39;)
+    btn.clicked.connect(show)
+    def show():
+         reply = QMessageBox.critical(self,&amp;quot;严重错误对话框&amp;quot;,&amp;quot;严重错误对话框正文&amp;quot;,QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-6、关于对话框&#34;&gt;&lt;a href=&#34;#3-6、关于对话框&#34; class=&#34;headerlink&#34; title=&#34;3.6、关于对话框&#34;&gt;&lt;/a&gt;3.6、关于对话框&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;    btn = QPushButton()
+    btn.setText(&amp;#39;弹出关于对话框&amp;#39;)
+    btn.clicked.connect(show)
+    def show():
+         reply = QMessageBox.about(self,&amp;quot;关于对话框&amp;quot;,&amp;quot;关于对话框正文&amp;quot;,QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://zztqsh.github.io/2021/05/19/react%E7%AC%94%E8%AE%B0/</guid>
+            <title>react笔记</title>
+            <link>https://zztqsh.github.io/2021/05/19/react%E7%AC%94%E8%AE%B0/</link>
+            <category>学习笔记</category>
+            <category>react</category>
+            <pubDate>Wed, 19 May 2021 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;day01&#34;&gt;&lt;a href=&#34;#day01&#34; class=&#34;headerlink&#34; title=&#34;day01&#34;&gt;&lt;/a&gt;day01&lt;/h1&gt;&lt;h2 id=&#34;1-项目开发准备&#34;&gt;&lt;a href=&#34;#1-项目开发准备&#34; class=&#34;headerlink&#34; title=&#34;1. 项目开发准备&#34;&gt;&lt;/a&gt;1. 项目开发准备&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 描述项目
+2). 技术选型 
+3). API接口/接口文档/测试接口
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2-启动项目开发&#34;&gt;&lt;a href=&#34;#2-启动项目开发&#34; class=&#34;headerlink&#34; title=&#34;2. 启动项目开发&#34;&gt;&lt;/a&gt;2. 启动项目开发&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 使用react脚手架创建项目
+2). 开发环境运行: npm start
+3). 生产环境打包运行: npm run build   serve build
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;3-git管理项目&#34;&gt;&lt;a href=&#34;#3-git管理项目&#34; class=&#34;headerlink&#34; title=&#34;3. git管理项目&#34;&gt;&lt;/a&gt;3. git管理项目&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 创建远程仓库
+2). 创建本地仓库
+    a. 配置.gitignore
+    b. git init
+    c. git add .
+    d. git commit -m &amp;quot;init&amp;quot;
+3). 将本地仓库推送到远程仓库
+    git remote add origin url
+    git push origin master
+4). 在本地创建dev分支, 并推送到远程
+    git checkout -b dev
+    git push origin dev
+5). 如果本地有修改
+    git add .
+    git commit -m &amp;quot;xxx&amp;quot;
+    git push origin dev
+6). 新的同事: 克隆仓库
+    git clone url
+    git checkout -b dev origin/dev
+    git pull origin dev
+7). 如果远程修改
+    git pull origin dev
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;4-创建项目的基本结构&#34;&gt;&lt;a href=&#34;#4-创建项目的基本结构&#34; class=&#34;headerlink&#34; title=&#34;4. 创建项目的基本结构&#34;&gt;&lt;/a&gt;4. 创建项目的基本结构&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;api: ajax请求的模块
+components: 非路由组件
+pages: 路由组件
+App.js: 应用的根组件
+index.js: 入口js    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;5-引入antd&#34;&gt;&lt;a href=&#34;#5-引入antd&#34; class=&#34;headerlink&#34; title=&#34;5 引入antd&#34;&gt;&lt;/a&gt;5 引入antd&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;下载antd的包
+按需打包: 只打包import引入组件的js/css
+    下载工具包
+    config-overrides.js
+    package.json
+自定义主题
+    下载工具包
+    config-overrides.js
+使用antd的组件
+    根据antd的文档编写
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;6-引入路由&#34;&gt;&lt;a href=&#34;#6-引入路由&#34; class=&#34;headerlink&#34; title=&#34;6. 引入路由&#34;&gt;&lt;/a&gt;6. 引入路由&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;下载包: react-router-dom
+拆分应用路由:
+  Login: 登陆
+  Admin: 后台管理界面
+注册路由:
+  &amp;lt;BrowserRouter&amp;gt;
+  &amp;lt;Switch&amp;gt;
+  &amp;lt;Route path=&amp;#39;&amp;#39; component=&amp;#123;&amp;#125;/&amp;gt;
+  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;7-Login的静态组件&#34;&gt;&lt;a href=&#34;#7-Login的静态组件&#34; class=&#34;headerlink&#34; title=&#34;7. Login的静态组件&#34;&gt;&lt;/a&gt;7. Login的静态组件&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 自定义了一部分样式布局
+2). 使用antd的组件实现登陆表单界面
+  Form  / Form.Item
+  Input
+  Icon
+  Button
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;8-收集表单数据和表单的前台验证&#34;&gt;&lt;a href=&#34;#8-收集表单数据和表单的前台验证&#34; class=&#34;headerlink&#34; title=&#34;8. 收集表单数据和表单的前台验证&#34;&gt;&lt;/a&gt;8. 收集表单数据和表单的前台验证&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). form对象
+    如何让包含&amp;lt;Form&amp;gt;的组件得到form对象?  WrapLoginForm = Form.create()(LoginForm)
+    WrapLoginForm是LoginForm的父组件, 它给LoginForm传入form属性
+    用到了高阶函数和高阶组件的技术
+2). 操作表单数据
+    form.getFieldDecorator(&amp;#39;标识名称&amp;#39;, &amp;#123;initialValue: 初始值, rules: []&amp;#125;)(&amp;lt;Input/&amp;gt;)包装表单项组件标签
+    form.getFieldsValue(): 得到包含所有输入数据的对象
+    form.getFieldValue(id): 根据标识得到对应字段输入的数据 
+3). 前台表单验证
+    a. 声明式实时表单验证:
+        form.getFieldDecorator(&amp;#39;标识名称&amp;#39;, &amp;#123;rules: [&amp;#123;min: 4, message: &amp;#39;错误提示信息&amp;#39;&amp;#125;]&amp;#125;)(&amp;lt;Input/&amp;gt;)
+    b. 自定义表单验证
+        form.getFieldDecorator(&amp;#39;标识名称&amp;#39;, &amp;#123;rules: [&amp;#123;validator: this.validatePwd&amp;#125;]&amp;#125;)(&amp;lt;Input/&amp;gt;)
+        validatePwd = (rule, value, callback) =&amp;gt; &amp;#123;
+          if(有问题) callback(&amp;#39;错误提示信息&amp;#39;) else callack()
+        &amp;#125; 
+    c. 点击提示时统一验证
+        form.validateFields((error, values) =&amp;gt; &amp;#123;
+          if(!error) &amp;#123;通过了验证, 发送ajax请求&amp;#125;
+        &amp;#125;)
+        
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;9-高阶函数与高阶组件&#34;&gt;&lt;a href=&#34;#9-高阶函数与高阶组件&#34; class=&#34;headerlink&#34; title=&#34;9. 高阶函数与高阶组件&#34;&gt;&lt;/a&gt;9. 高阶函数与高阶组件&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1. 高阶函数
+    1). 一类特别的函数
+        a. 接受函数类型的参数
+        b. 返回值是函数
+    2). 常见
+        a. 定时器: setTimeout()/setInterval()
+        b. Promise: Promise(() =&amp;gt; &amp;#123;&amp;#125;) then(value =&amp;gt; &amp;#123;&amp;#125;, reason =&amp;gt; &amp;#123;&amp;#125;)
+        c. 数组遍历相关的方法: forEach()/filter()/map()/reduce()/find()/findIndex()
+        d. 函数对象的bind()
+        e. Form.create()() / getFieldDecorator()()
+    3). 高阶函数更新动态, 更加具有扩展性   
+2. 高阶组件
+    1). 本质就是一个函数
+    2). 接收一个组件(被包装组件), 返回一个新的组件(包装组件), 包装组件会向被包装组件传入特定属性
+    3). 作用: 扩展组件的功能
+    
+3. 高阶组件与高阶函数的关系
+    高阶组件是特别的高阶函数
+    接收一个组件函数, 返回是一个新的组件函数
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;day02&#34;&gt;&lt;a href=&#34;#day02&#34; class=&#34;headerlink&#34; title=&#34;day02&#34;&gt;&lt;/a&gt;day02&lt;/h1&gt;&lt;h2 id=&#34;1-后台应用&#34;&gt;&lt;a href=&#34;#1-后台应用&#34; class=&#34;headerlink&#34; title=&#34;1. 后台应用&#34;&gt;&lt;/a&gt;1. 后台应用&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;启动后台应用: mongodb服务必须启动
+使用postman测试接口(根据接口文档):
+    访问测试: post请求的参数在body中设置
+    保存测试接口
+    导出/导入所有测试接口
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2-编写ajax代码&#34;&gt;&lt;a href=&#34;#2-编写ajax代码&#34; class=&#34;headerlink&#34; title=&#34;2. 编写ajax代码&#34;&gt;&lt;/a&gt;2. 编写ajax代码&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). ajax请求函数模块: api/ajax.js
+    封装axios + Promise
+    函数的返回值是promise对象  ===&amp;gt; 后面用上async/await
+    自己创建Promise
+      1. 内部统一处理请求异常: 外部的调用都不用使用try..catch来处理请求异常
+      2. 异步返回是响应数据(而不是响应对象): 外部的调用异步得到的就直接是数据了(response --&amp;gt; response.data)
+2). 接口请求函数模块: api/index.js
+    根据接口文档编写(一定要具备这个能力)
+    接口请求函数: 使用ajax(), 返回值promise对象
+3). 解决ajax跨域请求问题(开发时)
+    办法: 配置代理  ==&amp;gt; 只能解决开发环境
+    编码: package.json: proxy: &amp;quot;http://localhost:5000&amp;quot;
+4). 对代理的理解
+    1). 是什么?
+        具有特定功能的程序
+    2). 运行在哪?
+        前台应用端
+        只能在开发时使用
+    3). 作用?
+        解决开发时的ajax请求跨域问题
+        a. 监视并拦截请求(3000)
+        b. 转发请求(4000)
+    4). 配置代理
+        告诉代理服务器一些信息: 比如转发的目标地址
+        开发环境: 前端工程师
+        生产环境: 后端工程师
+5). async和await
+    a. 作用?
+       简化promise对象的使用: 不用再使用then()来指定成功/失败的回调函数
+       以同步编码(没有回调函数了)方式实现异步流程
+    b. 哪里写await?
+        在返回promise的表达式左侧写await: 不想要promise, 想要promise异步执行的成功的value数据
+    c. 哪里写async?
+        await所在函数(最近的)定义的左侧写async
+        
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;3-实现登陆-包含自动登陆&#34;&gt;&lt;a href=&#34;#3-实现登陆-包含自动登陆&#34; class=&#34;headerlink&#34; title=&#34;3. 实现登陆(包含自动登陆)&#34;&gt;&lt;/a&gt;3. 实现登陆(包含自动登陆)&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;login.jsx
+    1). 调用登陆的接口请求
+    2). 如果失败, 显示错误提示信息
+    3). 如果成功了:
+        保存user到local/内存中
+        跳转到admin
+    4). 如果内存中的user有值, 自动跳转到admin
+src/index.js
+    读取local中user到内存中保存
+admin.jsx
+    判断如果内存中没有user(_id没有值), 自动跳转到login
+storageUtils.js
+    包含使用localStorage来保存user相关操作的工具模块
+    使用第三库store
+        简化编码
+        兼容不同的浏览器
+memoryUtils.js
+    用来在内存中保存数据(user)的工具类
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;4-搭建admin的整体界面结构&#34;&gt;&lt;a href=&#34;#4-搭建admin的整体界面结构&#34; class=&#34;headerlink&#34; title=&#34;4. 搭建admin的整体界面结构&#34;&gt;&lt;/a&gt;4. 搭建admin的整体界面结构&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 整体布局使用antd的Layout组件
+2). 拆分组件
+    LeftNav: 左侧导航
+    Header: 右侧头部
+3). 子路由
+    定义路由组件
+    注册路由
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;5-LeftNav组件&#34;&gt;&lt;a href=&#34;#5-LeftNav组件&#34; class=&#34;headerlink&#34; title=&#34;5. LeftNav组件&#34;&gt;&lt;/a&gt;5. LeftNav组件&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 使用antd的组件
+    Menu / Item / SubMenu
+
+2). 使用react-router
+    withRouter(): 包装非路由组件, 给其传入history/location/match属性
+    history: push()/replace()/goBack()
+    location: pathname属性
+    match: params属性  
+3). componentWillMount与componentDidMount的比较
+    componentWillMount: 在第一次render()前调用一次, 为第一次render()准备数据(同步)
+    componentDidMount: 在第一次render()之后调用一次, 启动异步任务, 后面异步更新状态重新render
+4). 根据动态生成Item和SubMenu的数组
+    map() + 递归: 多级菜单列表
+    reduce() + 递归: 多级菜单列表   
+5). 2个问题?
+    刷新时如何选中对应的菜单项?
+        selectedKey是当前请求的path
+    刷新子菜单路径时, 自动打开子菜单列表?
+        openKey是 一级列表项的某个子菜单项是当前对应的菜单项
+        
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;day03&#34;&gt;&lt;a href=&#34;#day03&#34; class=&#34;headerlink&#34; title=&#34;day03&#34;&gt;&lt;/a&gt;day03&lt;/h1&gt;&lt;h2 id=&#34;1-Header组件&#34;&gt;&lt;a href=&#34;#1-Header组件&#34; class=&#34;headerlink&#34; title=&#34;1. Header组件&#34;&gt;&lt;/a&gt;1. Header组件&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 界面静态布局
+    三角形效果
+2). 获取登陆用户的名称显示
+    MemoryUtils
+3). 当前时间
+    循环定时器, 每隔1s更新当前时间状态
+    格式化指定时间: dateUtils
+4). 天气预报
+    使用jsonp库发jsonp请求百度天气预报接口
+    对jsonp请求的理解
+5). 当前导航项的标题
+    得到当前请求的路由path: withRouter()包装非路由组件
+    根据path在menuList中遍历查找对应的item的title
+6). 退出登陆
+    Modal组件显示提示
+    清除保存的user
+    跳转到login
+7). 抽取通用的类链接按钮组件
+    通过...透传所有接收的属性: &amp;lt;Button &amp;#123;...props&amp;#125; /&amp;gt;    &amp;lt;LinkButton&amp;gt;xxxx&amp;lt;/LinkButton&amp;gt;
+    组件标签的所有子节点都会成为组件的children属性
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2-jsonp解决ajax跨域的原理&#34;&gt;&lt;a href=&#34;#2-jsonp解决ajax跨域的原理&#34; class=&#34;headerlink&#34; title=&#34;2. jsonp解决ajax跨域的原理&#34;&gt;&lt;/a&gt;2. jsonp解决ajax跨域的原理&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). jsonp只能解决GET类型的ajax请求跨域问题
+2). jsonp请求不是ajax请求, 而是一般的get请求
+3). 基本原理
+    浏览器端:
+        动态生成&amp;lt;script&amp;gt;来请求后台接口(src就是接口的url)
+        定义好用于接收响应数据的函数(fn), 并将函数名通过请求参数提交给后台(如: callback=fn)
+    服务器端:
+        接收到请求处理产生结果数据后, 返回一个函数调用的js代码, 并将结果数据作为实参传入函数调用
+    浏览器端:
+        收到响应自动执行函数调用的js代码, 也就执行了提前定义好的回调函数, 并得到了需要的结果数据
+       
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;day04-Category组件&#34;&gt;&lt;a href=&#34;#day04-Category组件&#34; class=&#34;headerlink&#34; title=&#34;day04: Category组件&#34;&gt;&lt;/a&gt;day04: Category组件&lt;/h1&gt;&lt;h2 id=&#34;1-使用antd组件构建分类列表界面&#34;&gt;&lt;a href=&#34;#1-使用antd组件构建分类列表界面&#34; class=&#34;headerlink&#34; title=&#34;1. 使用antd组件构建分类列表界面&#34;&gt;&lt;/a&gt;1. 使用antd组件构建分类列表界面&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;Card
+Table
+Button
+Icon
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2-相关接口请求函数&#34;&gt;&lt;a href=&#34;#2-相关接口请求函数&#34; class=&#34;headerlink&#34; title=&#34;2. 相关接口请求函数&#34;&gt;&lt;/a&gt;2. 相关接口请求函数&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;获取一级/二级分类列表
+添加分类
+更新分类
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;3-异步显示一级分类列表&#34;&gt;&lt;a href=&#34;#3-异步显示一级分类列表&#34; class=&#34;headerlink&#34; title=&#34;3. 异步显示一级分类列表&#34;&gt;&lt;/a&gt;3. 异步显示一级分类列表&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;设计一级分类列表的状态: categorys
+异步获取一级分类列表: componentDidMount()&amp;#123;&amp;#125;
+更新状态, 显示
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;4-显示二级分类列表&#34;&gt;&lt;a href=&#34;#4-显示二级分类列表&#34; class=&#34;headerlink&#34; title=&#34;4. 显示二级分类列表&#34;&gt;&lt;/a&gt;4. 显示二级分类列表&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;设计状态: subCategorys / parentId / parentName
+显示二级分类列表: 根据parentId状态值, 异步获取分类列表
+setState()的问题
+    setState()更新状态是异步更新的, 直接读取状态值还是旧的状态值
+    setState(&amp;#123;&amp;#125;, [callback]), 回调函数是在状态更新且界面更新之后执行, 可以在此获取最新的状态
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;5-更新分类&#34;&gt;&lt;a href=&#34;#5-更新分类&#34; class=&#34;headerlink&#34; title=&#34;5. 更新分类&#34;&gt;&lt;/a&gt;5. 更新分类&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 界面
+    antd组件: Modal, Form, Input
+    显示/隐藏: showStatus状态为2/0
+    
+2). 功能
+    父组(Category)件得到子组件(AddForm)的数据(form)
+    调用更新分类的接口
+    重新获取分类列表
+    
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;day05&#34;&gt;&lt;a href=&#34;#day05&#34; class=&#34;headerlink&#34; title=&#34;day05&#34;&gt;&lt;/a&gt;day05&lt;/h1&gt;&lt;h2 id=&#34;1-添加分类&#34;&gt;&lt;a href=&#34;#1-添加分类&#34; class=&#34;headerlink&#34; title=&#34;1. 添加分类&#34;&gt;&lt;/a&gt;1. 添加分类&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 界面
+    antd组件: Modal, Form, Select, Input
+    显示/隐藏: showStatus状态为1/0
+    
+2). 功能
+    父组(Category)件得到子组件(AddForm)的数据(form)
+    调用添加分类的接口
+    重新获取分类列表
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2-Product整体路由&#34;&gt;&lt;a href=&#34;#2-Product整体路由&#34; class=&#34;headerlink&#34; title=&#34;2. Product整体路由&#34;&gt;&lt;/a&gt;2. Product整体路由&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 配置子路由: 
+    ProductHome / ProductDetail / ProductAddUpdate
+    &amp;lt;Route&amp;gt; / &amp;lt;Switch&amp;gt; / &amp;lt;Redirect&amp;gt;
+
+2). 匹配路由的逻辑:
+    默认: 逐层匹配   &amp;lt;Route path=&amp;#39;/product&amp;#39; component=&amp;#123;ProductHome&amp;#125;/&amp;gt;
+    exact属性: 完全匹配
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;3-分页实现技术-2种&#34;&gt;&lt;a href=&#34;#3-分页实现技术-2种&#34; class=&#34;headerlink&#34; title=&#34;3. 分页实现技术(2种)&#34;&gt;&lt;/a&gt;3. 分页实现技术(2种)&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 前台分页
+    请求获取数据: 一次获取所有数据, 翻页时不需要再发请求
+    请求接口: 
+        不需要指定请求参数: 页码(pageNum)和每页数量(pageSize)
+        响应数据: 所有数据的数组   
+2). 基于后台的分页
+    请求获取数据: 每次只获取当前页的数据, 翻页时要发请求
+    请求接口: 
+        需要指定请求参数: 页码(pageNum)和每页数量(pageSize)
+        响应数据: 当前页数据的数组 + 总记录数(total)   
+3). 如何选择?
+    基本根据数据多少来选择
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;4-ProductHome组件&#34;&gt;&lt;a href=&#34;#4-ProductHome组件&#34; class=&#34;headerlink&#34; title=&#34;4. ProductHome组件&#34;&gt;&lt;/a&gt;4. ProductHome组件&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 分页显示
+   界面: &amp;lt;Card&amp;gt; / &amp;lt;Table&amp;gt; / Select / Icon / Input / Button
+   状态: products / total
+   接口请求函数需要的数据: pageNum, pageSize
+   异步获取第一页数据显示
+       调用分页的接口请求函数, 获取到当前页的products和总记录数total
+       更新状态: products / total
+   翻页:
+       绑定翻页的监听, 监听回调需要得到pageNum
+       异步获取指定页码的数据显示  
+ 
+2). 搜索分页
+   接口请求函数需要的数据: 
+       pageSize: 每页的条目数
+       pageNum: 当前请求第几页 (从1开始)
+       productDesc / productName: searchName 根据商品描述/名称搜索
+   状态:  searchType / searchName  / 在用户操作时实时收集数据
+   异步搜索显示分页列表
+       如果searchName有值, 调用搜索的接口请求函数获取数据并更新状态
+       
+3). 更新商品的状态
+   初始显示: 根据product的status属性来显示  status = 1/2
+   点击切换:
+       绑定点击监听
+       异步请求更新状态  
+4). 进入详情界面
+   history.push(&amp;#39;/product/detail&amp;#39;, &amp;#123;product&amp;#125;)   
+5). 进入添加界面
+    history.push(&amp;#39;/product/addupdate&amp;#39;)
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;5-ProductDetail组件&#34;&gt;&lt;a href=&#34;#5-ProductDetail组件&#34; class=&#34;headerlink&#34; title=&#34;5. ProductDetail组件&#34;&gt;&lt;/a&gt;5. ProductDetail组件&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 读取商品数据: this.props.location.state.product
+2). 显示商品信息: &amp;lt;Card&amp;gt; / List 
+3). 异步显示商品所属分类的名称
+    pCategoryId==0 : 异步获取categoryId的分类名称
+    pCategoryId!=0: 异步获取 pCategoryId/categoryId的分类名称
+4). Promise.all([promise1, promise2])
+    返回值是promise
+    异步得到的是所有promsie的结果的数组
+    特点: 一次发多个请求, 只有当所有请求都成功, 才成功, 并得到成功的数据,一旦有一个失败, 整个都失败
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;day06&#34;&gt;&lt;a href=&#34;#day06&#34; class=&#34;headerlink&#34; title=&#34;day06&#34;&gt;&lt;/a&gt;day06&lt;/h1&gt;&lt;h2 id=&#34;1-ProductAddUpdate&#34;&gt;&lt;a href=&#34;#1-ProductAddUpdate&#34; class=&#34;headerlink&#34; title=&#34;1. ProductAddUpdate&#34;&gt;&lt;/a&gt;1. ProductAddUpdate&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 基本界面
+    Card / Form / Input / TextArea / Button
+    FormItem的label标题和layout
+    
+2). 分类的级联列表
+    Cascader的基本使用
+    异步获取一级分类列表, 生成一级分类options
+    如果当前是更新二级分类的商品, 异步获取对应的二级分类列表, 生成二级分类options, 并添加为对应option的children
+    async函数返回值是一个新promise对象, promise的结果和值由async函数的结果决定
+    当选择某个一级分类项时, 异步获取对应的二级分类列表, 生成二级分类options, 并添加为当前option的children 
+3). 表单数据收集与表单验证 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2-PicturesWall&#34;&gt;&lt;a href=&#34;#2-PicturesWall&#34; class=&#34;headerlink&#34; title=&#34;2. PicturesWall&#34;&gt;&lt;/a&gt;2. PicturesWall&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). antd组件
+    Upload / Modal / Icon
+    根据示例DEMO改造编写
+2). 上传图片
+    在&amp;lt;Upload&amp;gt;上配置接口的path和请求参数名
+    监视文件状态的改变: 上传中 / 上传完成/ 删除
+    在上传成功时, 保存好相关信息: name / url
+    为父组件提供获取已上传图片文件名数组的方法
+3). 删除图片
+    当文件状态变为删除时, 调用删除图片的接口删除上传到后台的图片
+4). 父组件调用子组件对象的方法: 使用ref技术
+    1. 创建ref容器: thi.pw = React.createRef()
+    2. 将ref容器交给需要获取的标签元素: &amp;lt;PicturesWall ref=&amp;#123;this.pw&amp;#125; /&amp;gt;  // 自动将将标签对象添加为pw对象的current属性
+    3. 通过ref容器读取标签元素: this.pw.current
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;day07&#34;&gt;&lt;a href=&#34;#day07&#34; class=&#34;headerlink&#34; title=&#34;day07&#34;&gt;&lt;/a&gt;day07&lt;/h1&gt;&lt;h2 id=&#34;1-RichTextEditor&#34;&gt;&lt;a href=&#34;#1-RichTextEditor&#34; class=&#34;headerlink&#34; title=&#34;1. RichTextEditor&#34;&gt;&lt;/a&gt;1. RichTextEditor&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 使用基于react的富文本编程器插件库: react-draft-wysiwyg
+2). 参考库的DEMO和API文档编写
+3). 如果还有不确定的, 百度搜索, 指定相对准确的关键字  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2-完成商品添加与修改功能&#34;&gt;&lt;a href=&#34;#2-完成商品添加与修改功能&#34; class=&#34;headerlink&#34; title=&#34;2. 完成商品添加与修改功能&#34;&gt;&lt;/a&gt;2. 完成商品添加与修改功能&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 收集输入数据
+    通过form收集: name/desc/price/pCategoryId/categoryId
+    通过ref收集: imgs/detail
+    如果是更新收集: _id
+    将收集数据封装成product对象
+2). 更新商品
+    定义添加和更新的接口请求函数
+    调用接口请求函数, 如果成功并返回商品列表界面
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;3-角色管理&#34;&gt;&lt;a href=&#34;#3-角色管理&#34; class=&#34;headerlink&#34; title=&#34;3. 角色管理&#34;&gt;&lt;/a&gt;3. 角色管理&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 角色前台分页显示
+2). 添加角色
+3). 给指定角色授权
+    界面: Tree
+    状态: checkedKeys, 根据传入的role的menus进行初始化
+    勾选某个Node时, 更新checkedKeys
+    点击OK时: 通过ref读取到子组件中的checkedKeys作为要更新product新的menus
+            发请求更新product
+    解决默认勾选不正常的bug: 利用组件的componentWillReceiveProps()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;day08&#34;&gt;&lt;a href=&#34;#day08&#34; class=&#34;headerlink&#34; title=&#34;day08&#34;&gt;&lt;/a&gt;day08&lt;/h1&gt;&lt;h2 id=&#34;1-setState-的使用&#34;&gt;&lt;a href=&#34;#1-setState-的使用&#34; class=&#34;headerlink&#34; title=&#34;1. setState()的使用&#34;&gt;&lt;/a&gt;1. setState()的使用&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). setState(updater, [callback]),
+    updater为返回stateChange对象的函数: (state, props) =&amp;gt; stateChange
+    接收的state和props被保证为最新的
+2). setState(stateChange, [callback])
+    stateChange为对象,
+    callback是可选的回调函数, 在状态更新且界面更新后才执行
+3). 总结:
+    对象方式是函数方式的简写方式
+        如果新状态不依赖于原状态 ===&amp;gt; 使用对象方式
+        如果新状态依赖于原状态 ===&amp;gt; 使用函数方式
+    如果需要在setState()后获取最新的状态数据, 在第二个callback函数中读取
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2-setState-的异步与同步&#34;&gt;&lt;a href=&#34;#2-setState-的异步与同步&#34; class=&#34;headerlink&#34; title=&#34;2. setState()的异步与同步&#34;&gt;&lt;/a&gt;2. setState()的异步与同步&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). setState()更新状态是异步还是同步的?
+    a. 执行setState()的位置?
+        在react控制的回调函数中: 生命周期勾子 / react事件监听回调
+        非react控制的异步回调函数中: 定时器回调 / 原生事件监听回调 / promise回调 /...
+    b. 异步 OR 同步?
+        react相关回调中: 异步
+        其它异步回调中: 同步 
+2). 关于异步的setState()
+    a. 多次调用, 如何处理?
+        setState(&amp;#123;&amp;#125;): 合并更新一次状态, 只调用一次render()更新界面 ---状态更新和界面更新都合并了
+        setState(fn): 更新多次状态, 但只调用一次render()更新界面  ---状态更新没有合并, 但界面更新合并了
+    b. 如何得到异步更新后的状态数据?
+        在setState()的callback回调函数中
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;3-Component与PureComponent&#34;&gt;&lt;a href=&#34;#3-Component与PureComponent&#34; class=&#34;headerlink&#34; title=&#34;3. Component与PureComponent&#34;&gt;&lt;/a&gt;3. Component与PureComponent&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). Component存在的问题?
+    a. 父组件重新render(), 当前组件也会重新执行render(), 即使没有任何变化
+    b. 当前组件setState(), 重新执行render(), 即使state没有任何变化 
+2). 解决Component存在的问题
+    a. 原因: 组件的shouldcomponentUpdate()默认返回true, 即使数据没有变化render()都会重新执行
+    b. 办法1: 重写shouldComponentUpdate(), 判断如果数据有变化返回true, 否则返回false
+    c. 办法2: 使用PureComponent代替Component
+    d. 说明: 一般都使用PureComponent来优化组件性能
+3). PureComponent的基本原理
+    a. 重写实现shouldComponentUpdate()
+    b. 对组件的新/旧state和props中的数据进行浅比较, 如果都没有变化, 返回false, 否则返回true
+    c. 一旦componentShouldUpdate()返回false不再执行用于更新的render() 
+4). 面试题:
+    组件的哪个生命周期勾子能实现组件优化?
+    PureComponent的原理?
+    区别Component与PureComponent?
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;4-用户管理&#34;&gt;&lt;a href=&#34;#4-用户管理&#34; class=&#34;headerlink&#34; title=&#34;4. 用户管理&#34;&gt;&lt;/a&gt;4. 用户管理&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 显示用户分页列表
+2). 添加用户
+3). 修改用户
+4). 删除用户
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;5-导航菜单权限控制&#34;&gt;&lt;a href=&#34;#5-导航菜单权限控制&#34; class=&#34;headerlink&#34; title=&#34;5. 导航菜单权限控制&#34;&gt;&lt;/a&gt;5. 导航菜单权限控制&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 基本思路(依赖于后台): 
+    角色: 包含所拥有权限的所有菜单项key的数组: menus=[key1, key2, key3]
+    用户: 包含所属角色的ID: role_id
+    当前登陆用户: user中已经包含了所属role对象
+    遍历显示菜单项时: 判断只有当有对应的权限才显示
+2). 判断是否有权限的条件?
+    a. 如果当前用户是admin
+    b. 如果当前item是公开的
+    c. 当前用户有此item的权限: key有没有menus中
+    d. 如果当前用户有此item的某个子item的权限
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;day09&#34;&gt;&lt;a href=&#34;#day09&#34; class=&#34;headerlink&#34; title=&#34;day09&#34;&gt;&lt;/a&gt;day09&lt;/h1&gt;&lt;h2 id=&#34;1-redux理解&#34;&gt;&lt;a href=&#34;#1-redux理解&#34; class=&#34;headerlink&#34; title=&#34;1. redux理解&#34;&gt;&lt;/a&gt;1. redux理解&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;什么?: redux是专门做状态管理的独立第3方库, 不是react插件, 但一般都用在react项目中
+作用?: 对应用中状态进行集中式的管理(写/读)
+开发: 与react-redux, redux-thunk等插件配合使用
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2-redux相关API&#34;&gt;&lt;a href=&#34;#2-redux相关API&#34; class=&#34;headerlink&#34; title=&#34;2. redux相关API&#34;&gt;&lt;/a&gt;2. redux相关API&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;redux中包含: createStore(), applyMiddleware(), combineReducers()
+store对象: getState(), dispatch(), subscribe()
+react-redux: 
+    &amp;lt;Provider store=&amp;#123;store&amp;#125;&amp;gt;: 向所有的容器组件提供store
+    connect(
+        state =&amp;gt; (&amp;#123;xxx: state.xxx&amp;#125;),
+        &amp;#123;actionCreator1, actionCreator2&amp;#125;
+    )(UI组件): 
+        产生的就是容器组件, 负责向UI组件传递标签属性, 
+        一般属性值从state中获取, 函数属性内部会执行dispatch分发action
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;3-redux核心概念-3个&#34;&gt;&lt;a href=&#34;#3-redux核心概念-3个&#34; class=&#34;headerlink&#34; title=&#34;3. redux核心概念(3个)&#34;&gt;&lt;/a&gt;3. redux核心概念(3个)&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;action: 
+    默认是对象(同步action), &amp;#123;type: &amp;#39;xxx&amp;#39;, data: value&amp;#125;, 需要通过对应的actionCreator产生, 
+    它的值也可以是函数(异步action), 需要引入redux-thunk才可以
+reducer
+    根据老的state和指定的action, 返回一个新的state
+    不能修改老的state
+store
+    redux最核心的管理对象
+    内部管理着: state和reducer
+    提供方法: getState(), dispatch(action), subscribe(listener)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;4-redux工作流程&#34;&gt;&lt;a href=&#34;#4-redux工作流程&#34; class=&#34;headerlink&#34; title=&#34;4. redux工作流程&#34;&gt;&lt;/a&gt;4. redux工作流程&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://www.ruanyifeng.com/blogimg/asset/2016/bg2016091802.jpg&#34; class=&#34;lazyload&#34; data-srcset=&#34;http://www.ruanyifeng.com/blogimg/asset/2016/bg2016091802.jpg&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;5-使用redux及相关库编码&#34;&gt;&lt;a href=&#34;#5-使用redux及相关库编码&#34; class=&#34;headerlink&#34; title=&#34;5. 使用redux及相关库编码&#34;&gt;&lt;/a&gt;5. 使用redux及相关库编码&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;需要引入的库: 
+    redux
+    react-redux
+    redux-thunk
+    redux-devtools-extension(这个只在开发时需要)
+redux文件夹: 
+    action-types.js
+    actions.js
+    reducers.js
+    store.js
+组件分2类: 
+    ui组件(components): 不使用redux相关API
+    容器组件(containers): 通过connect()()生成的组件
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;day10&#34;&gt;&lt;a href=&#34;#day10&#34; class=&#34;headerlink&#34; title=&#34;day10&#34;&gt;&lt;/a&gt;day10&lt;/h1&gt;&lt;h2 id=&#34;1-在项目中搭建redux整套环境&#34;&gt;&lt;a href=&#34;#1-在项目中搭建redux整套环境&#34; class=&#34;headerlink&#34; title=&#34;1. 在项目中搭建redux整套环境&#34;&gt;&lt;/a&gt;1. 在项目中搭建redux整套环境&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). store.js
+2). reducer.js
+3). actions.js
+4). action-types.js
+5). index.js
+6). 在需要与redux进行状态数据通信(读/写)的UI组件包装生成容器组件
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2-通过redux管理头部标题headTitle数据&#34;&gt;&lt;a href=&#34;#2-通过redux管理头部标题headTitle数据&#34; class=&#34;headerlink&#34; title=&#34;2. 通过redux管理头部标题headTitle数据&#34;&gt;&lt;/a&gt;2. 通过redux管理头部标题headTitle数据&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). action-types.js
+2). actoins.js
+3). reducer.js
+4). 相关组件: 
+    left-nav.js
+    header.js
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;3-通过redux管理登陆用户信息user数据&#34;&gt;&lt;a href=&#34;#3-通过redux管理登陆用户信息user数据&#34; class=&#34;headerlink&#34; title=&#34;3. 通过redux管理登陆用户信息user数据&#34;&gt;&lt;/a&gt;3. 通过redux管理登陆用户信息user数据&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). action-types.js
+2). actoin.js
+3). reducer.js
+4). 相关组件: 
+    login.js
+    admin.js
+    left-nav.js
+    header.js
+    role.js
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;4-自定义redux库&#34;&gt;&lt;a href=&#34;#4-自定义redux库&#34; class=&#34;headerlink&#34; title=&#34;4. 自定义redux库&#34;&gt;&lt;/a&gt;4. 自定义redux库&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). redux库向外暴露下面几个函数
+    createStore(): 接收的参数为reducer函数, 返回为store对象
+    combineReducers(): 接收包含n个reducer方法的对象, 返回一个新的reducer函数
+    applyMiddleware() // 暂不实现
+2). store对象的内部结构
+    getState(): 返回值为内部保存的state数据
+    dispatch(): 参数为action对象
+    subscribe(): 参数为监听内部state更新的回调函数 
+3). combineReducers函数:
+    返回的总reducer函数内部会根据总的state和指定的action, 
+    调用每个reducer函数得到对应的新的state, 并封装成一个新的总state对象返回
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;5-自定义react-redux库&#34;&gt;&lt;a href=&#34;#5-自定义react-redux库&#34; class=&#34;headerlink&#34; title=&#34;5. 自定义react-redux库&#34;&gt;&lt;/a&gt;5. 自定义react-redux库&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). react-redux向外暴露了2个API
+    a. Provider组件类
+    b. connect函数  
+2). Provider组件
+    接收store属性
+    通过context将store暴露给所有的容器子组件
+    Provider原样渲染其所有标签子节点
+    
+3). connect函数
+    接收2个参数: mapStateToProps和mapDispatchToProps
+    connect()执行的返回值为一个高阶组件: 包装UI组件, 返回一个新的容器组件
+    mapStateToProps: 
+        为一个函数, 返回包含n个一般属性对象, 
+        容器组件中调用得到对象后, 初始化为容器组件的初始状态, 并指定为UI组件标签的一般属性
+    mapDispatchToProps:
+        如果为函数, 调用得到包含n个dispatch方法的对象
+        如果为对象, 遍历封装成包含n个dispatch方法的对象
+        将包含n个dispatch方法的对象分别作为函数属性传入UI组件
+    通过store绑定state变化的监听, 在回调函数中根据store中最新的state数据更新容器组件状态, 从而更新UI组件
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;day11&#34;&gt;&lt;a href=&#34;#day11&#34; class=&#34;headerlink&#34; title=&#34;day11&#34;&gt;&lt;/a&gt;day11&lt;/h1&gt;&lt;h2 id=&#34;1-数据可视化&#34;&gt;&lt;a href=&#34;#1-数据可视化&#34; class=&#34;headerlink&#34; title=&#34;1. 数据可视化&#34;&gt;&lt;/a&gt;1. 数据可视化&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). echarts(百度) ==&amp;gt; echarts-for-react
+2). g2(阿里) ==&amp;gt; bizCharts
+3). d3(国外)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2-前台404界面&#34;&gt;&lt;a href=&#34;#2-前台404界面&#34; class=&#34;headerlink&#34; title=&#34;2. 前台404界面&#34;&gt;&lt;/a&gt;2. 前台404界面&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;Redirect from=&amp;#39;/&amp;#39; to=&amp;#39;/home&amp;#39; exact/&amp;gt;
+&amp;lt;Route component=&amp;#123;NotFound&amp;#125;/&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;3-打包应用运行&#34;&gt;&lt;a href=&#34;#3-打包应用运行&#34; class=&#34;headerlink&#34; title=&#34;3. 打包应用运行&#34;&gt;&lt;/a&gt;3. 打包应用运行&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1). 解决生产环境ajax跨域问题
+    使用nginx的反向代理解决(一般由后台配置)
+    CORS: 允许浏览器端跨域
+2). BrowserRouter模式刷新404的问题
+    a. 问题: 刷新某个路由路径时, 会出现404的错误
+    b. 原因: 项目根路径后的path路径会被当作后台路由路径, 去请求对应的后台路由, 但没有
+    c. 解决: 使用自定义中间件去读取返回index页面展现
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://zztqsh.github.io/2021/03/07/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</guid>
+            <title>学习计划</title>
+            <link>https://zztqsh.github.io/2021/03/07/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</link>
+            <category>学习计划</category>
+            <pubDate>Sun, 07 Mar 2021 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;学习计划&#34;&gt;&lt;a href=&#34;#学习计划&#34; class=&#34;headerlink&#34; title=&#34;学习计划&#34;&gt;&lt;/a&gt;学习计划&lt;/h2&gt;&lt;h3 id=&#34;一、移动端页面制作和响应式实现&#34;&gt;&lt;a href=&#34;#一、移动端页面制作和响应式实现&#34; class=&#34;headerlink&#34; title=&#34;一、移动端页面制作和响应式实现&#34;&gt;&lt;/a&gt;一、移动端页面制作和响应式实现&lt;/h3&gt;&lt;h4 id=&#34;1-1-学习响应式开发相关知识点&#34;&gt;&lt;a href=&#34;#1-1-学习响应式开发相关知识点&#34; class=&#34;headerlink&#34; title=&#34;1.1 学习响应式开发相关知识点&#34;&gt;&lt;/a&gt;1.1 学习响应式开发相关知识点&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;viewport试口&lt;/li&gt;
+&lt;li&gt;移动端适配方案&lt;/li&gt;
+&lt;li&gt;移动端布局实际操作&lt;/li&gt;
+&lt;li&gt;媒介查询&lt;/li&gt;
+&lt;li&gt;移动端交互实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;1-2-响应式开发实战&#34;&gt;&lt;a href=&#34;#1-2-响应式开发实战&#34; class=&#34;headerlink&#34; title=&#34;1.2 响应式开发实战&#34;&gt;&lt;/a&gt;1.2 响应式开发实战&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;可供参考练习的响应式网站：(可以根据屏幕尺寸更改css样式)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.huawei.com/cn/&#34;&gt;华为-构建万物互联的智能世界&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.apple.com.cn/?afid=p238%7CH84sSf8S_mtid_18707vxu38484&amp;cid=aos-cn-kwha-brand&#34;&gt;Apple-官方网站&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;组件：&lt;br&gt;&lt;a href=&#34;https://www.bootcss.com/&#34;&gt;Bootstrap&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;二、ajax技术&#34;&gt;&lt;a href=&#34;#二、ajax技术&#34; class=&#34;headerlink&#34; title=&#34;二、ajax技术&#34;&gt;&lt;/a&gt;二、ajax技术&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;AJAX的作用&lt;/li&gt;
+&lt;li&gt;原生AJAX&lt;/li&gt;
+&lt;li&gt;同步与异步&lt;/li&gt;
+&lt;li&gt;http协议&lt;/li&gt;
+&lt;li&gt;AJAX的封装&lt;/li&gt;
+&lt;li&gt;jQuery的AJAX&lt;/li&gt;
+&lt;li&gt;缓存问题及解决方案&lt;/li&gt;
+&lt;li&gt;跨域请求及解决方案&lt;/li&gt;
+&lt;li&gt;前端模板引擎&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;相关学习视频：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1WC4y1b78y&#34;&gt;Web前端Ajax教程初学者零基础入门到精通全套完整版&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;相关参考教程：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.w3school.com.cn/ajax/index.asp&#34;&gt;AJAX 教程 -W3school&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.runoob.com/ajax/ajax-tutorial.html&#34;&gt;AJAX 教程 -菜鸟教程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;三、微信小程序开发&#34;&gt;&lt;a href=&#34;#三、微信小程序开发&#34; class=&#34;headerlink&#34; title=&#34;三、微信小程序开发&#34;&gt;&lt;/a&gt;三、微信小程序开发&lt;/h3&gt;&lt;h4 id=&#34;3-1-学习微信小程序开发的相关知识点&#34;&gt;&lt;a href=&#34;#3-1-学习微信小程序开发的相关知识点&#34; class=&#34;headerlink&#34; title=&#34;3.1 学习微信小程序开发的相关知识点&#34;&gt;&lt;/a&gt;3.1 学习微信小程序开发的相关知识点&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;小程序组件&lt;/li&gt;
+&lt;li&gt;小程序API&lt;/li&gt;
+&lt;li&gt;小程序云函数&lt;/li&gt;
+&lt;li&gt;wepy小程序开发框架&lt;/li&gt;
+&lt;li&gt;mpvue小程序开发框架&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;相关学习视频:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1nE41117BQ&#34;&gt;零基础玩转微信小程序&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Qb411z7wR&#34;&gt;微信小程序开发学习&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;3-2-微信小程序开发实战&#34;&gt;&lt;a href=&#34;#3-2-微信小程序开发实战&#34; class=&#34;headerlink&#34; title=&#34;3.2 微信小程序开发实战&#34;&gt;&lt;/a&gt;3.2 微信小程序开发实战&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;音乐播放器&lt;/li&gt;
+&lt;li&gt;聊天室(在线聊天系统)&lt;/li&gt;
+&lt;li&gt;点餐系统&lt;/li&gt;
+&lt;li&gt;文件的上传与下载&lt;/li&gt;
+&lt;li&gt;天气预报查询&lt;/li&gt;
+&lt;li&gt;………&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;开发指南 :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developers.weixin.qq.com/miniprogram/dev/framework/&#34;&gt;微信小程序官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;现阶段参考的学习书籍：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;《黑马程序员微信小程序开发实战》&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;四、vue框架开发&#34;&gt;&lt;a href=&#34;#四、vue框架开发&#34; class=&#34;headerlink&#34; title=&#34;四、vue框架开发&#34;&gt;&lt;/a&gt;四、vue框架开发&lt;/h3&gt;&lt;h4 id=&#34;4-1-学习vue框架开发的相关知识点&#34;&gt;&lt;a href=&#34;#4-1-学习vue框架开发的相关知识点&#34; class=&#34;headerlink&#34; title=&#34;4.1 学习vue框架开发的相关知识点&#34;&gt;&lt;/a&gt;4.1 学习vue框架开发的相关知识点&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;pre&gt;&lt;code&gt;vue组件与vue生命周期
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;pre&gt;&lt;code&gt;单文件组件与脚手架搭建
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;pre&gt;&lt;code&gt;vue路由
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;pre&gt;&lt;code&gt;vuex状态管理
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;pre&gt;&lt;code&gt;nuxt服务端渲染
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;  基于vue的ui组件库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;边学边敲，以实践为主&lt;/p&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://zztqsh.github.io/2020/10/30/C%E8%AF%AD%E8%A8%80%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90%E4%BB%A3%E7%A0%81/</guid>
+            <title>C语言生日快乐代码</title>
+            <link>https://zztqsh.github.io/2020/10/30/C%E8%AF%AD%E8%A8%80%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90%E4%BB%A3%E7%A0%81/</link>
+            <category>学习分享</category>
+            <category>c语言</category>
+            <pubDate>Fri, 30 Oct 2020 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;C语言生日快乐代码&#34;&gt;&lt;a href=&#34;#C语言生日快乐代码&#34; class=&#34;headerlink&#34; title=&#34;C语言生日快乐代码&#34;&gt;&lt;/a&gt;C语言生日快乐代码&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;#include &amp;lt;stdlib.h&amp;gt;
+#include&amp;lt;stdio.h&amp;gt; 
+#include&amp;lt;windows.h&amp;gt;
+#include&amp;lt;conio.h&amp;gt;
+#include&amp;lt;math.h&amp;gt;
+using namespace std;
+const int A1 = 131;
+const int A2 = 147;
+const int A3 = 165;
+const int A4 = 175;
+const int A5 = 196;
+const int A6 = 220;
+const int A7 = 247;
+const int B1 = 262;
+const int B2 = 296;
+const int B3 = 330;
+const int B4 = 349;
+const int B5 = 392;
+const int B6 = 440;
+const int B7 = 494;
+const int C1 = 523;
+const int C2 = 587;
+const int C3 = 659;
+const int C4 = 698;
+const int C5 = 784;
+const int C6 = 880;
+const int C7 = 988;
+const int D1 = 1047;
+const int D2 = 1175;
+const int D3 = 1319;
+const int D4 = 1397;
+const int D5 = 1568;
+const int D6 = 1760;
+const int D7 = 1976;
+const int OneBeat = 600;
+const int HalfBeat = 300;
+extern char s_1[]=&amp;#123;&amp;quot;☆ 祝  ☆&amp;quot;&amp;#125;;
+extern char s_2[]=&amp;#123;&amp;quot;☆ 美 丽 善 良  ☆&amp;quot;&amp;#125;;
+extern char s_3[]=&amp;#123;&amp;quot;☆ 大 方 优 雅  ☆&amp;quot;&amp;#125;;
+extern char s_4[]=&amp;#123;&amp;quot;☆ 清 新 脱 俗  ☆ &amp;quot;&amp;#125;;
+extern char s_5[]=&amp;#123;&amp;quot;☆ 纯 洁 活 泼  ☆&amp;quot;&amp;#125;;
+extern char s_6[]=&amp;#123;&amp;quot;☆ 率 直 可 爱  ☆&amp;quot;&amp;#125;;
+extern char s_7[]=&amp;#123;&amp;quot;☆ 温 柔 端 庄  ☆&amp;quot;&amp;#125;;
+extern char s_8[]=&amp;#123;&amp;quot;☆ 贤 惠 婉 约  ☆&amp;quot;&amp;#125;;
+extern char s_9[]=&amp;#123;&amp;quot;☆ 气 质 干 练  ☆&amp;quot;&amp;#125;;
+extern char s_10[]=&amp;#123;&amp;quot;☆ 天 然 真 诚  ☆&amp;quot;&amp;#125;;
+extern char s_11[]=&amp;#123;&amp;quot;☆ 超 凡 脱 俗  ☆&amp;quot;&amp;#125;;
+extern char s_12[]=&amp;#123;&amp;quot;☆ 的 小 马 哥  ☆&amp;quot;&amp;#125;;
+extern char s_13[]=&amp;#123;&amp;quot;☆ 生 日 快 乐 ！！！  ☆&amp;quot;&amp;#125;;
+extern char s_14[]=&amp;#123;&amp;quot;   平安喜乐！\n&amp;quot;&amp;#125;;
+extern char s_15[]=&amp;#123;&amp;quot;万事胜意！\n&amp;quot;&amp;#125;;
+extern char s_16[]=&amp;#123;&amp;quot;THEO冰&amp;quot;&amp;#125;;
+extern char s_17[]=&amp;#123;&amp;quot;2020.10.30&amp;quot;&amp;#125;;
+extern char * ssum[]=&amp;#123;s_1,s_2,s_3,s_4,s_5,s_6,s_7,s_8,s_9,s_10,s_11,s_12,s_13,s_14,s_15,s_16,s_17&amp;#125;;
+char randk();
+char randk()&amp;#123;
+char a=0;
+a=(char) abs( rand()%16);
+if(a &amp;gt;=10)&amp;#123;
+  a-=10;
+  a+=97;
+&amp;#125;else a+=48; 
+return a;
+&amp;#125;
+int main()
+&amp;#123;
+int k;
+system(&amp;quot;color b&amp;quot;);
+printf(&amp;quot;请输入密码：\n&amp;quot;);
+scanf(&amp;quot;%d&amp;quot;,&amp;amp;k);
+int i,j=0;
+if(k==1030)&amp;#123;
+    printf(&amp;quot;\n&amp;quot;);
+    Sleep(200);printf(&amp;quot;密&amp;quot;); Sleep(200);printf(&amp;quot;码&amp;quot;);Sleep(200);printf(&amp;quot;正&amp;quot;);Sleep(200);printf(&amp;quot;确\n&amp;quot;);
+    Sleep(200);printf(&amp;quot;接&amp;quot;); Sleep(200);printf(&amp;quot;下&amp;quot;);Sleep(200);printf(&amp;quot;来&amp;quot;);Sleep(200);printf(&amp;quot;什&amp;quot;);
+    Sleep(200);printf(&amp;quot;么&amp;quot;); Sleep(200);printf(&amp;quot;都&amp;quot;);Sleep(200);printf(&amp;quot;别&amp;quot;);Sleep(200);printf(&amp;quot;动\n&amp;quot;);
+    Sleep(200);printf(&amp;quot;只&amp;quot;); Sleep(200);printf(&amp;quot;需&amp;quot;);Sleep(200);printf(&amp;quot;把&amp;quot;);Sleep(200);printf(&amp;quot;音&amp;quot;); 
+    Sleep(200);printf(&amp;quot;量&amp;quot;); Sleep(200);printf(&amp;quot;调&amp;quot;);Sleep(200);printf(&amp;quot;大\n&amp;quot;); 
+    Sleep(200);printf(&amp;quot;耐&amp;quot;); Sleep(200);printf(&amp;quot;心&amp;quot;);Sleep(200);printf(&amp;quot;等&amp;quot;);Sleep(200);printf(&amp;quot;待\n&amp;quot;);   
+    Sleep(500);
+    int i=0;
+long f=0;
+char s[10]=&amp;quot;color &amp;quot;;
+puts(&amp;quot;\n\n\n\n\n\n\n\n\n\n &amp;quot;);
+for(i=0;i&amp;lt;10;i++)&amp;#123;
+  s[6]=randk();s[7]=randk();
+  system(s);
+  printf(&amp;quot;\r★★生日快乐!★★&amp;quot;);
+  f=0;
+  while(f&amp;lt;81474400)
+          f=f+1;
+&amp;#125;
+
+puts(&amp;quot;小马哥:\n\n\n&amp;quot;);
+s[6]=&amp;#39;d&amp;#39;;
+
+//输出要说的话
+for(i=0;i&amp;lt;19;i++)&amp;#123;
+puts(&amp;quot;\n\a&amp;quot;);
+s[7]=randk();
+system(s);
+puts(*(ssum+i));
+f=0;
+while(f&amp;lt;214748325)&amp;#123;
+ f=f+1;
+ f=f-1;
+ f=f+1;
+&amp;#125;
+&amp;#125;
+getchar();
+printf(&amp;quot;\n\n\n&amp;quot;);
+Sleep(100);printf(&amp;quot;**** ****\n&amp;quot;);
+Sleep(100);printf(&amp;quot;*********   *********\n&amp;quot;);
+Sleep(100);printf(&amp;quot; ************* *************\n&amp;quot;);
+for(i=0;i&amp;lt;3;i++)
+&amp;#123;
+Sleep(100);
+for(j=0;j&amp;lt;29;j++)
+printf(&amp;quot;*&amp;quot;);
+printf(&amp;quot;\n&amp;quot;);
+&amp;#125;
+for(i=0;i&amp;lt;7;i++)
+&amp;#123;
+Sleep(100);
+for(j=0;j&amp;lt;2*(i+1)-1;j++)
+printf(&amp;quot; &amp;quot;);
+for(j=0;j&amp;lt;27-i*4;j++)
+printf(&amp;quot;*&amp;quot;);
+printf(&amp;quot;\n&amp;quot;);
+&amp;#125;
+for(i=0;i&amp;lt;14;i++)
+printf(&amp;quot; &amp;quot;);
+printf(&amp;quot;*\n&amp;quot;);
+    for(j=0;j&amp;lt;10;j++)&amp;#123;
+        for(i=0;i&amp;lt;2;i++);
+        system(&amp;quot;color d&amp;quot;);
+        for(i=0;i&amp;lt;2;i++);
+        system(&amp;quot;color a&amp;quot;);
+        for(i=0;i&amp;lt;2;i++);
+        system(&amp;quot;color c&amp;quot;);
+        for(i=0;i&amp;lt;2;i++);
+        system(&amp;quot;color b&amp;quot;);
+        for(i=0;i&amp;lt;2;i++);
+        system(&amp;quot;color f&amp;quot;);
+        for(i=0;i&amp;lt;2;i++);
+        system(&amp;quot;color e&amp;quot;);
+        j++;
+        &amp;#125;
+        printf(&amp;quot;\n\n&amp;quot;);
+     for(i=0;i&amp;lt;9;i++)&amp;#123;
+            system(&amp;quot;color d&amp;quot;);
+        &amp;#125;  
+        printf(&amp;quot; *********&amp;quot;);printf(&amp;quot;**\n&amp;quot;); system(&amp;quot;color a&amp;quot;);
+        Sleep(500);      printf(&amp;quot; *   *&amp;quot;);printf(&amp;quot;   ************&amp;quot;);   printf(&amp;quot;  ************&amp;quot;);printf(&amp;quot;   ** **\n&amp;quot;) ;system(&amp;quot;color b&amp;quot;);
+        Sleep(500);  printf(&amp;quot; *   *&amp;quot;);printf(&amp;quot;  ** **&amp;quot;);   printf(&amp;quot;   ** &amp;quot;);printf(&amp;quot; **** **   \n&amp;quot;) ; system(&amp;quot;color c&amp;quot;);  
+        Sleep(500);  printf(&amp;quot; *   *&amp;quot;);printf(&amp;quot; **  **&amp;quot;);   printf(&amp;quot;   ** &amp;quot;);printf(&amp;quot;   **** ****\n&amp;quot;) ; system(&amp;quot;color d&amp;quot;);   
+        Sleep(500);  printf(&amp;quot; ************&amp;quot;);printf(&amp;quot; ***********&amp;quot;);   printf(&amp;quot;   ** &amp;quot;);printf(&amp;quot;  ** **   **\n&amp;quot;) ;  system(&amp;quot;color e&amp;quot;); 
+        Sleep(500);  printf(&amp;quot;*&amp;quot;);printf(&amp;quot;  **  &amp;quot;); printf(&amp;quot;************&amp;quot;); printf(&amp;quot; **   *****************\n&amp;quot;) ;system(&amp;quot;color f&amp;quot;);
+        Sleep(500);  printf(&amp;quot;*&amp;quot;);printf(&amp;quot; ***********&amp;quot;);   printf(&amp;quot;   ** &amp;quot;);   printf(&amp;quot;  ****   **\n&amp;quot;) ;system(&amp;quot;color a&amp;quot;);
+        Sleep(500);  printf(&amp;quot;*************&amp;quot;);printf(&amp;quot;  **  &amp;quot;); printf(&amp;quot; ** &amp;quot;); printf(&amp;quot;  ** ** **   ** **\n&amp;quot;) ;system(&amp;quot;color b&amp;quot;);
+        Sleep(500);  printf(&amp;quot;*&amp;quot;);printf(&amp;quot;  **  &amp;quot;); printf(&amp;quot; ** *   &amp;quot;); printf(&amp;quot;  ***   **   **   *\n&amp;quot;) ; system(&amp;quot;color c&amp;quot;);
+        Sleep(500);  printf(&amp;quot;  * *&amp;quot;);printf(&amp;quot;  ** * &amp;quot;);printf(&amp;quot;**   * &amp;quot;);  printf(&amp;quot;  ****   **\n&amp;quot;) ;system(&amp;quot;color d&amp;quot;);
+        Sleep(500);  printf(&amp;quot;   **&amp;quot;);printf(&amp;quot;  **  &amp;quot;); printf(&amp;quot;************&amp;quot;); printf(&amp;quot;  ****   **\n&amp;quot;) ;system(&amp;quot;color e&amp;quot;);
+        printf(&amp;quot;\n\n&amp;quot;);
+        
+        
+        Sleep(200); printf(&amp;quot;  **   **\n &amp;quot;);system(&amp;quot;color a&amp;quot;);
+        Sleep(200);printf(&amp;quot;****\n &amp;quot;);  system(&amp;quot;color b&amp;quot;);
+        Sleep(200); printf(&amp;quot;  **  **\n&amp;quot;);  system(&amp;quot;color c&amp;quot;);
+        Sleep(200); printf(&amp;quot; **********************\n&amp;quot;);system(&amp;quot;color d&amp;quot;);
+        Sleep(200); printf(&amp;quot;   **  **\n&amp;quot;);system(&amp;quot;color e&amp;quot;);
+        Sleep(200); printf(&amp;quot;   **\n&amp;quot;);system(&amp;quot;color f&amp;quot;);
+        Sleep(200); printf(&amp;quot;   **\n&amp;quot;);system(&amp;quot;color d&amp;quot;);
+        Sleep(200); printf(&amp;quot; **********************\n&amp;quot;);system(&amp;quot;color a&amp;quot;);
+        Sleep(200); printf(&amp;quot;   **\n&amp;quot;);system(&amp;quot;color b&amp;quot;);
+        Sleep(200); printf(&amp;quot;   **\n&amp;quot;);system(&amp;quot;color c&amp;quot;);
+        Sleep(200); printf(&amp;quot;   **\n&amp;quot;);system(&amp;quot;color d&amp;quot;);
+        Sleep(200); printf(&amp;quot; **********************\n&amp;quot;);system(&amp;quot;color e&amp;quot;);
+        Sleep(200); printf(&amp;quot;\n\n&amp;quot;);
+        
+        Sleep(200);printf(&amp;quot; **********************\n&amp;quot;);system(&amp;quot;color a&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color b&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color c&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color d&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color e&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color f&amp;quot;);
+        Sleep(200);printf(&amp;quot; **********************\n&amp;quot;);system(&amp;quot;color a&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color b&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color c&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color d&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color e&amp;quot;);
+        Sleep(200);   printf(&amp;quot; **  **\n&amp;quot;);system(&amp;quot;color f&amp;quot;);
+        Sleep(200);printf(&amp;quot; **********************\n&amp;quot;);system(&amp;quot;color a&amp;quot;);
+        
+        printf(&amp;quot;\n\n&amp;quot;);
+        Sleep(200);printf(&amp;quot;**&amp;quot;);   printf(&amp;quot;  **\n&amp;quot;);system(&amp;quot;color a&amp;quot;);
+        Sleep(200);printf(&amp;quot;**&amp;quot;);   printf(&amp;quot;  **\n&amp;quot;);system(&amp;quot;color b&amp;quot;);
+        Sleep(200);printf(&amp;quot;   ***&amp;quot;);   printf(&amp;quot;  **\n&amp;quot;);system(&amp;quot;color c&amp;quot;);
+        Sleep(200);printf(&amp;quot;  * *** &amp;quot;); printf(&amp;quot;  ***************\n&amp;quot;);system(&amp;quot;color d&amp;quot;);
+        Sleep(200);printf(&amp;quot; ** ** *&amp;quot;); printf(&amp;quot;**  *\n&amp;quot;);system(&amp;quot;color e&amp;quot;);
+        Sleep(200);printf(&amp;quot;**  **  **&amp;quot;);   printf(&amp;quot;  **  *\n&amp;quot;);system(&amp;quot;color f&amp;quot;);
+        Sleep(200);printf(&amp;quot;**   **&amp;quot;);  printf(&amp;quot;   *****************\n&amp;quot;);system(&amp;quot;color a&amp;quot;);
+        Sleep(200);printf(&amp;quot;**&amp;quot;);   printf(&amp;quot;  **  \n&amp;quot;);system(&amp;quot;color b&amp;quot;);
+        Sleep(200);printf(&amp;quot;**&amp;quot;);   printf(&amp;quot;**  **   \n&amp;quot;);system(&amp;quot;color c&amp;quot;);
+        Sleep(200);printf(&amp;quot;**&amp;quot;);   printf(&amp;quot;  ** **  \n&amp;quot;);system(&amp;quot;color d&amp;quot;);
+        Sleep(200);printf(&amp;quot;**&amp;quot;);   printf(&amp;quot;****\n&amp;quot;);system(&amp;quot;color e&amp;quot;);
+        Sleep(200);printf(&amp;quot;**&amp;quot;);   printf(&amp;quot;  **   ** \n&amp;quot;);system(&amp;quot;color f&amp;quot;);
+        
+        printf(&amp;quot;\n\n&amp;quot;);
+        Sleep(200);printf(&amp;quot; **\n&amp;quot;);system(&amp;quot;color a&amp;quot;);
+        Sleep(200);printf(&amp;quot;  ** \n&amp;quot;);system(&amp;quot;color b&amp;quot;);
+        Sleep(200);printf(&amp;quot;   ****\n&amp;quot;);system(&amp;quot;color c&amp;quot;);
+        Sleep(200);printf(&amp;quot;**   **\n&amp;quot;);system(&amp;quot;color d&amp;quot;);
+        Sleep(200);printf(&amp;quot;  ** **\n&amp;quot;);system(&amp;quot;color e&amp;quot;);
+        Sleep(200);printf(&amp;quot;  ** **\n&amp;quot;);system(&amp;quot;color f&amp;quot;);
+        Sleep(200);printf(&amp;quot;  ** **\n&amp;quot;);system(&amp;quot;color a&amp;quot;);
+        Sleep(200);printf(&amp;quot;  ************************\n&amp;quot;);system(&amp;quot;color b&amp;quot;);
+        Sleep(200);printf(&amp;quot; **\n&amp;quot;);system(&amp;quot;color c&amp;quot;);
+        Sleep(200);printf(&amp;quot;   * **\n&amp;quot;);system(&amp;quot;color d&amp;quot;);
+        Sleep(200);printf(&amp;quot; **  **   **\n&amp;quot;);system(&amp;quot;color e&amp;quot;);
+        Sleep(200);printf(&amp;quot;**   ****\n&amp;quot;);system(&amp;quot;color f&amp;quot;);
+        Sleep(200);printf(&amp;quot;  ** ** **\n&amp;quot;);system(&amp;quot;color a&amp;quot;);
+        Sleep(200);printf(&amp;quot;** * **  **\n&amp;quot;);system(&amp;quot;color b&amp;quot;);
+        Sleep(100);printf(&amp;quot;***\n&amp;quot;);system(&amp;quot;color c&amp;quot;);
+        printf(&amp;quot;\n\n&amp;quot;);
+        
+printf(&amp;quot;**** ****\n&amp;quot;);
+printf(&amp;quot;*********   *********\n&amp;quot;);
+printf(&amp;quot; ************* *************\n&amp;quot;);
+for(i=0;i&amp;lt;3;i++)
+&amp;#123;
+Sleep(100);
+for(j=0;j&amp;lt;29;j++)
+printf(&amp;quot;*&amp;quot;);
+printf(&amp;quot;\n&amp;quot;);
+&amp;#125;
+for(i=0;i&amp;lt;7;i++)
+&amp;#123;
+Sleep(100);
+for(j=0;j&amp;lt;2*(i+1)-1;j++)
+printf(&amp;quot; &amp;quot;);
+for(j=0;j&amp;lt;27-i*4;j++)
+printf(&amp;quot;*&amp;quot;);
+printf(&amp;quot;\n&amp;quot;);
+&amp;#125;
+for(i=0;i&amp;lt;14;i++)
+printf(&amp;quot; &amp;quot;);
+printf(&amp;quot;*\n&amp;quot;);
+while(999)&amp;#123;
+        int T=1;
+Beep(C5, HalfBeat);
+Beep(C5, HalfBeat);
+Beep(C6, OneBeat);
+Beep(C5, OneBeat);
+Beep(D1, OneBeat);
+Beep(C7, OneBeat * 2);
+Beep(C5, HalfBeat);
+Beep(C5, HalfBeat);
+Beep(C6, OneBeat);
+Beep(C5, OneBeat);
+Beep(D2, OneBeat);
+Beep(D1, OneBeat * 2);
+Beep(C5, HalfBeat);
+Beep(C5, HalfBeat);
+Beep(D5, OneBeat);
+Beep(D3, OneBeat);
+Beep(D1, OneBeat);
+Beep(C7, OneBeat);
+Beep(D4, HalfBeat);
+Beep(D4, HalfBeat);
+Beep(D3, OneBeat);
+Beep(D1, OneBeat);
+Beep(D2, OneBeat);
+Beep(D1, OneBeat * 2);
+Beep(C5, HalfBeat);
+Beep(C5, HalfBeat);
+Beep(D5, OneBeat);
+Beep(D3, OneBeat);
+Beep(D1, OneBeat);
+Beep(C7, HalfBeat);
+Beep(C6, OneBeat * 2);
+Beep(D4, HalfBeat);
+Beep(D4, HalfBeat);
+Beep(D3, OneBeat);
+Beep(D1, OneBeat);
+Beep(D2, OneBeat);
+Beep(D1, OneBeat * 3);
+Sleep(500);
+        for(i=0;i&amp;lt;19999999;i++);
+        system(&amp;quot;color d&amp;quot;);
+        for(i=0;i&amp;lt;19999999;i++);
+        system(&amp;quot;color a&amp;quot;);
+        for(i=0;i&amp;lt;19999999;i++);
+        system(&amp;quot;color c&amp;quot;);
+        for(i=0;i&amp;lt;19999999;i++);
+        system(&amp;quot;color b&amp;quot;);
+        for(i=0;i&amp;lt;19999999;i++);
+        system(&amp;quot;color f&amp;quot;);
+        for(i=0;i&amp;lt;19999999;i++);
+        system(&amp;quot;color e&amp;quot;);&amp;#125;
+&amp;#125;
+        else&amp;#123;
+    Sleep(200);printf(&amp;quot;密&amp;quot;); Sleep(200);printf(&amp;quot;码&amp;quot;);Sleep(200);printf(&amp;quot;错&amp;quot;);Sleep(200);printf(&amp;quot;误！\n&amp;quot;);
+    Sleep(200);printf(&amp;quot;请&amp;quot;); Sleep(200);printf(&amp;quot;重&amp;quot;);Sleep(200);printf(&amp;quot;新&amp;quot;);Sleep(200);printf(&amp;quot;运&amp;quot;);Sleep(200);printf(&amp;quot;行&amp;quot;);
+    Sleep(200);printf(&amp;quot;并&amp;quot;); Sleep(200);printf(&amp;quot;输&amp;quot;);Sleep(200);printf(&amp;quot;入&amp;quot;);Sleep(200);printf(&amp;quot;正&amp;quot;);  
+    Sleep(200);printf(&amp;quot;确&amp;quot;); Sleep(200);printf(&amp;quot;的&amp;quot;);Sleep(200);printf(&amp;quot;密&amp;quot;);Sleep(200);printf(&amp;quot;码\n&amp;quot;);
+        &amp;#125;
+return 0;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;若要观看效果，可自行在dev-c++运行&lt;/p&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://zztqsh.github.io/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/</guid>
+            <title>markdown写博客</title>
+            <link>https://zztqsh.github.io/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/</link>
+            <category>markdown</category>
+            <category>文章格式</category>
+            <pubDate>Fri, 14 Aug 2020 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;第一部分-文章格式&#34;&gt;&lt;a href=&#34;#第一部分-文章格式&#34; class=&#34;headerlink&#34; title=&#34;第一部分 文章格式&#34;&gt;&lt;/a&gt;第一部分 文章格式&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;---
+layout:     //可选post
+title: 博客
+date: 2020/08/14 
+author: ZZT
+headimg: 
+siderbar: true
+toc: true
+music: 503073179
+type: song
+server: netease
+sidebar: [grid, toc, tags] # 放置任何你想要显示的侧边栏部件 或[]
+comments: false
+mathjax: true # false: 不渲染, true: 渲染
+pin: false
+categories: 关于博客
+tags:
+  - tags1
+  - tags2
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;layout-post-时特有的字段：&#34;&gt;&lt;a href=&#34;#layout-post-时特有的字段：&#34; class=&#34;headerlink&#34; title=&#34;layout:post 时特有的字段：&#34;&gt;&lt;/a&gt;&lt;code&gt;layout:post&lt;/code&gt; 时特有的字段：&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;th&gt;值类型&lt;/th&gt;
+&lt;th&gt;默认值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;author&lt;/td&gt;
+&lt;td&gt;文章作者    [Object]&lt;/td&gt;
+&lt;td&gt;config.author&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;categories&lt;/td&gt;
+&lt;td&gt;分类&lt;/td&gt;
+&lt;td&gt;String, Array&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;tags&lt;/td&gt;
+&lt;td&gt;标签&lt;/td&gt;
+&lt;td&gt;String, Array&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;toc&lt;/td&gt;
+&lt;td&gt;是否生成目录&lt;/td&gt;
+&lt;td&gt;Bool&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;front-matter&#34;&gt;&lt;a href=&#34;#front-matter&#34; class=&#34;headerlink&#34; title=&#34;front-matter&#34;&gt;&lt;/a&gt;front-matter&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;th&gt;值类型&lt;/th&gt;
+&lt;th&gt;默认值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;layout&lt;/td&gt;
+&lt;td&gt;布局模版&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;title&lt;/td&gt;
+&lt;td&gt;页面标题&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;seo_title&lt;/td&gt;
+&lt;td&gt;网页标题&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;page.title&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;short_title&lt;/td&gt;
+&lt;td&gt;页面标题（在group列表中显示）&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;page.title&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;date&lt;/td&gt;
+&lt;td&gt;创建时间&lt;/td&gt;
+&lt;td&gt;Date&lt;/td&gt;
+&lt;td&gt;文件创建时间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;updated&lt;/td&gt;
+&lt;td&gt;更新日期&lt;/td&gt;
+&lt;td&gt;Date&lt;/td&gt;
+&lt;td&gt;文件修改时间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;link&lt;/td&gt;
+&lt;td&gt;外部文章网址&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;music&lt;/td&gt;
+&lt;td&gt;内部音乐控件&lt;/td&gt;
+&lt;td&gt;[Object]&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;robots&lt;/td&gt;
+&lt;td&gt;robots&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;keywords&lt;/td&gt;
+&lt;td&gt;页面关键词&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;description&lt;/td&gt;
+&lt;td&gt;页面描述、摘要&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cover&lt;/td&gt;
+&lt;td&gt;是否显示封面&lt;/td&gt;
+&lt;td&gt;Bool&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;top_meta&lt;/td&gt;
+&lt;td&gt;是否显示文章或页面顶部的meta信息&lt;/td&gt;
+&lt;td&gt;Bool&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;bottom_meta&lt;/td&gt;
+&lt;td&gt;是否显示文章或页面底部的meta信息&lt;/td&gt;
+&lt;td&gt;Bool&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;sidebar&lt;/td&gt;
+&lt;td&gt;页面侧边栏&lt;/td&gt;
+&lt;td&gt;Bool, Array&lt;/td&gt;
+&lt;td&gt;theme.layout.*.sidebar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;body&lt;/td&gt;
+&lt;td&gt;页面主体元素&lt;/td&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;td&gt;theme.layout.on_page.body&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mathjax&lt;/td&gt;
+&lt;td&gt;是否渲染公式&lt;/td&gt;
+&lt;td&gt;Bool, String&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;thumbnail&lt;/td&gt;
+&lt;td&gt;缩略图&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;icons&lt;/td&gt;
+&lt;td&gt;图标&lt;/td&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;td&gt;[]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pin&lt;/td&gt;
+&lt;td&gt;是否置顶&lt;/td&gt;
+&lt;td&gt;Bool&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;headimg&lt;/td&gt;
+&lt;td&gt;文章头图&lt;/td&gt;
+&lt;td&gt;url&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h3 id=&#34;music&#34;&gt;&lt;a href=&#34;#music&#34; class=&#34;headerlink&#34; title=&#34;music&#34;&gt;&lt;/a&gt;music&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段&lt;/th&gt;
+&lt;th&gt;是否必须&lt;/th&gt;
+&lt;th&gt;值类型&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;server&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;netease, tencent, kugou, xiami, baidu&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;type&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;song, playlist, album, search, artist&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;id&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;song id / playlist id / album id / search keyword&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h2 id=&#34;第二部分-在文章中插入音乐&#34;&gt;&lt;a href=&#34;#第二部分-在文章中插入音乐&#34; class=&#34;headerlink&#34; title=&#34;第二部分 在文章中插入音乐&#34;&gt;&lt;/a&gt;第二部分 在文章中插入音乐&lt;/h2&gt;&lt;h3 id=&#34;方法一&#34;&gt;&lt;a href=&#34;#方法一&#34; class=&#34;headerlink&#34; title=&#34;方法一&#34;&gt;&lt;/a&gt;方法一&lt;/h3&gt;&lt;h4 id=&#34;2-1-安装插件&#34;&gt;&lt;a href=&#34;#2-1-安装插件&#34; class=&#34;headerlink&#34; title=&#34;2.1 安装插件&#34;&gt;&lt;/a&gt;2.1 安装插件&lt;/h4&gt;&lt;p&gt;在hexo文件夹中鼠标右击&lt;code&gt;git bash here&lt;/code&gt;执行以下命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install hexo-tag-aplayer --save
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;2-2-插入音乐&#34;&gt;&lt;a href=&#34;#2-2-插入音乐&#34; class=&#34;headerlink&#34; title=&#34;2.2 插入音乐&#34;&gt;&lt;/a&gt;2.2 插入音乐&lt;/h4&gt;&lt;p&gt;格式为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{% aplayer &#34;歌手名字&#34; &#34;歌曲名字&#34; &#34;音乐地址&#34;  &#34;音乐封面图片地址&#34; autoplay %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;举个例子：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{% aplayer &#34;蔡徐坤&#34; &#34;情人&#34; &#34;music.mp3&#34;  &#34;picture.jpg&#34; autoplay %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：存放音乐和图片的文件夹名称必须和文章名字一致；&lt;code&gt;autoplay&lt;/code&gt;表示自动播放，若不需要可自行删除掉&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;2-3-给音乐加歌词&#34;&gt;&lt;a href=&#34;#2-3-给音乐加歌词&#34; class=&#34;headerlink&#34; title=&#34;2.3 给音乐加歌词&#34;&gt;&lt;/a&gt;2.3 给音乐加歌词&lt;/h4&gt;&lt;h5 id=&#34;2-3-1-方法1&#34;&gt;&lt;a href=&#34;#2-3-1-方法1&#34; class=&#34;headerlink&#34; title=&#34;2.3.1 方法1&#34;&gt;&lt;/a&gt;2.3.1 方法1&lt;/h5&gt;&lt;p&gt;格式：&lt;br&gt;    {% &#34;歌手名字&#34; &#34;歌曲名字&#34; &#34;音乐地址&#34;  &#34;音乐封面图片地址&#34; autoplay &#34;autoplay&#34; %}
+    [00:00.00]lrc here
+    {% endaplayerlrc %}&lt;/p&gt;
+&lt;h5 id=&#34;2-3-2-方法2&#34;&gt;&lt;a href=&#34;#2-3-2-方法2&#34; class=&#34;headerlink&#34; title=&#34;2.3.2 方法2&#34;&gt;&lt;/a&gt;2.3.2 方法2&lt;/h5&gt;&lt;p&gt;格式：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{% aplayer &#34;歌手名字&#34; &#34;歌曲名字&#34; &#34;音乐地址&#34;  &#34;音乐封面图片地址&#34; &#34;lrc:abc.txt&#34; %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;举个例子：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{% aplayer &#34;蔡徐坤&#34; &#34;情人&#34; &#34;music.mp3&#34;  &#34;picture.jpg&#34; &#34;lrc:abc.txt&#34; %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：lrc的txt文件必须更改成是由utf-8编码，否则网站上呈现出来的歌词会出现乱码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;font size=&#34;4&#34;&gt;更改成由utf-8编码的方法:&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;①首先自行编写歌词，或者可以从QQ音乐下载歌曲的lrc文件，再把歌曲的lrc文件的后缀名改成txt，打开该txt文件你就会发现是由 ANSI 编码而来（如图）&lt;br&gt;&lt;img src=&#34;/.io//1.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;/.io//1.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;br&gt;②把该txt文件另存为由utf-8编码（如图）&lt;br&gt;&lt;img src=&#34;/.io//2.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;/.io//2.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;方法二&#34;&gt;&lt;a href=&#34;#方法二&#34; class=&#34;headerlink&#34; title=&#34;方法二&#34;&gt;&lt;/a&gt;方法二&lt;/h3&gt;&lt;p&gt;格式：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div align=&amp;quot;middle&amp;quot;&amp;gt;http://music.163.com/song/media/outer/url?id=XXXXXX.mp3&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：XXXXX为音乐的id号&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;font size=&#34;4&#34;&gt;id号查找方法：&lt;/font&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先进入网易云在线平台，任意找到一首歌点进去播放，可以在地址栏拿到音乐id号&lt;/li&gt;
+&lt;li&gt;通过下面网址：&lt;a href=&#34;http://music.163.com/song/media/outer/url?id=XXXXXX.mp3%EF%BC%8C&#34;&gt;http://music.163.com/song/media/outer/url?id=XXXXXX.mp3，&lt;/a&gt; XXXXXX就是歌曲id号，每一首歌我们只需要换掉这个id号就行了,就相当于每一首的外链了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;第三部分-在文章中插入图片&#34;&gt;&lt;a href=&#34;#第三部分-在文章中插入图片&#34; class=&#34;headerlink&#34; title=&#34;第三部分 在文章中插入图片&#34;&gt;&lt;/a&gt;第三部分 在文章中插入图片&lt;/h2&gt;&lt;h3 id=&#34;3-1-安装插件&#34;&gt;&lt;a href=&#34;#3-1-安装插件&#34; class=&#34;headerlink&#34; title=&#34;3.1 安装插件&#34;&gt;&lt;/a&gt;3.1 安装插件&lt;/h3&gt;&lt;p&gt;在hexo文件夹中鼠标右击&lt;code&gt;git bash here&lt;/code&gt;执行以下命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install hexo-asset-image --save
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-2-插入图片&#34;&gt;&lt;a href=&#34;#3-2-插入图片&#34; class=&#34;headerlink&#34; title=&#34;3.2 插入图片&#34;&gt;&lt;/a&gt;3.2 插入图片&lt;/h3&gt;&lt;p&gt;格式为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;![图片标题](picture.jpg)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;第四部分-在文章中插入视频&#34;&gt;&lt;a href=&#34;#第四部分-在文章中插入视频&#34; class=&#34;headerlink&#34; title=&#34;第四部分 在文章中插入视频&#34;&gt;&lt;/a&gt;第四部分 在文章中插入视频&lt;/h2&gt;&lt;h3 id=&#34;4-1-安装插件&#34;&gt;&lt;a href=&#34;#4-1-安装插件&#34; class=&#34;headerlink&#34; title=&#34;4.1 安装插件&#34;&gt;&lt;/a&gt;4.1 安装插件&lt;/h3&gt;&lt;p&gt;在hexo文件夹中鼠标右击&lt;code&gt;git bash here&lt;/code&gt;执行以下命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install hexo-tag-dplayer --save
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;4-2-插入视频&#34;&gt;&lt;a href=&#34;#4-2-插入视频&#34; class=&#34;headerlink&#34; title=&#34;4.2 插入视频&#34;&gt;&lt;/a&gt;4.2 插入视频&lt;/h3&gt;&lt;p&gt;格式：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{% dplayer key=value ... %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;举个例子：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{% dplayer  &#34;url=demo.mp4&#34;  &#34;pic=picture.jpg&#34; &#34;width=700px&#34;  &#34;heigth=60px&#34; &#34;theme=#FADFA3&#34; &#34;autoplay=false&#34;  %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中key可以为：&lt;br&gt;&lt;code&gt;autoplay&lt;/code&gt;, &lt;code&gt;loop&lt;/code&gt;, &lt;code&gt;screenshot&lt;/code&gt;, &lt;code&gt;hotkey&lt;/code&gt;, &lt;code&gt;mutex&lt;/code&gt;, &lt;code&gt;dmunlimited&lt;/code&gt;,&lt;code&gt;logo&lt;/code&gt;,&lt;code&gt;theme&lt;/code&gt;,&lt;code&gt;url&lt;/code&gt;,&lt;code&gt;pic&lt;/code&gt;,&lt;code&gt;lang&lt;/code&gt;,&lt;code&gt;autoplay&lt;/code&gt;, &lt;code&gt;width&lt;/code&gt;,&lt;code&gt;heigth&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;其实在我们平时插入视频不需要用到那么多的key&lt;br&gt;必要的key有以下几个：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;url：视频的地址&lt;/li&gt;
+&lt;li&gt;pic：视频的封面图片地址&lt;/li&gt;
+&lt;li&gt;width:视频的宽度（单位为px）&lt;/li&gt;
+&lt;li&gt;heigth：视频的高度（单位为px）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;第五部分-字体的格式&#34;&gt;&lt;a href=&#34;#第五部分-字体的格式&#34; class=&#34;headerlink&#34; title=&#34;第五部分 字体的格式&#34;&gt;&lt;/a&gt;第五部分 字体的格式&lt;/h2&gt;&lt;h3 id=&#34;5-1-标题&#34;&gt;&lt;a href=&#34;#5-1-标题&#34; class=&#34;headerlink&#34; title=&#34;5.1 标题&#34;&gt;&lt;/a&gt;5.1 标题&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;# 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;5-2-文字样式&#34;&gt;&lt;a href=&#34;#5-2-文字样式&#34; class=&#34;headerlink&#34; title=&#34;5.2 文字样式&#34;&gt;&lt;/a&gt;5.2 文字样式&lt;/h3&gt;&lt;p&gt;加粗：&lt;code&gt;**文字**&lt;/code&gt;&lt;br&gt;样式：&lt;strong&gt;加粗&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;斜体：&lt;code&gt;*文字*&lt;/code&gt;&lt;br&gt;样式：&lt;em&gt;斜体&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;下划线：&lt;code&gt;&amp;lt;u&amp;gt;文字&amp;lt;/u&amp;gt;&lt;/code&gt;&lt;br&gt;样式：&lt;u&gt;下划线&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;删除线：&lt;code&gt;~~文字~~&lt;/code&gt;&lt;br&gt;样式：&lt;del&gt;文字&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;代码块：&lt;code&gt;文字&lt;/code&gt;&lt;br&gt;样式：&lt;code&gt;文字&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;引用：&lt;code&gt;文字&lt;/code&gt;&lt;br&gt;样式：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;文字&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;5-3表格&#34;&gt;&lt;a href=&#34;#5-3表格&#34; class=&#34;headerlink&#34; title=&#34;5.3表格&#34;&gt;&lt;/a&gt;5.3表格&lt;/h3&gt;&lt;h4 id=&#34;5-3-1-有序表格&#34;&gt;&lt;a href=&#34;#5-3-1-有序表格&#34; class=&#34;headerlink&#34; title=&#34;5.3.1 有序表格&#34;&gt;&lt;/a&gt;5.3.1 有序表格&lt;/h4&gt;&lt;p&gt;在文字前面加上1. 2. 3.&lt;/p&gt;
+&lt;p&gt;格式：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 文本1
+2. 文本2
+3. 文本3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;样式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;文本1&lt;/li&gt;
+&lt;li&gt;文本2&lt;/li&gt;
+&lt;li&gt;文本3&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;5-3-2-无序表格&#34;&gt;&lt;a href=&#34;#5-3-2-无序表格&#34; class=&#34;headerlink&#34; title=&#34;5.3.2 无序表格&#34;&gt;&lt;/a&gt;5.3.2 无序表格&lt;/h4&gt;&lt;p&gt;在文字前面加上 -&lt;/p&gt;
+&lt;p&gt;格式：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- 文本1
+- 文本2
+- 文本3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;样式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文本1&lt;/li&gt;
+&lt;li&gt;文本2&lt;/li&gt;
+&lt;li&gt;文本3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以上是个人搭建博客写文章时的总结&lt;/p&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://zztqsh.github.io/2020/08/13/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</guid>
+            <title>绑定域名</title>
+            <link>https://zztqsh.github.io/2020/08/13/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</link>
+            <category>绑定域名</category>
+            <pubDate>Thu, 13 Aug 2020 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;一、购买域名&#34;&gt;&lt;a href=&#34;#一、购买域名&#34; class=&#34;headerlink&#34; title=&#34;一、购买域名&#34;&gt;&lt;/a&gt;一、购买域名&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;域名可以在&lt;a href=&#34;https://cloud.tencent.com/act/domainsales?fromSource=gwzcw.3559299.3559299.3559299&amp;utm_medium=cpc&amp;utm_id=gwzcw.3559299.3559299.3559299&#34;&gt;腾讯云&lt;/a&gt;，&lt;a href=&#34;https://www.aliyun.com/?utm_content=se_1003105700&#34;&gt;阿里云&lt;/a&gt;，&lt;a href=&#34;https://sg.godaddy.com/zh/offers/domains/godaddy-com?isc=gennbacn16&amp;countryview=1&amp;currencyType=CNY&amp;utm_source=baidu&amp;utm_medium=cpc&amp;utm_term=%E5%9F%9F%E5%90%8D%E8%B4%AD%E4%B9%B0&amp;utm_campaign=zh-cn_dom_sem_ni_nb_x_ph_001&amp;utm_content=%E5%9F%9F%E5%90%8D%E8%B4%AD%E4%B9%B0&amp;gclid=CPj39v3FnOsCFQwZvAodyXgNXQ&amp;gclsrc=ds&#34;&gt;GoDaddy&lt;/a&gt;上购买&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;以下以腾讯云为例：&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;1-注册一个腾讯云账号&#34;&gt;&lt;a href=&#34;#1-注册一个腾讯云账号&#34; class=&#34;headerlink&#34; title=&#34;1.注册一个腾讯云账号&#34;&gt;&lt;/a&gt;1.注册一个腾讯云账号&lt;/h4&gt;&lt;div class=&#34;gallery &#34;&gt;
+              &lt;p&gt;&lt;img src=&#34;https://wx1.sinaimg.cn/mw2000/0077ovw4gy1grk67flxf8j30fj04zt8p.jpg&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://wx1.sinaimg.cn/mw2000/0077ovw4gy1grk67flxf8j30fj04zt8p.jpg&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;注册腾讯云账号&#34;&gt;&lt;/p&gt;
+            &lt;/div&gt;
+
+&lt;h4 id=&#34;2-购买域名&#34;&gt;&lt;a href=&#34;#2-购买域名&#34; class=&#34;headerlink&#34; title=&#34;2.购买域名&#34;&gt;&lt;/a&gt;2.购买域名&lt;/h4&gt;&lt;div class=&#34;gallery &#34;&gt;
+              &lt;p&gt;&lt;img src=&#34;https://wx1.sinaimg.cn/mw2000/0077ovw4gy1grk67cyb42j30b309mgwl.jpg&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://wx1.sinaimg.cn/mw2000/0077ovw4gy1grk67cyb42j30b309mgwl.jpg&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;购买域名&#34;&gt; &lt;/p&gt;
+            &lt;/div&gt;
+
+&lt;h4 id=&#34;3-进行实名认证&#34;&gt;&lt;a href=&#34;#3-进行实名认证&#34; class=&#34;headerlink&#34; title=&#34;3.进行实名认证&#34;&gt;&lt;/a&gt;3.进行实名认证&lt;/h4&gt;&lt;div class=&#34;gallery &#34;&gt;
+              &lt;p&gt;&lt;img src=&#34;https://wx1.sinaimg.cn/mw2000/0077ovw4gy1grk67dz2wpj30dx0c4h35.jpg&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://wx1.sinaimg.cn/mw2000/0077ovw4gy1grk67dz2wpj30dx0c4h35.jpg&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;实名认证&#34;&gt;&lt;/p&gt;
+            &lt;/div&gt;
+
+&lt;h3 id=&#34;二、域名解析&#34;&gt;&lt;a href=&#34;#二、域名解析&#34; class=&#34;headerlink&#34; title=&#34;二、域名解析&#34;&gt;&lt;/a&gt;二、域名解析&lt;/h3&gt;&lt;h4 id=&#34;1-进入-域名注册-我的域名&#34;&gt;&lt;a href=&#34;#1-进入-域名注册-我的域名&#34; class=&#34;headerlink&#34; title=&#34;1.进入 域名注册-我的域名&#34;&gt;&lt;/a&gt;1.进入 &lt;code&gt;域名注册&lt;/code&gt;-&lt;code&gt;我的域名&lt;/code&gt;&lt;/h4&gt;&lt;div class=&#34;gallery &#34;&gt;
+              &lt;p&gt;&lt;img src=&#34;https://wx1.sinaimg.cn/mw2000/0077ovw4gy1grk67e8m7dj30oe0hrq48.jpg&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://wx1.sinaimg.cn/mw2000/0077ovw4gy1grk67e8m7dj30oe0hrq48.jpg&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;域名注册&#34;&gt;&lt;/p&gt;
+            &lt;/div&gt;
+
+&lt;h4 id=&#34;2-点击解析&#34;&gt;&lt;a href=&#34;#2-点击解析&#34; class=&#34;headerlink&#34; title=&#34;2.点击解析&#34;&gt;&lt;/a&gt;2.点击&lt;code&gt;解析&lt;/code&gt;&lt;/h4&gt;&lt;div class=&#34;gallery &#34;&gt;
+              &lt;p&gt;&lt;img src=&#34;https://wx1.sinaimg.cn/mw2000/0077ovw4gy1grk67feh0lj30tq0ac4qp.jpg&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://wx1.sinaimg.cn/mw2000/0077ovw4gy1grk67feh0lj30tq0ac4qp.jpg&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;域名解析&#34;&gt;&lt;/p&gt;
+            &lt;/div&gt;
+
+&lt;h4 id=&#34;3-添加记录&#34;&gt;&lt;a href=&#34;#3-添加记录&#34; class=&#34;headerlink&#34; title=&#34;3.添加记录&#34;&gt;&lt;/a&gt;3.添加记录&lt;/h4&gt;&lt;p&gt;①主机记录为:&lt;code&gt;@&lt;/code&gt;  记录类型为:&lt;code&gt;CNAME&lt;/code&gt;  记录值为:&lt;code&gt;你自己的博客地址&lt;/code&gt;(例如我的为 zztqsh.github.io)&lt;br&gt;②主机记录为:&lt;code&gt;www&lt;/code&gt;  记录类型为:&lt;code&gt;CNAME&lt;/code&gt; 记录值为:&lt;code&gt;你自己的博客地址&lt;/code&gt;(例如我的为 zztqsh.github.io)&lt;/p&gt;
+&lt;div class=&#34;gallery &#34;&gt;
+              &lt;p&gt;&lt;img src=&#34;https://wx1.sinaimg.cn/mw2000/0077ovw4gy1grk67d9puuj315109tdgt.jpg&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://wx1.sinaimg.cn/mw2000/0077ovw4gy1grk67d9puuj315109tdgt.jpg&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;添加记录&#34;&gt;&lt;/p&gt;
+            &lt;/div&gt;
+
+
+
+&lt;blockquote&gt;
+&lt;center&gt;10分钟后，你就可以用域名来访问你的博客了！&lt;/center&gt;&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://zztqsh.github.io/2020/03/11/%E4%B8%80%E4%BA%9B%E8%AF%9D/</guid>
+            <title>对“主席”的一些话</title>
+            <link>https://zztqsh.github.io/2020/03/11/%E4%B8%80%E4%BA%9B%E8%AF%9D/</link>
+            <category>个人感想</category>
+            <pubDate>Wed, 11 Mar 2020 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;📢-对“主席”的一些话-👇👇👇&#34;&gt;&lt;a href=&#34;#📢-对“主席”的一些话-👇👇👇&#34; class=&#34;headerlink&#34; title=&#34;📢  对“主席”的一些话  👇👇👇&#34;&gt;&lt;/a&gt;📢  对“主席”的一些话  👇👇👇&lt;/h3&gt;&lt;p&gt;有一些话，我想来想去觉得还是有必要说出来：😐😐😐&lt;/p&gt;
+&lt;p&gt;我进这个基地 其实先前有点害怕 😭😭😭&lt;/p&gt;
+&lt;p&gt;因为不懂如何选座位而不敢进基地，怕乱坐位置触犯了规则，但鼓起勇气向你求助之后，你的回答也让我感觉其实这个基地很随和，并没我想得那么严肃和苛刻😄&lt;br&gt;但由于基地中大部分都是男生，也让我不懂得该如何主动向他们请教😳，也怕会冒犯到，所以自己学自己的，除了少梅姐之外，也只有你会主动问我学得怎么样了，也会帮我解决我存在的一些问题，也许是因为出于好心，也许是你即将成为主席，想要通过自己的努力更好带领大家，无论怎么样都谢谢你🙏🙏🙏&lt;/p&gt;
+&lt;p&gt;没有谁生来就拥有一切懂得所有，在你达到你现在的水平之前，你也是从零开始，你通过自身努力不断提升自己才变得现在的水平，而我也一样，我才刚开始，也许和现在的你比起来我什么都不是😣，可我并不是在原地踏步🏃🏃🏃，只是走得慢但也不会退后，而你也会指出我学习中的问题🐮，就像之前你指出我只懂得抄进去却不懂得理解它，也会帮我找一些学习视频告诉我学习方法，如果你不说出来，我也许会走更多的弯路&lt;/p&gt;
+&lt;p&gt;可你在指导的同时，总是会说“我的天！…….”🙉🙉🙉 可能是那些很基础的东西我都不懂得令你很惊讶，而你也总会带着一骨傲气，就像在说“这点都不懂，垃圾”，就像在看不起我一样，也许这些东西对你而言非常熟悉，可对于我而言还很陌生，我也在不断去学习去吸收，之前跟我说过关于“自恋”的问题，可我并不觉得有什么，每个人都会有一点自我欣赏，这反倒是好事，至少会对自己有信心，而并非高傲自大，也不是觉得自己很了不起就可以凌驾于别人身上，我相信你也不会这样，你也有自己的野心和欲望，懂得自己想要什么也会因此付出努力，相信你会成功的&lt;/p&gt;
+&lt;p&gt;希望即将成为主席的你，能够更加正视自己，也不必太在意过去的自己，坦然面对，不迷失自己😁😁😁&lt;/p&gt;
+&lt;p&gt;也希望基地在你的带领之下能够越来越好，你也会走向顶峰，当然到达了顶峰也不要回头看看我们这些还在半山腰的小兄弟👬小姐妹们👭&lt;/p&gt;
+&lt;p&gt;㊗️㊗️㊗️㊗️㊗️&lt;/p&gt;
+&lt;p&gt;祝你早日实现你的梦想&lt;br&gt;祝你早点种出你的”爱情树”🙊&lt;/p&gt;
+&lt;p&gt;最后&lt;br&gt;祝你成功！💪💪💪&lt;/p&gt;
+&lt;p&gt;㊗️㊗️㊗️㊗️㊗️&lt;/p&gt;
+&lt;p&gt;🚀&lt;a href=&#34;https://redhat123456.github.io/&#34;&gt;主席的博客&lt;/a&gt;🚀&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

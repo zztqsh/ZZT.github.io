@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>THEO • Posts by &#34;qss&#34; tag</title>
+        <link>https://zztqsh.github.io</link>
+        <description></description>
+        <language>zh-CN,en,zh-HK,zh-TW,default</language>
+        <pubDate>Sat, 19 Jun 2021 00:00:00 +0800</pubDate>
+        <lastBuildDate>Sat, 19 Jun 2021 00:00:00 +0800</lastBuildDate>
+        <category>学习笔记</category>
+        <category>Qss</category>
+        <category>pyqt</category>
+        <category>学习分享</category>
+        <category>c语言</category>
+        <category>markdown</category>
+        <category>文章格式</category>
+        <category>python</category>
+        <category>个人感想</category>
+        <category>学习计划</category>
+        <category>绑定域名</category>
+        <category>图像识别</category>
+        <category>课程设计</category>
+        <category>react</category>
+        <item>
+            <guid isPermalink="true">https://zztqsh.github.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</guid>
+            <title>Qss修饰Qt</title>
+            <link>https://zztqsh.github.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</link>
+            <category>学习笔记</category>
+            <category>Qss</category>
+            <category>pyqt</category>
+            <pubDate>Sat, 19 Jun 2021 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;一、Qss实时编译器&#34;&gt;&lt;a href=&#34;#一、Qss实时编译器&#34; class=&#34;headerlink&#34; title=&#34;一、Qss实时编译器&#34;&gt;&lt;/a&gt;一、Qss实时编译器&lt;/h2&gt;&lt;div class=&#34;note link green&#34;&gt;&lt;p&gt;QSS Editor是用于编辑和实时预览Qt样式表的工具，下载地址为如下:&lt;/p&gt;&lt;/div&gt;
+
+&lt;center&gt;&lt;div class=&#34;tag link&#34;&gt;&lt;a class=&#34;link-card&#34; title=&#34;QSS Editor下载&#34; href=&#34;https://sourceforge.net/projects/qsseditor&#34;&gt;&lt;div class=&#34;left&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&lt;p class=&#34;text&#34;&gt;QSS Editor下载&lt;/p&gt;&lt;p class=&#34;url&#34;&gt;https://sourceforge.net/projects/qsseditor&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;/center&gt;
+
+&lt;h2 id=&#34;二、在python中使用Qss修饰QT&#34;&gt;&lt;a href=&#34;#二、在python中使用Qss修饰QT&#34; class=&#34;headerlink&#34; title=&#34;二、在python中使用Qss修饰QT&#34;&gt;&lt;/a&gt;二、在python中使用Qss修饰QT&lt;/h2&gt;&lt;h3 id=&#34;2-1-读取Qss文件：&#34;&gt;&lt;a href=&#34;#2-1-读取Qss文件：&#34; class=&#34;headerlink&#34; title=&#34;2.1 读取Qss文件：&#34;&gt;&lt;/a&gt;2.1 读取Qss文件：&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;# 读取Qss文件
+class ReadQss:
+   def __init__(self):
+   pass
+
+@staticmethod
+def readQss(style):
+    with open(style, &amp;#39;r&amp;#39;) as f:
+    return f.read()
+
+styleFile = &amp;#39;D:\\program\\Programming\\Python\\KeChengSheJi\\pyqt5\\text\\test_stye.qss&amp;#39;
+qssStyle = ReadQss.readQss(styleFile)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;2-2-创建按钮，并设置属性名（-py文件）：&#34;&gt;&lt;a href=&#34;#2-2-创建按钮，并设置属性名（-py文件）：&#34; class=&#34;headerlink&#34; title=&#34;2.2 创建按钮，并设置属性名（.py文件）：&#34;&gt;&lt;/a&gt;2.2 创建按钮，并设置属性名（.py文件）：&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;mainwindow=QMainWindow()
+widget = QtWidgets.QWidget(mainwindow)
+fileselect = QtWidgets.QPushButton(self.widget2)
+#给按钮设置一个属性名称
+fileselect.setObjectName(&amp;quot;fileselect&amp;quot;)
+#给按钮装饰样式
+fileselect.setStyleSheet(qssStyle)
+fileselect.setFixedSize(150, 40)
+fileselect.setText(&amp;quot;点击打开文件夹&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;2-3-qss文件：&#34;&gt;&lt;a href=&#34;#2-3-qss文件：&#34; class=&#34;headerlink&#34; title=&#34;2.3 .qss文件：&#34;&gt;&lt;/a&gt;2.3 .qss文件：&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;#fileselect&amp;#123;
+ background-color: rgba(196,255,255,150);
+ border-style: outset;
+ border-width: 4px;
+ border-radius: 10px;
+ border-color: rgba(255, 225, 255, 150);
+ font:  17px &amp;quot;Microsoft YaHei&amp;quot;;
+ color:rgba(13,175,233,255);
+&amp;#125;
+#fileselect:hover&amp;#123;
+background-color:rgba(196,255,255, 255);
+border-color: rgba(255, 225, 255, 200);
+color:rgba(13,175,233,255);
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;三、Qss的基本属性&#34;&gt;&lt;a href=&#34;#三、Qss的基本属性&#34; class=&#34;headerlink&#34; title=&#34;三、Qss的基本属性&#34;&gt;&lt;/a&gt;三、Qss的基本属性&lt;/h2&gt;&lt;h3 id=&#34;3-1-背景属性（Background）&#34;&gt;&lt;a href=&#34;#3-1-背景属性（Background）&#34; class=&#34;headerlink&#34; title=&#34;3.1 背景属性（Background）&#34;&gt;&lt;/a&gt;3.1 背景属性（Background）&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;属性&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;background&lt;/td&gt;
+&lt;td&gt;在一个声明中设置所有的背景属性。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-attachment&lt;/td&gt;
+&lt;td&gt;设置背景图像是否固定或者随着页面的其余部分滚动。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-color&lt;/td&gt;
+&lt;td&gt;设置元素的背景颜色。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-image&lt;/td&gt;
+&lt;td&gt;设置元素的背景图像。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-position&lt;/td&gt;
+&lt;td&gt;设置背景图像的开始位置。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-repeat&lt;/td&gt;
+&lt;td&gt;设置是否及如何重复背景图像。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-clip&lt;/td&gt;
+&lt;td&gt;规定背景的绘制区域。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-origin&lt;/td&gt;
+&lt;td&gt;规定背景图片的定位区域。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-size&lt;/td&gt;
+&lt;td&gt;规定背景图片的尺寸。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;###3.2 控制大小&lt;/p&gt;
+&lt;p&gt;min-width和min-height两个属性可以用来指定一个部件的内容区域的最小大小，这两个值将影响部件的minimumSizeHint()&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;QPushButton &amp;#123;
+  min-width: 68px;
+  min-height: 28px;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果该属性没有被指定，最小大小将从部件的内容区域和当前样式中继承&lt;/p&gt;
+&lt;h3 id=&#34;3-3-处理伪类状态&#34;&gt;&lt;a href=&#34;#3-3-处理伪类状态&#34; class=&#34;headerlink&#34; title=&#34;3.3 处理伪类状态&#34;&gt;&lt;/a&gt;3.3 处理伪类状态&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;QPushButton &amp;#123;
+  border: 2px outset green;
+  background: gray;
+&amp;#125;
+QPushButton:pressed &amp;#123;
+  border-style: inset;
+&amp;#125; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;伪状态列表&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;伪状态&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;checked&lt;/td&gt;
+&lt;td&gt;button部件被选中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;disabled&lt;/td&gt;
+&lt;td&gt;部件被禁用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;enabled&lt;/td&gt;
+&lt;td&gt;部件被启用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;focus&lt;/td&gt;
+&lt;td&gt;部件获得焦点&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hover&lt;/td&gt;
+&lt;td&gt;鼠标位于部件上&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;indeterminate&lt;/td&gt;
+&lt;td&gt;checkbox或radiobutton被部分选中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;off&lt;/td&gt;
+&lt;td&gt;部件可以切换，且处于off状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;on&lt;/td&gt;
+&lt;td&gt;部件可以切换，且处于on状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pressed&lt;/td&gt;
+&lt;td&gt;部件被鼠标按下&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;unchecked&lt;/td&gt;
+&lt;td&gt;button部件未被选中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;组合框样式举例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#comboBox QAbstractItemView &amp;#123;
+outline: 1px solid rgb(217,243,255);
+color: rgb(0,140,81);
+background:url(KeChengSheJi/pyqt5/qss/img_1.png);
+selection-background-color: lightgreen;
+selection-color: white;
+&amp;#125;
+#comboBox:hover&amp;#123;
+background:rgba(196,255,255,0);
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

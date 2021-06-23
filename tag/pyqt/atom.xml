@@ -1,0 +1,574 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://zztqsh.github.io</id>
+    <title>THEO • Posts by &#34;pyqt&#34; tag</title>
+    <link href="https://zztqsh.github.io" />
+    <updated>2021-06-18T16:00:00.000Z</updated>
+    <category term="学习笔记" />
+    <category term="Qss" />
+    <category term="pyqt" />
+    <category term="学习分享" />
+    <category term="c语言" />
+    <category term="markdown" />
+    <category term="文章格式" />
+    <category term="python" />
+    <category term="个人感想" />
+    <category term="学习计划" />
+    <category term="绑定域名" />
+    <category term="图像识别" />
+    <category term="课程设计" />
+    <category term="react" />
+    <entry>
+        <id>https://zztqsh.github.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</id>
+        <title>Qss修饰Qt</title>
+        <link rel="alternate" href="https://zztqsh.github.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/"/>
+        <content type="html">&lt;h2 id=&#34;一、Qss实时编译器&#34;&gt;&lt;a href=&#34;#一、Qss实时编译器&#34; class=&#34;headerlink&#34; title=&#34;一、Qss实时编译器&#34;&gt;&lt;/a&gt;一、Qss实时编译器&lt;/h2&gt;&lt;div class=&#34;note link green&#34;&gt;&lt;p&gt;QSS Editor是用于编辑和实时预览Qt样式表的工具，下载地址为如下:&lt;/p&gt;&lt;/div&gt;
+
+&lt;center&gt;&lt;div class=&#34;tag link&#34;&gt;&lt;a class=&#34;link-card&#34; title=&#34;QSS Editor下载&#34; href=&#34;https://sourceforge.net/projects/qsseditor&#34;&gt;&lt;div class=&#34;left&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&lt;p class=&#34;text&#34;&gt;QSS Editor下载&lt;/p&gt;&lt;p class=&#34;url&#34;&gt;https://sourceforge.net/projects/qsseditor&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;/center&gt;
+
+&lt;h2 id=&#34;二、在python中使用Qss修饰QT&#34;&gt;&lt;a href=&#34;#二、在python中使用Qss修饰QT&#34; class=&#34;headerlink&#34; title=&#34;二、在python中使用Qss修饰QT&#34;&gt;&lt;/a&gt;二、在python中使用Qss修饰QT&lt;/h2&gt;&lt;h3 id=&#34;2-1-读取Qss文件：&#34;&gt;&lt;a href=&#34;#2-1-读取Qss文件：&#34; class=&#34;headerlink&#34; title=&#34;2.1 读取Qss文件：&#34;&gt;&lt;/a&gt;2.1 读取Qss文件：&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;# 读取Qss文件
+class ReadQss:
+   def __init__(self):
+   pass
+
+@staticmethod
+def readQss(style):
+    with open(style, &amp;#39;r&amp;#39;) as f:
+    return f.read()
+
+styleFile = &amp;#39;D:\\program\\Programming\\Python\\KeChengSheJi\\pyqt5\\text\\test_stye.qss&amp;#39;
+qssStyle = ReadQss.readQss(styleFile)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;2-2-创建按钮，并设置属性名（-py文件）：&#34;&gt;&lt;a href=&#34;#2-2-创建按钮，并设置属性名（-py文件）：&#34; class=&#34;headerlink&#34; title=&#34;2.2 创建按钮，并设置属性名（.py文件）：&#34;&gt;&lt;/a&gt;2.2 创建按钮，并设置属性名（.py文件）：&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;mainwindow=QMainWindow()
+widget = QtWidgets.QWidget(mainwindow)
+fileselect = QtWidgets.QPushButton(self.widget2)
+#给按钮设置一个属性名称
+fileselect.setObjectName(&amp;quot;fileselect&amp;quot;)
+#给按钮装饰样式
+fileselect.setStyleSheet(qssStyle)
+fileselect.setFixedSize(150, 40)
+fileselect.setText(&amp;quot;点击打开文件夹&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;2-3-qss文件：&#34;&gt;&lt;a href=&#34;#2-3-qss文件：&#34; class=&#34;headerlink&#34; title=&#34;2.3 .qss文件：&#34;&gt;&lt;/a&gt;2.3 .qss文件：&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;#fileselect&amp;#123;
+ background-color: rgba(196,255,255,150);
+ border-style: outset;
+ border-width: 4px;
+ border-radius: 10px;
+ border-color: rgba(255, 225, 255, 150);
+ font:  17px &amp;quot;Microsoft YaHei&amp;quot;;
+ color:rgba(13,175,233,255);
+&amp;#125;
+#fileselect:hover&amp;#123;
+background-color:rgba(196,255,255, 255);
+border-color: rgba(255, 225, 255, 200);
+color:rgba(13,175,233,255);
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;三、Qss的基本属性&#34;&gt;&lt;a href=&#34;#三、Qss的基本属性&#34; class=&#34;headerlink&#34; title=&#34;三、Qss的基本属性&#34;&gt;&lt;/a&gt;三、Qss的基本属性&lt;/h2&gt;&lt;h3 id=&#34;3-1-背景属性（Background）&#34;&gt;&lt;a href=&#34;#3-1-背景属性（Background）&#34; class=&#34;headerlink&#34; title=&#34;3.1 背景属性（Background）&#34;&gt;&lt;/a&gt;3.1 背景属性（Background）&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;属性&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;background&lt;/td&gt;
+&lt;td&gt;在一个声明中设置所有的背景属性。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-attachment&lt;/td&gt;
+&lt;td&gt;设置背景图像是否固定或者随着页面的其余部分滚动。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-color&lt;/td&gt;
+&lt;td&gt;设置元素的背景颜色。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-image&lt;/td&gt;
+&lt;td&gt;设置元素的背景图像。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-position&lt;/td&gt;
+&lt;td&gt;设置背景图像的开始位置。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-repeat&lt;/td&gt;
+&lt;td&gt;设置是否及如何重复背景图像。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-clip&lt;/td&gt;
+&lt;td&gt;规定背景的绘制区域。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-origin&lt;/td&gt;
+&lt;td&gt;规定背景图片的定位区域。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;background-size&lt;/td&gt;
+&lt;td&gt;规定背景图片的尺寸。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;###3.2 控制大小&lt;/p&gt;
+&lt;p&gt;min-width和min-height两个属性可以用来指定一个部件的内容区域的最小大小，这两个值将影响部件的minimumSizeHint()&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;QPushButton &amp;#123;
+  min-width: 68px;
+  min-height: 28px;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果该属性没有被指定，最小大小将从部件的内容区域和当前样式中继承&lt;/p&gt;
+&lt;h3 id=&#34;3-3-处理伪类状态&#34;&gt;&lt;a href=&#34;#3-3-处理伪类状态&#34; class=&#34;headerlink&#34; title=&#34;3.3 处理伪类状态&#34;&gt;&lt;/a&gt;3.3 处理伪类状态&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;QPushButton &amp;#123;
+  border: 2px outset green;
+  background: gray;
+&amp;#125;
+QPushButton:pressed &amp;#123;
+  border-style: inset;
+&amp;#125; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;伪状态列表&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;伪状态&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;checked&lt;/td&gt;
+&lt;td&gt;button部件被选中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;disabled&lt;/td&gt;
+&lt;td&gt;部件被禁用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;enabled&lt;/td&gt;
+&lt;td&gt;部件被启用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;focus&lt;/td&gt;
+&lt;td&gt;部件获得焦点&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hover&lt;/td&gt;
+&lt;td&gt;鼠标位于部件上&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;indeterminate&lt;/td&gt;
+&lt;td&gt;checkbox或radiobutton被部分选中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;off&lt;/td&gt;
+&lt;td&gt;部件可以切换，且处于off状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;on&lt;/td&gt;
+&lt;td&gt;部件可以切换，且处于on状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pressed&lt;/td&gt;
+&lt;td&gt;部件被鼠标按下&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;unchecked&lt;/td&gt;
+&lt;td&gt;button部件未被选中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;组合框样式举例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#comboBox QAbstractItemView &amp;#123;
+outline: 1px solid rgb(217,243,255);
+color: rgb(0,140,81);
+background:url(KeChengSheJi/pyqt5/qss/img_1.png);
+selection-background-color: lightgreen;
+selection-color: white;
+&amp;#125;
+#comboBox:hover&amp;#123;
+background:rgba(196,255,255,0);
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <category term="学习笔记" />
+        <category term="Qss" />
+        <category term="pyqt" />
+        <updated>2021-06-18T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://zztqsh.github.io/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</id>
+        <title>pyqt使用方法</title>
+        <link rel="alternate" href="https://zztqsh.github.io/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+        <content type="html">&lt;center&gt;&lt;div class=&#34;tag link&#34;&gt;&lt;a class=&#34;link-card&#34; title=&#34;QT 官方文档&#34; href=&#34;https://doc.qt.io/&#34;&gt;&lt;div class=&#34;left&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&lt;p class=&#34;text&#34;&gt;QT 官方文档&lt;/p&gt;&lt;p class=&#34;url&#34;&gt;https://doc.qt.io/&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;/center&gt;   
+
+&lt;h2 id=&#34;一、基本功能&#34;&gt;&lt;a href=&#34;#一、基本功能&#34; class=&#34;headerlink&#34; title=&#34;一、基本功能&#34;&gt;&lt;/a&gt;一、基本功能&lt;/h2&gt;&lt;h3 id=&#34;1-1、建立简单的窗口&#34;&gt;&lt;a href=&#34;#1-1、建立简单的窗口&#34; class=&#34;headerlink&#34; title=&#34;1.1、建立简单的窗口&#34;&gt;&lt;/a&gt;1.1、建立简单的窗口&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;import sys
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QApplication, QWidget
+if __name__ == &amp;#39;__main__&amp;#39;:
+app = QApplication(sys.argv)
+w = QWidget()
+w.resize(250, 150)
+w.move(300, 300)
+w.setWindowTitle(&amp;#39;Simple&amp;#39;)
+w.setGeometry(300, 300, 300, 220)
+w.setWindowIcon(QIcon(&amp;#39;pyqt使用方法/pic/提示.png&amp;#39;))
+w.show()
+sys.exit(app.exec_())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/.io//1.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;/.io//1.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;示例窗口&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;app = QApplication(sys.argv)&lt;/code&gt;:&lt;br&gt;每个PyQt5应用都必须创建一个应用对象。sys.argv是一组命令行参数的列表。Python可以在shell里运行，这个参数提供对脚本控制的功能。&lt;br&gt;&lt;code&gt;w = QWidget()&lt;/code&gt;:&lt;br&gt;QWidge控件是一个用户界面的基本控件，它提供了基本的应用构造器。默认情况下，构造器是没有父级的，没有父级的构造器被称为窗口（window）&lt;br&gt;&lt;code&gt;w.resize(250, 150)&lt;/code&gt;:&lt;br&gt;resize()方法能改变控件的大小，这里的意思是窗口宽250px，高150px&lt;br&gt;&lt;code&gt;w.move(300, 300)&lt;/code&gt;:&lt;br&gt;move()是修改控件位置的的方法。它把控件放置到屏幕坐标的(300, 300)的位置。注：屏幕坐标系的原点是屏幕的左上角&lt;br&gt;&lt;code&gt;w.setGeometry(300, 300, 300, 220)&lt;/code&gt;:&lt;br&gt;把窗口放到屏幕上并且设置窗口大小。参数分别代表屏幕坐标的x、y和窗口大小的宽、高（是resize和move的集合体）&lt;br&gt;&lt;code&gt;w.setWindowTitle(&amp;#39;Simple&amp;#39;)&lt;/code&gt;:&lt;br&gt;给窗口添加了一个标题，标题在标题栏展示&lt;br&gt;&lt;code&gt;w.show()&lt;/code&gt;:&lt;br&gt;show()能让控件在桌面上显示出来。控件在内存里创建，之后才能在显示器上显示出来&lt;br&gt;&lt;code&gt;sys.exit(app.exec_())&lt;/code&gt;:&lt;br&gt;当调用exit()方法或直接销毁主控件时，主循环就会结束。sys.exit()方法能确保主循环安全退出&lt;/p&gt;
+&lt;h3 id=&#34;1-2、控件&#34;&gt;&lt;a href=&#34;#1-2、控件&#34; class=&#34;headerlink&#34; title=&#34;1.2、控件&#34;&gt;&lt;/a&gt;1.2、控件&lt;/h3&gt;&lt;h4 id=&#34;1-2-1、按钮&#34;&gt;&lt;a href=&#34;#1-2-1、按钮&#34; class=&#34;headerlink&#34; title=&#34;1.2.1、按钮&#34;&gt;&lt;/a&gt;1.2.1、按钮&lt;/h4&gt;&lt;p&gt;创建按钮：第一个参数是按钮的文本，第二个参数是按钮的父级组件：&lt;br&gt;   &lt;code&gt;  qbtn = QPushButton(&amp;#39;按钮&amp;#39;, self)&lt;/code&gt;&lt;br&gt;按钮绑定事件：&lt;br&gt;    &lt;code&gt;qbtn.clicked.connect(function)&lt;/code&gt;&lt;br&gt;给按钮添加提示语：&lt;br&gt;&lt;code&gt;QToolTip.setFont(QFont(&amp;#39;SansSerif&amp;#39;, 10))&lt;/code&gt;&lt;br&gt;&lt;code&gt;qbtn.setToolTip(&amp;#39;This is a &amp;lt;b&amp;gt;QPushButton&amp;lt;/b&amp;gt; widget&amp;#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;tag link&#34;&gt;&lt;a class=&#34;link-card&#34; title=&#34;QPushButton 按钮控件&#34; href=&#34;https://blog.csdn.net/qq_17351161/article/details/102907200?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162403539316780255224798%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&amp;request_id=162403539316780255224798&amp;biz_id=0&amp;spm=1018.2226.3001.4450&#34;&gt;&lt;div class=&#34;left&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&lt;p class=&#34;text&#34;&gt;QPushButton 按钮控件&lt;/p&gt;&lt;p class=&#34;url&#34;&gt;https://blog.csdn.net/qq_17351161/article/details/102907200?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162403539316780255224798%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&amp;request_id=162403539316780255224798&amp;biz_id=0&amp;spm=1018.2226.3001.4450&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;1-2-2、图像控件-QPixmap&#34;&gt;&lt;a href=&#34;#1-2-2、图像控件-QPixmap&#34; class=&#34;headerlink&#34; title=&#34;1.2.2、图像控件 QPixmap&#34;&gt;&lt;/a&gt;1.2.2、图像控件 QPixmap&lt;/h4&gt;&lt;p&gt;创建一个QPixmap 对象，它将传入的文件名作为参数:&lt;br&gt;&lt;code&gt;pixmap = QPixmap(&amp;quot;icon.png&amp;quot;)&lt;/code&gt;&lt;br&gt;将pixmap放到QLabel控件中:&lt;br&gt;&lt;code&gt;lbl = QLabel(self)&lt;/code&gt;&lt;br&gt;&lt;code&gt;lbl.setPixmap(pixmap)&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;1-2-3、文本框-QLineEdit&#34;&gt;&lt;a href=&#34;#1-2-3、文本框-QLineEdit&#34; class=&#34;headerlink&#34; title=&#34;1.2.3、文本框 QLineEdit&#34;&gt;&lt;/a&gt;1.2.3、文本框 QLineEdit&lt;/h4&gt;&lt;p&gt;创建一个QLineEdit对象：&lt;br&gt;&lt;code&gt;qle = QLineEdit(self)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文本的设置与获取&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;API&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;setText()&lt;/td&gt;
+&lt;td&gt;插入文本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;text()&lt;/td&gt;
+&lt;td&gt;获取文本内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;displayText()&lt;/td&gt;
+&lt;td&gt;获取文本显示的内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;显示模式&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;API&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;setEchoMode(QLineEdit_EchoMode)&lt;/td&gt;
+&lt;td&gt;设置显示模式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;echoMode()&lt;/td&gt;
+&lt;td&gt;获取文本框输入模式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;QLineEdit_EchoMode&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;Normal&lt;/td&gt;
+&lt;td&gt;普通模式，显示输入的值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NoEcho&lt;/td&gt;
+&lt;td&gt;不输出&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Password&lt;/td&gt;
+&lt;td&gt;密文显示，显示都是星号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PasswordEchoOnEdit&lt;/td&gt;
+&lt;td&gt;输入时候显示，结束后密文&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;输入限制&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;相关API&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;setMaxLength(int)&lt;/td&gt;
+&lt;td&gt;这是最大长度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;maxLength()&lt;/td&gt;
+&lt;td&gt;获取最长度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;setReadOnly(bool)&lt;/td&gt;
+&lt;td&gt;设置只读&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;isReadOnly()&lt;/td&gt;
+&lt;td&gt;获取是否只读&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;setValidator(QValidator)&lt;/td&gt;
+&lt;td&gt;设置验证器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;setInputMask(mask_str)&lt;/td&gt;
+&lt;td&gt;掩码验证&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hasAcceptableInput()&lt;/td&gt;
+&lt;td&gt;文本是否通过验证&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;文本框的编辑状态&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;相关API&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;isModified(bool)&lt;/td&gt;
+&lt;td&gt;是否被编辑&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;setModified()&lt;/td&gt;
+&lt;td&gt;设置编辑状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;div class=&#34;tag link&#34;&gt;&lt;a class=&#34;link-card&#34; title=&#34;QLineEdit 单行文本输入&#34; href=&#34;https://blog.csdn.net/qq_17351161/article/details/102954815&#34;&gt;&lt;div class=&#34;left&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&lt;p class=&#34;text&#34;&gt;QLineEdit 单行文本输入&lt;/p&gt;&lt;p class=&#34;url&#34;&gt;https://blog.csdn.net/qq_17351161/article/details/102954815&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;二、布局管理&#34;&gt;&lt;a href=&#34;#二、布局管理&#34; class=&#34;headerlink&#34; title=&#34;二、布局管理&#34;&gt;&lt;/a&gt;二、布局管理&lt;/h2&gt;&lt;h3 id=&#34;2-1、水平布局&#34;&gt;&lt;a href=&#34;#2-1、水平布局&#34; class=&#34;headerlink&#34; title=&#34;2.1、水平布局&#34;&gt;&lt;/a&gt;2.1、水平布局&lt;/h3&gt;&lt;h4 id=&#34;水平对齐&#34;&gt;&lt;a href=&#34;#水平对齐&#34; class=&#34;headerlink&#34; title=&#34;水平对齐&#34;&gt;&lt;/a&gt;水平对齐&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;layout = QHBoxLayout()
+layout.addWidget(QPushButton(str(1))
+layout.addWidget(QPushButton(str(2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;水平居中对齐&#34;&gt;&lt;a href=&#34;#水平居中对齐&#34; class=&#34;headerlink&#34; title=&#34;水平居中对齐&#34;&gt;&lt;/a&gt;水平居中对齐&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;layout = QHBoxLayout()
+layout.addStretch(1) # 前面增加一行
+layout.addWidget(QPushButton(str(1))
+layout.addWidget(QPushButton(str(2))
+layout.addStretch(1) #后面增加一行
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;水平两端对齐&#34;&gt;&lt;a href=&#34;#水平两端对齐&#34; class=&#34;headerlink&#34; title=&#34;水平两端对齐&#34;&gt;&lt;/a&gt;水平两端对齐&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;layout = QHBoxLayout()
+layout.addWidget(QPushButton(str(1))
+layout.addStretch(1)  # 添加行
+layout.addWidget(QPushButton(str(2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;布局对齐方式&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;QtCore.Qt.AlignLeft&lt;/td&gt;
+&lt;td&gt;水平方向居左对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QtCore.Qt.AlignRight&lt;/td&gt;
+&lt;td&gt;水平方向居右对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QtCore.Qt.AlignCenter&lt;/td&gt;
+&lt;td&gt;水平方向居中对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QtCore.Qt.AlignJustify&lt;/td&gt;
+&lt;td&gt;水平方向两端对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QtCore.Qt.AlignTop&lt;/td&gt;
+&lt;td&gt;垂直方向靠上对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QtCore.Qt.AlignBottom&lt;/td&gt;
+&lt;td&gt;垂直方向靠下对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QtCore.Qt.AlignVCenter&lt;/td&gt;
+&lt;td&gt;垂直方向居中对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h3 id=&#34;2-2、垂直布局&#34;&gt;&lt;a href=&#34;#2-2、垂直布局&#34; class=&#34;headerlink&#34; title=&#34;2.2、垂直布局&#34;&gt;&lt;/a&gt;2.2、垂直布局&lt;/h3&gt;&lt;h4 id=&#34;垂直对齐&#34;&gt;&lt;a href=&#34;#垂直对齐&#34; class=&#34;headerlink&#34; title=&#34;垂直对齐&#34;&gt;&lt;/a&gt;垂直对齐&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;layout = QVBoxLayout()
+layout.addWidget(QPushButton(str(1))
+layout.addWidget(QPushButton(str(2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;垂直顶部对齐&#34;&gt;&lt;a href=&#34;#垂直顶部对齐&#34; class=&#34;headerlink&#34; title=&#34;垂直顶部对齐&#34;&gt;&lt;/a&gt;垂直顶部对齐&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;layout = QVBoxLayout()
+layout.addWidget(QPushButton(str(1))
+layout.addWidget(QPushButton(str(2))
+layout.addStretch(1)  # 添加行
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;垂直底部对齐&#34;&gt;&lt;a href=&#34;#垂直底部对齐&#34; class=&#34;headerlink&#34; title=&#34;垂直底部对齐&#34;&gt;&lt;/a&gt;垂直底部对齐&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;layout = QVBoxLayout()
+layout.addStretch(1)  # 添加行
+layout.addWidget(QPushButton(str(1))
+layout.addWidget(QPushButton(str(2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;垂直居中对齐&#34;&gt;&lt;a href=&#34;#垂直居中对齐&#34; class=&#34;headerlink&#34; title=&#34;垂直居中对齐&#34;&gt;&lt;/a&gt;垂直居中对齐&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;layout = QVBoxLayout()
+layout.addStretch(1)  # 添加行
+layout.addWidget(QPushButton(str(1))
+layout.addWidget(QPushButton(str(2))
+layout.addStretch(1)  # 添加行
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;垂直两端对齐&#34;&gt;&lt;a href=&#34;#垂直两端对齐&#34; class=&#34;headerlink&#34; title=&#34;垂直两端对齐&#34;&gt;&lt;/a&gt;垂直两端对齐&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;layout = QVBoxLayout()
+layout.addWidget(QPushButton(str(1))
+layout.addStretch(1)  # 添加行
+layout.addWidget(QPushButton(str(2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;增加两个控件的距离（两个按钮之间的距离）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;layout = QHBoxLayout()
+layout.addWidget(QPushButton(str(1))
+layout.addSpacing(100)
+layout.addWidget(QPushButton(str(2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;tag link&#34;&gt;&lt;a class=&#34;link-card&#34; title=&#34;QT 布局管理&#34; href=&#34;https://cloud.tencent.com/developer/article/1437295&#34;&gt;&lt;div class=&#34;left&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&lt;p class=&#34;text&#34;&gt;QT 布局管理&lt;/p&gt;&lt;p class=&#34;url&#34;&gt;https://cloud.tencent.com/developer/article/1437295&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;三、对话框&#34;&gt;&lt;a href=&#34;#三、对话框&#34; class=&#34;headerlink&#34; title=&#34;三、对话框&#34;&gt;&lt;/a&gt;三、对话框&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;常用方法&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方法&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;information(QWidget parent,title,text,buttons,defaultButton)&lt;/td&gt;
+&lt;td&gt;弹出消息对话框，参数解释：parent（指定的父窗口控件），title（对话框标题），text（对话框文本），buttons（多个标准按钮，默认设为OK按钮），defaultButton（默认选中的标准按钮，默认是第一个标准按钮）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;question(QWidget parent,title,text,buttons,defaultButton)&lt;/td&gt;
+&lt;td&gt;弹出问答对话框&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;warning(QWidget parent,title,text,buttons,defaultButton)&lt;/td&gt;
+&lt;td&gt;弹出警告对话框&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;critical(QWidget parent,title,text,buttons,defaultButton)&lt;/td&gt;
+&lt;td&gt;弹出严重错误对话框&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;about(QWidget parent,title,text)&lt;/td&gt;
+&lt;td&gt;弹出关于对话框&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;setTitle()&lt;/td&gt;
+&lt;td&gt;设置标题&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;setText()&lt;/td&gt;
+&lt;td&gt;设置消息正文&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;setIcon()&lt;/td&gt;
+&lt;td&gt;设置弹出对话框的图片&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;标准按钮类型&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;QMessage.OK&lt;/td&gt;
+&lt;td&gt;同意操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QMessage.Cancel&lt;/td&gt;
+&lt;td&gt;取消操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QMessage.Yes&lt;/td&gt;
+&lt;td&gt;同意操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QMessage.No&lt;/td&gt;
+&lt;td&gt;取消操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QMessage.Abort&lt;/td&gt;
+&lt;td&gt;终止操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QMessage.Retry&lt;/td&gt;
+&lt;td&gt;重试操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QMessage.Ignore&lt;/td&gt;
+&lt;td&gt;忽略操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;创建对话框：&lt;br&gt;&lt;code&gt;reply = QMessageBox.information(self,&amp;quot;消息对话框&amp;quot;,&amp;quot;消息对话框正文&amp;quot;,QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;例如：点击关闭窗口后提示”是否要退出程序”&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    # 关闭按钮
+    self.exitbutton = QtWidgets.QPushButton(self.widget3)
+    self.exitbutton.setFixedSize(90, 40)
+    self.exitbutton.setText(&amp;quot;关闭&amp;quot;)
+    self.exitbutton.setObjectName(&amp;quot;exitbutton&amp;quot;)
+    self.exitbutton.setStyleSheet(qssStyle)
+    self.exitbutton.clicked.connect(self.exit)
+
+def exit(self):
+    # 点击关闭按钮后提示是否要关闭窗口
+    self.closeWindow = QtWidgets.QMessageBox(mainwindow)
+    self.okbtn =QtWidgets.QPushButton(QObject.tr(self,&amp;quot;确定&amp;quot;))
+    self.okbtn.setObjectName(&amp;quot;okbtn&amp;quot;)
+    self.okbtn.setStyleSheet(qssStyle)
+    self.canclebtn = QtWidgets.QPushButton(QObject.tr(self, &amp;quot;取消&amp;quot;))
+    self.canclebtn.setObjectName(&amp;quot;canclebtn&amp;quot;)
+    self.canclebtn.setStyleSheet(qssStyle)
+    self.closeWindow.addButton(self.okbtn,QMessageBox.AcceptRole)
+    self.closeWindow.addButton(self.canclebtn, QMessageBox.RejectRole)
+    self.closeWindow.setWindowTitle(&amp;quot;提示&amp;quot;)
+    self.closeWindow.setText(&amp;quot;    确定退出程序？&amp;quot;)
+    self.closeWindow.setWindowIcon(QIcon(&amp;quot;KeChengSheJi/pyqt5/text/pic/提示.png&amp;quot;))
+    self.closeWindow.setIconPixmap(QPixmap(&amp;quot;KeChengSheJi/pyqt5/text/pic/提示 (1).png&amp;quot;).scaled(30, 30))
+    self.closeWindow.setObjectName(&amp;quot;closeWindow&amp;quot;)
+    self.closeWindow.setStyleSheet(qssStyle)
+    self.closeWindow.show()
+    # 点击确定按钮后关闭整个程序
+    self.okbtn.clicked.connect(mainwindow.close)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;tag link&#34;&gt;&lt;a class=&#34;link-card&#34; title=&#34;QMessageBox弹出式对话框&#34; href=&#34;https://blog.csdn.net/qq_44880255/article/details/106967619&#34;&gt;&lt;div class=&#34;left&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&lt;p class=&#34;text&#34;&gt;QMessageBox弹出式对话框&lt;/p&gt;&lt;p class=&#34;url&#34;&gt;https://blog.csdn.net/qq_44880255/article/details/106967619&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;3-1、文件选择对话框&#34;&gt;&lt;a href=&#34;#3-1、文件选择对话框&#34; class=&#34;headerlink&#34; title=&#34;3.1、文件选择对话框&#34;&gt;&lt;/a&gt;3.1、文件选择对话框&lt;/h3&gt;&lt;p&gt;例如：选择图片&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;fname = QFileDialog.getOpenFileName(self, &amp;quot;选择文件&amp;quot;, &amp;quot;/&amp;quot;, &amp;quot;Image Files(*.jpg;*.png)&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-2、消息对话框&#34;&gt;&lt;a href=&#34;#3-2、消息对话框&#34; class=&#34;headerlink&#34; title=&#34;3.2、消息对话框&#34;&gt;&lt;/a&gt;3.2、消息对话框&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;    btn = QPushButton()
+    btn.setText(&amp;#39;弹出消息对话框&amp;#39;)
+    btn.clicked.connect(show)
+    def show():
+         reply = QMessageBox.information(self,&amp;quot;消息对话框&amp;quot;,&amp;quot;消息对话框正文&amp;quot;,QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-3、消息提问框&#34;&gt;&lt;a href=&#34;#3-3、消息提问框&#34; class=&#34;headerlink&#34; title=&#34;3.3、消息提问框&#34;&gt;&lt;/a&gt;3.3、消息提问框&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;    btn = QPushButton()
+    btn.setText(&amp;#39;弹出消息对话框&amp;#39;)
+    btn.clicked.connect(show)
+    def show():
+         reply = QMessageBox.question(self,&amp;quot;消息提问框&amp;quot;,&amp;quot;消息提问框正文&amp;quot;,QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-4、警告对话框&#34;&gt;&lt;a href=&#34;#3-4、警告对话框&#34; class=&#34;headerlink&#34; title=&#34;3.4、警告对话框&#34;&gt;&lt;/a&gt;3.4、警告对话框&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;    btn = QPushButton()
+    btn.setText(&amp;#39;弹出警告对话框&amp;#39;)
+    btn.clicked.connect(show)
+    def show():
+         reply = QMessageBox.warning(self,&amp;quot;警告对话框&amp;quot;,&amp;quot;警告对话框正文&amp;quot;,QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-5、严重错误对话框&#34;&gt;&lt;a href=&#34;#3-5、严重错误对话框&#34; class=&#34;headerlink&#34; title=&#34;3.5、严重错误对话框&#34;&gt;&lt;/a&gt;3.5、严重错误对话框&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;    btn = QPushButton()
+    btn.setText(&amp;#39;弹出严重错误对话框&amp;#39;)
+    btn.clicked.connect(show)
+    def show():
+         reply = QMessageBox.critical(self,&amp;quot;严重错误对话框&amp;quot;,&amp;quot;严重错误对话框正文&amp;quot;,QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-6、关于对话框&#34;&gt;&lt;a href=&#34;#3-6、关于对话框&#34; class=&#34;headerlink&#34; title=&#34;3.6、关于对话框&#34;&gt;&lt;/a&gt;3.6、关于对话框&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;    btn = QPushButton()
+    btn.setText(&amp;#39;弹出关于对话框&amp;#39;)
+    btn.clicked.connect(show)
+    def show():
+         reply = QMessageBox.about(self,&amp;quot;关于对话框&amp;quot;,&amp;quot;关于对话框正文&amp;quot;,QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <category term="pyqt" />
+        <category term="学习分享" />
+        <category term="python" />
+        <updated>2021-06-17T16:00:00.000Z</updated>
+    </entry>
+</feed>

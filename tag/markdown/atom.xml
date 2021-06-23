@@ -1,0 +1,350 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://zztqsh.github.io</id>
+    <title>THEO • Posts by &#34;markdown&#34; tag</title>
+    <link href="https://zztqsh.github.io" />
+    <updated>2020-08-13T16:00:00.000Z</updated>
+    <category term="学习笔记" />
+    <category term="Qss" />
+    <category term="pyqt" />
+    <category term="学习分享" />
+    <category term="c语言" />
+    <category term="markdown" />
+    <category term="文章格式" />
+    <category term="python" />
+    <category term="个人感想" />
+    <category term="学习计划" />
+    <category term="绑定域名" />
+    <category term="图像识别" />
+    <category term="课程设计" />
+    <category term="react" />
+    <entry>
+        <id>https://zztqsh.github.io/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/</id>
+        <title>markdown写博客</title>
+        <link rel="alternate" href="https://zztqsh.github.io/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
+        <content type="html">&lt;h2 id=&#34;第一部分-文章格式&#34;&gt;&lt;a href=&#34;#第一部分-文章格式&#34; class=&#34;headerlink&#34; title=&#34;第一部分 文章格式&#34;&gt;&lt;/a&gt;第一部分 文章格式&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;---
+layout:     //可选post
+title: 博客
+date: 2020/08/14 
+author: ZZT
+headimg: 
+siderbar: true
+toc: true
+music: 503073179
+type: song
+server: netease
+sidebar: [grid, toc, tags] # 放置任何你想要显示的侧边栏部件 或[]
+comments: false
+mathjax: true # false: 不渲染, true: 渲染
+pin: false
+categories: 关于博客
+tags:
+  - tags1
+  - tags2
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;layout-post-时特有的字段：&#34;&gt;&lt;a href=&#34;#layout-post-时特有的字段：&#34; class=&#34;headerlink&#34; title=&#34;layout:post 时特有的字段：&#34;&gt;&lt;/a&gt;&lt;code&gt;layout:post&lt;/code&gt; 时特有的字段：&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;th&gt;值类型&lt;/th&gt;
+&lt;th&gt;默认值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;author&lt;/td&gt;
+&lt;td&gt;文章作者    [Object]&lt;/td&gt;
+&lt;td&gt;config.author&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;categories&lt;/td&gt;
+&lt;td&gt;分类&lt;/td&gt;
+&lt;td&gt;String, Array&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;tags&lt;/td&gt;
+&lt;td&gt;标签&lt;/td&gt;
+&lt;td&gt;String, Array&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;toc&lt;/td&gt;
+&lt;td&gt;是否生成目录&lt;/td&gt;
+&lt;td&gt;Bool&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;front-matter&#34;&gt;&lt;a href=&#34;#front-matter&#34; class=&#34;headerlink&#34; title=&#34;front-matter&#34;&gt;&lt;/a&gt;front-matter&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;th&gt;值类型&lt;/th&gt;
+&lt;th&gt;默认值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;layout&lt;/td&gt;
+&lt;td&gt;布局模版&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;title&lt;/td&gt;
+&lt;td&gt;页面标题&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;seo_title&lt;/td&gt;
+&lt;td&gt;网页标题&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;page.title&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;short_title&lt;/td&gt;
+&lt;td&gt;页面标题（在group列表中显示）&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;page.title&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;date&lt;/td&gt;
+&lt;td&gt;创建时间&lt;/td&gt;
+&lt;td&gt;Date&lt;/td&gt;
+&lt;td&gt;文件创建时间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;updated&lt;/td&gt;
+&lt;td&gt;更新日期&lt;/td&gt;
+&lt;td&gt;Date&lt;/td&gt;
+&lt;td&gt;文件修改时间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;link&lt;/td&gt;
+&lt;td&gt;外部文章网址&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;music&lt;/td&gt;
+&lt;td&gt;内部音乐控件&lt;/td&gt;
+&lt;td&gt;[Object]&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;robots&lt;/td&gt;
+&lt;td&gt;robots&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;keywords&lt;/td&gt;
+&lt;td&gt;页面关键词&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;description&lt;/td&gt;
+&lt;td&gt;页面描述、摘要&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cover&lt;/td&gt;
+&lt;td&gt;是否显示封面&lt;/td&gt;
+&lt;td&gt;Bool&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;top_meta&lt;/td&gt;
+&lt;td&gt;是否显示文章或页面顶部的meta信息&lt;/td&gt;
+&lt;td&gt;Bool&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;bottom_meta&lt;/td&gt;
+&lt;td&gt;是否显示文章或页面底部的meta信息&lt;/td&gt;
+&lt;td&gt;Bool&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;sidebar&lt;/td&gt;
+&lt;td&gt;页面侧边栏&lt;/td&gt;
+&lt;td&gt;Bool, Array&lt;/td&gt;
+&lt;td&gt;theme.layout.*.sidebar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;body&lt;/td&gt;
+&lt;td&gt;页面主体元素&lt;/td&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;td&gt;theme.layout.on_page.body&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mathjax&lt;/td&gt;
+&lt;td&gt;是否渲染公式&lt;/td&gt;
+&lt;td&gt;Bool, String&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;thumbnail&lt;/td&gt;
+&lt;td&gt;缩略图&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;icons&lt;/td&gt;
+&lt;td&gt;图标&lt;/td&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;td&gt;[]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pin&lt;/td&gt;
+&lt;td&gt;是否置顶&lt;/td&gt;
+&lt;td&gt;Bool&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;headimg&lt;/td&gt;
+&lt;td&gt;文章头图&lt;/td&gt;
+&lt;td&gt;url&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h3 id=&#34;music&#34;&gt;&lt;a href=&#34;#music&#34; class=&#34;headerlink&#34; title=&#34;music&#34;&gt;&lt;/a&gt;music&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段&lt;/th&gt;
+&lt;th&gt;是否必须&lt;/th&gt;
+&lt;th&gt;值类型&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;server&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;netease, tencent, kugou, xiami, baidu&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;type&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;song, playlist, album, search, artist&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;id&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;song id / playlist id / album id / search keyword&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h2 id=&#34;第二部分-在文章中插入音乐&#34;&gt;&lt;a href=&#34;#第二部分-在文章中插入音乐&#34; class=&#34;headerlink&#34; title=&#34;第二部分 在文章中插入音乐&#34;&gt;&lt;/a&gt;第二部分 在文章中插入音乐&lt;/h2&gt;&lt;h3 id=&#34;方法一&#34;&gt;&lt;a href=&#34;#方法一&#34; class=&#34;headerlink&#34; title=&#34;方法一&#34;&gt;&lt;/a&gt;方法一&lt;/h3&gt;&lt;h4 id=&#34;2-1-安装插件&#34;&gt;&lt;a href=&#34;#2-1-安装插件&#34; class=&#34;headerlink&#34; title=&#34;2.1 安装插件&#34;&gt;&lt;/a&gt;2.1 安装插件&lt;/h4&gt;&lt;p&gt;在hexo文件夹中鼠标右击&lt;code&gt;git bash here&lt;/code&gt;执行以下命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install hexo-tag-aplayer --save
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;2-2-插入音乐&#34;&gt;&lt;a href=&#34;#2-2-插入音乐&#34; class=&#34;headerlink&#34; title=&#34;2.2 插入音乐&#34;&gt;&lt;/a&gt;2.2 插入音乐&lt;/h4&gt;&lt;p&gt;格式为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{% aplayer &#34;歌手名字&#34; &#34;歌曲名字&#34; &#34;音乐地址&#34;  &#34;音乐封面图片地址&#34; autoplay %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;举个例子：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{% aplayer &#34;蔡徐坤&#34; &#34;情人&#34; &#34;music.mp3&#34;  &#34;picture.jpg&#34; autoplay %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：存放音乐和图片的文件夹名称必须和文章名字一致；&lt;code&gt;autoplay&lt;/code&gt;表示自动播放，若不需要可自行删除掉&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;2-3-给音乐加歌词&#34;&gt;&lt;a href=&#34;#2-3-给音乐加歌词&#34; class=&#34;headerlink&#34; title=&#34;2.3 给音乐加歌词&#34;&gt;&lt;/a&gt;2.3 给音乐加歌词&lt;/h4&gt;&lt;h5 id=&#34;2-3-1-方法1&#34;&gt;&lt;a href=&#34;#2-3-1-方法1&#34; class=&#34;headerlink&#34; title=&#34;2.3.1 方法1&#34;&gt;&lt;/a&gt;2.3.1 方法1&lt;/h5&gt;&lt;p&gt;格式：&lt;br&gt;    {% &#34;歌手名字&#34; &#34;歌曲名字&#34; &#34;音乐地址&#34;  &#34;音乐封面图片地址&#34; autoplay &#34;autoplay&#34; %}
+    [00:00.00]lrc here
+    {% endaplayerlrc %}&lt;/p&gt;
+&lt;h5 id=&#34;2-3-2-方法2&#34;&gt;&lt;a href=&#34;#2-3-2-方法2&#34; class=&#34;headerlink&#34; title=&#34;2.3.2 方法2&#34;&gt;&lt;/a&gt;2.3.2 方法2&lt;/h5&gt;&lt;p&gt;格式：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{% aplayer &#34;歌手名字&#34; &#34;歌曲名字&#34; &#34;音乐地址&#34;  &#34;音乐封面图片地址&#34; &#34;lrc:abc.txt&#34; %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;举个例子：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{% aplayer &#34;蔡徐坤&#34; &#34;情人&#34; &#34;music.mp3&#34;  &#34;picture.jpg&#34; &#34;lrc:abc.txt&#34; %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：lrc的txt文件必须更改成是由utf-8编码，否则网站上呈现出来的歌词会出现乱码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;font size=&#34;4&#34;&gt;更改成由utf-8编码的方法:&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;①首先自行编写歌词，或者可以从QQ音乐下载歌曲的lrc文件，再把歌曲的lrc文件的后缀名改成txt，打开该txt文件你就会发现是由 ANSI 编码而来（如图）&lt;br&gt;&lt;img src=&#34;/.io//1.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;/.io//1.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;br&gt;②把该txt文件另存为由utf-8编码（如图）&lt;br&gt;&lt;img src=&#34;/.io//2.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;/.io//2.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;方法二&#34;&gt;&lt;a href=&#34;#方法二&#34; class=&#34;headerlink&#34; title=&#34;方法二&#34;&gt;&lt;/a&gt;方法二&lt;/h3&gt;&lt;p&gt;格式：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div align=&amp;quot;middle&amp;quot;&amp;gt;http://music.163.com/song/media/outer/url?id=XXXXXX.mp3&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：XXXXX为音乐的id号&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;font size=&#34;4&#34;&gt;id号查找方法：&lt;/font&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先进入网易云在线平台，任意找到一首歌点进去播放，可以在地址栏拿到音乐id号&lt;/li&gt;
+&lt;li&gt;通过下面网址：&lt;a href=&#34;http://music.163.com/song/media/outer/url?id=XXXXXX.mp3%EF%BC%8C&#34;&gt;http://music.163.com/song/media/outer/url?id=XXXXXX.mp3，&lt;/a&gt; XXXXXX就是歌曲id号，每一首歌我们只需要换掉这个id号就行了,就相当于每一首的外链了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;第三部分-在文章中插入图片&#34;&gt;&lt;a href=&#34;#第三部分-在文章中插入图片&#34; class=&#34;headerlink&#34; title=&#34;第三部分 在文章中插入图片&#34;&gt;&lt;/a&gt;第三部分 在文章中插入图片&lt;/h2&gt;&lt;h3 id=&#34;3-1-安装插件&#34;&gt;&lt;a href=&#34;#3-1-安装插件&#34; class=&#34;headerlink&#34; title=&#34;3.1 安装插件&#34;&gt;&lt;/a&gt;3.1 安装插件&lt;/h3&gt;&lt;p&gt;在hexo文件夹中鼠标右击&lt;code&gt;git bash here&lt;/code&gt;执行以下命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install hexo-asset-image --save
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-2-插入图片&#34;&gt;&lt;a href=&#34;#3-2-插入图片&#34; class=&#34;headerlink&#34; title=&#34;3.2 插入图片&#34;&gt;&lt;/a&gt;3.2 插入图片&lt;/h3&gt;&lt;p&gt;格式为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;![图片标题](picture.jpg)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;第四部分-在文章中插入视频&#34;&gt;&lt;a href=&#34;#第四部分-在文章中插入视频&#34; class=&#34;headerlink&#34; title=&#34;第四部分 在文章中插入视频&#34;&gt;&lt;/a&gt;第四部分 在文章中插入视频&lt;/h2&gt;&lt;h3 id=&#34;4-1-安装插件&#34;&gt;&lt;a href=&#34;#4-1-安装插件&#34; class=&#34;headerlink&#34; title=&#34;4.1 安装插件&#34;&gt;&lt;/a&gt;4.1 安装插件&lt;/h3&gt;&lt;p&gt;在hexo文件夹中鼠标右击&lt;code&gt;git bash here&lt;/code&gt;执行以下命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install hexo-tag-dplayer --save
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;4-2-插入视频&#34;&gt;&lt;a href=&#34;#4-2-插入视频&#34; class=&#34;headerlink&#34; title=&#34;4.2 插入视频&#34;&gt;&lt;/a&gt;4.2 插入视频&lt;/h3&gt;&lt;p&gt;格式：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{% dplayer key=value ... %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;举个例子：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{% dplayer  &#34;url=demo.mp4&#34;  &#34;pic=picture.jpg&#34; &#34;width=700px&#34;  &#34;heigth=60px&#34; &#34;theme=#FADFA3&#34; &#34;autoplay=false&#34;  %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中key可以为：&lt;br&gt;&lt;code&gt;autoplay&lt;/code&gt;, &lt;code&gt;loop&lt;/code&gt;, &lt;code&gt;screenshot&lt;/code&gt;, &lt;code&gt;hotkey&lt;/code&gt;, &lt;code&gt;mutex&lt;/code&gt;, &lt;code&gt;dmunlimited&lt;/code&gt;,&lt;code&gt;logo&lt;/code&gt;,&lt;code&gt;theme&lt;/code&gt;,&lt;code&gt;url&lt;/code&gt;,&lt;code&gt;pic&lt;/code&gt;,&lt;code&gt;lang&lt;/code&gt;,&lt;code&gt;autoplay&lt;/code&gt;, &lt;code&gt;width&lt;/code&gt;,&lt;code&gt;heigth&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;其实在我们平时插入视频不需要用到那么多的key&lt;br&gt;必要的key有以下几个：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;url：视频的地址&lt;/li&gt;
+&lt;li&gt;pic：视频的封面图片地址&lt;/li&gt;
+&lt;li&gt;width:视频的宽度（单位为px）&lt;/li&gt;
+&lt;li&gt;heigth：视频的高度（单位为px）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;第五部分-字体的格式&#34;&gt;&lt;a href=&#34;#第五部分-字体的格式&#34; class=&#34;headerlink&#34; title=&#34;第五部分 字体的格式&#34;&gt;&lt;/a&gt;第五部分 字体的格式&lt;/h2&gt;&lt;h3 id=&#34;5-1-标题&#34;&gt;&lt;a href=&#34;#5-1-标题&#34; class=&#34;headerlink&#34; title=&#34;5.1 标题&#34;&gt;&lt;/a&gt;5.1 标题&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;# 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;5-2-文字样式&#34;&gt;&lt;a href=&#34;#5-2-文字样式&#34; class=&#34;headerlink&#34; title=&#34;5.2 文字样式&#34;&gt;&lt;/a&gt;5.2 文字样式&lt;/h3&gt;&lt;p&gt;加粗：&lt;code&gt;**文字**&lt;/code&gt;&lt;br&gt;样式：&lt;strong&gt;加粗&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;斜体：&lt;code&gt;*文字*&lt;/code&gt;&lt;br&gt;样式：&lt;em&gt;斜体&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;下划线：&lt;code&gt;&amp;lt;u&amp;gt;文字&amp;lt;/u&amp;gt;&lt;/code&gt;&lt;br&gt;样式：&lt;u&gt;下划线&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;删除线：&lt;code&gt;~~文字~~&lt;/code&gt;&lt;br&gt;样式：&lt;del&gt;文字&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;代码块：&lt;code&gt;文字&lt;/code&gt;&lt;br&gt;样式：&lt;code&gt;文字&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;引用：&lt;code&gt;文字&lt;/code&gt;&lt;br&gt;样式：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;文字&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;5-3表格&#34;&gt;&lt;a href=&#34;#5-3表格&#34; class=&#34;headerlink&#34; title=&#34;5.3表格&#34;&gt;&lt;/a&gt;5.3表格&lt;/h3&gt;&lt;h4 id=&#34;5-3-1-有序表格&#34;&gt;&lt;a href=&#34;#5-3-1-有序表格&#34; class=&#34;headerlink&#34; title=&#34;5.3.1 有序表格&#34;&gt;&lt;/a&gt;5.3.1 有序表格&lt;/h4&gt;&lt;p&gt;在文字前面加上1. 2. 3.&lt;/p&gt;
+&lt;p&gt;格式：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 文本1
+2. 文本2
+3. 文本3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;样式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;文本1&lt;/li&gt;
+&lt;li&gt;文本2&lt;/li&gt;
+&lt;li&gt;文本3&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;5-3-2-无序表格&#34;&gt;&lt;a href=&#34;#5-3-2-无序表格&#34; class=&#34;headerlink&#34; title=&#34;5.3.2 无序表格&#34;&gt;&lt;/a&gt;5.3.2 无序表格&lt;/h4&gt;&lt;p&gt;在文字前面加上 -&lt;/p&gt;
+&lt;p&gt;格式：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- 文本1
+- 文本2
+- 文本3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;样式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文本1&lt;/li&gt;
+&lt;li&gt;文本2&lt;/li&gt;
+&lt;li&gt;文本3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以上是个人搭建博客写文章时的总结&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="markdown" />
+        <category term="文章格式" />
+        <updated>2020-08-13T16:00:00.000Z</updated>
+    </entry>
+</feed>

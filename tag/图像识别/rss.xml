@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>THEO • Posts by &#34;图像识别&#34; tag</title>
+        <link>https://zztqsh.github.io</link>
+        <description></description>
+        <language>zh-CN,en,zh-HK,zh-TW,default</language>
+        <pubDate>Tue, 22 Jun 2021 00:00:00 +0800</pubDate>
+        <lastBuildDate>Tue, 22 Jun 2021 00:00:00 +0800</lastBuildDate>
+        <category>学习笔记</category>
+        <category>Qss</category>
+        <category>pyqt</category>
+        <category>学习分享</category>
+        <category>c语言</category>
+        <category>markdown</category>
+        <category>文章格式</category>
+        <category>python</category>
+        <category>个人感想</category>
+        <category>学习计划</category>
+        <category>绑定域名</category>
+        <category>图像识别</category>
+        <category>课程设计</category>
+        <category>react</category>
+        <item>
+            <guid isPermalink="true">https://zztqsh.github.io/2021/06/22/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%EF%BC%89/</guid>
+            <title>课程设计（图像识别）</title>
+            <link>https://zztqsh.github.io/2021/06/22/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%EF%BC%89/</link>
+            <category>学习分享</category>
+            <category>python</category>
+            <category>图像识别</category>
+            <category>课程设计</category>
+            <pubDate>Tue, 22 Jun 2021 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;span id=&#34;head&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;a href=&#34;#end&#34;&gt;↓↓点击先偷偷观看最终效果↓↓&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;一、前言&#34;&gt;&lt;a href=&#34;#一、前言&#34; class=&#34;headerlink&#34; title=&#34;一、前言&#34;&gt;&lt;/a&gt;一、前言&lt;/h1&gt;&lt;p&gt;为了能够快速学习python语言，我大概花了几周的时间在自学这本《python编程从入门到实践》😵&lt;/p&gt;
+&lt;div class=&#34;img-wrap&#34;&gt;&lt;div class=&#34;img-bg&#34;&gt;&lt;img class=&#34;img lazyload&#34; src=&#34;https://raw.staticdn.net/zztqsh/picture/main/pythoon%E7%BC%96%E7%A8%8B%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.staticdn.net/zztqsh/picture/main/pythoon%E7%BC%96%E7%A8%8B%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;《python编程从入门到实践》&#34; style=&#34;width:200px;&#34;&gt;&lt;/div&gt;&lt;span class=&#34;image-caption&#34;&gt;《python编程从入门到实践》&lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;菜鸟就是菜鸟，总是要比别人多看几遍才能理解得透彻，因此我英语课上看，概率论课上也看😨，才微微的把python的基础法语弄明白了，一边学习顺便把一些些基础知识记录进我的”菜鸟”小本本&lt;span class=&#34;btn regular&#34;&gt;&lt;a class=&#34;button&#34; href=&#34;https://qshzzt.com/2021/06/22/菜菜的Python笔记/&#34; title=&#34;菜菜的Python笔记&#34;&gt;&lt;i class=&#34;fas fa-play-circle&#34;&gt;&lt;/i&gt;菜菜的Python笔记&lt;/a&gt;&lt;/span&gt;毕竟菜鸟总要学着自己长大👶&lt;/p&gt;
+&lt;p&gt;把Python的一些基础知识学完后，恰逢到要做一个面向对象的课程设计，而老师也允许使用Python语言进行设计，就当把这次课程设计当做Python的一次实战，一次锻炼的机会😁（真的是锻炼，折磨我好几个夜晚了🌜，黑眼圈🌚有了，痘痘也冒出了好几个😭，不过真的学到了好多）&lt;/p&gt;
+&lt;p&gt;起初没有想着要做&lt;font color=&#34;purple&#34;&gt;图像识别&lt;/font&gt;，是想做一个从图片从提取文字，发现一个Python-tesseract工具，只需要简短的代码就能够提取图片中的文字了，但是这个东西需要自行安装，还需要下载一个Tesseract-OCR应用程序，安装完后还需要修改源码中的路径，不知道是怎的，可能路径我没弄好，在使用这个工具的时候，运行后一直出现错误，提示我没有这个应用程序，之后我挣扎了许久，路径修改来修改去，突然可以运行了，可是这个工具不自带有中文字体库，我第一次使用来提取中文字体时，运行出来的结果都是一堆的问号❓，这可把我整懵了，于是又一直查资料，终于找到了解决方法，也顺利安装了中文字体库&lt;code&gt;chi_sim.traineddata&lt;/code&gt;，在提取中文字体时，也顺利提取出，但是当图片是中英文结合时，效果就不是那么理想了，而且若文字是有很多段很多行，提取出的所有文字都只显示在一行上🤣，若是效果理想，可是只是使用到了几行代码，还是借用的工具，我根本没学到什么东西，于是决定尝试另一种方向。&lt;/p&gt;
+&lt;p&gt;直到我发现了一个东西，也就是一个图像识别的界面，它的界面是这样子的：&lt;/p&gt;
+&lt;div class=&#34;img-wrap&#34;&gt;&lt;div class=&#34;img-bg&#34;&gt;&lt;img class=&#34;img lazyload&#34; src=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%8F%82%E8%80%83%E7%95%8C%E9%9D%A2.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%8F%82%E8%80%83%E7%95%8C%E9%9D%A2.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;参考界面&#34; style=&#34;width:300px;&#34;&gt;&lt;/div&gt;&lt;span class=&#34;image-caption&#34;&gt;参考界面&lt;/span&gt;&lt;/div&gt;
+
+&lt;p&gt;于是我就在想，我是不是也可以自己写这样的一个界面🤨，让用户自行选择识别类型，自行上传想要识别的图片，上传后界面就会显示出识别后的信息😬&lt;br&gt;然而写出这个界面的主人并没有把它的完整代码放出来，只是放了一部分，毕竟这也是别人的知识产权，不可能全都拿出来公开展示，于是那个代码我运行之后运行框一堆&lt;font color=&#34;red&#34;&gt;红色的错误&lt;/font&gt;，我修修补补之后运行成功了可是窗口总是会中途卡退，也许是存在逻辑错误或者是其它问题，我也不太清楚🙉，而且代码有点乱让我不懂哪里是哪里&lt;/p&gt;
+&lt;p&gt;于是我决定自己一人从 0 开始，也是那个参考界面给了我很多的想法&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我把我所想的和要实现的功能列出来：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;程序运行后弹出一个窗口&lt;/li&gt;
+&lt;li&gt;用户先&lt;strong&gt;选择图片&lt;/strong&gt;，选择图片后显示出&lt;strong&gt;图片&lt;/strong&gt;和&lt;strong&gt;图片路径&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;选择图片后，界面显示出选择识别类型的组合框；若未选择图片，界面是不会显示出识别类型的&lt;strong&gt;组合框&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;若用户选择好识别类型后，界面显示出识别的信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;把要实现的功能大概的罗列出来后，我就开始起步🚶‍♂️了，只能说祝我好运吧🙏🙏🙏&lt;/p&gt;
+&lt;h1 id=&#34;二、起步&#34;&gt;&lt;a href=&#34;#二、起步&#34; class=&#34;headerlink&#34; title=&#34;二、起步&#34;&gt;&lt;/a&gt;二、起步&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;为了能够在过程中找出是哪一个步骤哪一个功能的实现出现的问题，于是我采取把每一个功能先单独写出来，也就是每一个功能单独写一个Python文件，一个个测试，等到所有的功能都没有问题，我再把它们组合在同一个文件中。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;弹出的新窗口&lt;/strong&gt;&lt;br&gt;对于弹出的新窗口的实现，我采用的是&lt;code&gt;Python-Tkinter&lt;/code&gt;，&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;root = tkinter.Tk()
+root.title(&amp;#39;图像识别&amp;#39;)
+root.geometry(&amp;#39;600x500&amp;#39;)
+root.mainloop()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;img-wrap&#34;&gt;&lt;div class=&#34;img-bg&#34;&gt;&lt;img class=&#34;img lazyload&#34; src=&#34;https://raw.githubusercontent.com/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E5%BC%B9%E5%87%BA%E6%96%B0%E7%AA%97%E5%8F%A3.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.githubusercontent.com/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E5%BC%B9%E5%87%BA%E6%96%B0%E7%AA%97%E5%8F%A3.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;弹出的新窗口&#34; style=&#34;width:300px;&#34;&gt;&lt;/div&gt;&lt;span class=&#34;image-caption&#34;&gt;弹出的新窗口&lt;/span&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;选择图片与显示图片和图片路径&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import tkinter
+import tkinter.filedialog
+import tkinter.ttk
+from tkinter import *
+from PIL import Image
+from PIL import ImageTk
+class App():
+    # 构造函数
+    def __init__(self, master=None, value=None, name=None):
+        self.select()
+    # 选择文件
+    def select(self):
+        btn = Button(root, text=&amp;#39;点击选择文件&amp;#39;, command=self.openfile, font=12, fg=&amp;quot;white&amp;quot;, bg=&amp;quot;green&amp;quot;)
+        btn.pack(ipadx=&amp;#39;10&amp;#39;, ipady=&amp;#39;1&amp;#39;)
+    #  打开文件并显示路径
+    def openfile(self):
+        global filename
+        filename = tkinter.filedialog.askopenfilename()
+        if filename != &amp;#39;&amp;#39;:
+            lb.config(text=&amp;#39;您选择的文件是 : &amp;#39; + filename)
+            lb.pack()
+            self.showpic()
+        else:
+            lb.config(text=&amp;#39;您没有选择任何文件&amp;#39;)
+            lb.pack()
+    # 显示图片
+    def showpic(self):
+        Img = Image.open(filename)
+        Img = Img.resize((int(500), int(300)), Image.ANTIALIAS)
+        img_png = ImageTk.PhotoImage(Img)
+        label_Img = tkinter.Label(root, image=img_png)
+        label_Img.pack(anchor=&amp;#39;center&amp;#39;)
+        root.mainloop()
+
+root = tkinter.Tk()
+root.title(&amp;#39;图像识别&amp;#39;)
+root.geometry(&amp;#39;600x500&amp;#39;)
+varstring = tkinter.StringVar()
+lb = Label(root, text=&amp;#39;&amp;#39;)
+app = App()
+root.mainloop()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;gallery &#34;&gt;
+              &lt;p&gt;&lt;img src=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E9%80%89%E6%8B%A9%E5%9B%BE%E7%89%871.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E9%80%89%E6%8B%A9%E5%9B%BE%E7%89%871.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;弹出窗口界面&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E9%80%89%E6%8B%A9%E5%9B%BE%E7%89%872.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E9%80%89%E6%8B%A9%E5%9B%BE%E7%89%872.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;点击选择图片后的界面&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E9%80%89%E6%8B%A9%E5%9B%BE%E7%89%873.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E9%80%89%E6%8B%A9%E5%9B%BE%E7%89%873.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;选择好图片后的界面&#34;&gt;&lt;/p&gt;
+            &lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;组合框&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import tkinter.ttk
+class combox():
+    def __init__(self):
+        self.select()
+
+    def select(self):
+        combobox[&amp;#39;value&amp;#39;] = (&amp;#39;python&amp;#39;, &amp;#39;java&amp;#39;, &amp;#39;C&amp;#39;, &amp;#39;C++&amp;#39;)
+        combobox.current(0)
+        combobox.pack()
+        root.mainloop()
+
+root = tkinter.Tk()
+root.title(&amp;quot;组合框&amp;quot;)
+root.geometry(&amp;quot;200x200&amp;quot;)
+combobox = tkinter.ttk.Combobox(root)
+label = tkinter.Label()
+app = combox()
+root.mainloop()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;img-wrap&#34;&gt;&lt;div class=&#34;img-bg&#34;&gt;&lt;img class=&#34;img lazyload&#34; src=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E7%BB%84%E5%90%88%E6%A1%86.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.staticdn.net/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%B5%B7%E6%AD%A5/%E7%BB%84%E5%90%88%E6%A1%86.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;组合框&#34; style=&#34;width:300px;&#34;&gt;&lt;/div&gt;&lt;span class=&#34;image-caption&#34;&gt;组合框&lt;/span&gt;&lt;/div&gt;
+
+&lt;p&gt;好像这三个功能单独写的时候感觉没啥问题，都可以运行成功，只是界面不太美观（当然界面的美化可以等所有的功能全都写好后再进行优化），当我尝试着先将这三个功能合并在一个界面时，&lt;strong&gt;question&lt;/strong&gt;来了😩&lt;/p&gt;
+&lt;p&gt;由于点击打开图片后，需要&lt;strong&gt;显示组合框&lt;/strong&gt;，然而这个组合框一直不出现，我退出程序后，运行框提醒我&lt;font color=&#34;red&#34;&gt;_tkinter.TclError: NULL main window&lt;/font&gt;，英语不太好的我看到这个的第一反应就是&lt;strong&gt;缺乏主窗口&lt;/strong&gt;&lt;br&gt;虽然知道错误是什么，然而第一次使用&lt;code&gt;Python-Tkinter&lt;/code&gt;的我显然还是不知道该怎么解决这个&lt;strong&gt;question&lt;/strong&gt;🥺，于是疯狂找资料，找它的使用方法，可是网上给出的也都是每个功能单独在一个窗口的使用方法，而我是想搞的是一个窗口含有多个功能界面，这就让我&lt;font size=&#34;5&#34;&gt;头大&lt;/font&gt;了….&lt;/p&gt;
+&lt;p&gt;第一次尝试遇到问题是正常&lt;font size=&#34;1&#34;&gt;(离谱)&lt;/font&gt;不过了….&lt;br&gt;即使是这样我也是不会轻易放弃的&lt;font size=&#34;1&#34;&gt;（才怪）&lt;/font&gt;&lt;br&gt;我努力挣扎了两天&lt;font size=&#34;1&#34;&gt;（然而没什么用）&lt;/font&gt;&lt;br&gt;发现还有另一个python的模块可以写窗口，那就是&lt;strong&gt;无敌超神&lt;/strong&gt;的&lt;strong&gt;PyQt&lt;/strong&gt;✌✌✌&lt;br&gt;为什么❓&lt;strong&gt;无敌超神&lt;/strong&gt;❓能让我瞬间抛下&lt;code&gt;Python-Tkinter&lt;/code&gt;，让我下面细说🤣🤣🤣&lt;/p&gt;
+&lt;h1 id=&#34;三、转战QT&#34;&gt;&lt;a href=&#34;#三、转战QT&#34; class=&#34;headerlink&#34; title=&#34;三、转战QT&#34;&gt;&lt;/a&gt;三、转战QT&lt;/h1&gt;&lt;p&gt;这东西厉害就是有特定的&lt;code&gt;QMainWindow&lt;/code&gt;创建主窗口，还可以在主窗口中建立更多的界面&lt;code&gt; QtWidgets&lt;/code&gt;，通过给各个&lt;strong&gt;控件&lt;/strong&gt;设置各自的&lt;strong&gt;对象名&lt;/strong&gt;(&lt;code&gt;self.setObjectName(&amp;quot;对象名&amp;quot;))&lt;/code&gt;，还能使用&lt;code&gt;qss&lt;/code&gt;文件给控件进行美化😎😎😎，例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#对象名&amp;#123;
+  background:url(/);
+  font:10px;
+  color:white;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;qss&lt;/code&gt;的语法类似于&lt;code&gt;css&lt;/code&gt;的语法，然而&lt;code&gt;css&lt;/code&gt;的用法我在上学期学了一些基础用法，所以&lt;code&gt;qss&lt;/code&gt;对于我而言还是挺好理解的，顺便记录了一点此次完成的&lt;strong&gt;图像识别&lt;/strong&gt;需要用到的QT的用法&lt;span class=&#34;btn regular&#34;&gt;&lt;a class=&#34;button&#34; href=&#34;https://qshzzt.com/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/&#34; title=&#34;Pyqt的用法&#34;&gt;&lt;i class=&#34;fas fa-play-circle&#34;&gt;&lt;/i&gt;Pyqt的用法&lt;/a&gt;&lt;/span&gt;，还有如何使用Qss修饰Qt&lt;span class=&#34;btn regular&#34;&gt;&lt;a class=&#34;button&#34; href=&#34;https://qshzzt.com/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/&#34; title=&#34;Qss修饰Qt的用法&#34;&gt;&lt;i class=&#34;fas fa-play-circle&#34;&gt;&lt;/i&gt;Qss修饰Qt的用法&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;结合Qt的使用方法，我重新把我的想法和实现的功能改了一遍&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;程序运行后弹出一个窗口&lt;/li&gt;
+&lt;li&gt;用户自行选择识别类型（若不选择，默认是&lt;strong&gt;组合框&lt;/strong&gt;的第一个识别类型）&lt;/li&gt;
+&lt;li&gt;用户自行选择识别的图片&lt;/li&gt;
+&lt;li&gt;若用户已经选择图片，界面显示图片的路径，并显示已选择的图片，点击&lt;strong&gt;确定&lt;/strong&gt;按钮则界面显示出&lt;strong&gt;识别信息&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;若用户未选择图片就点击&lt;strong&gt;确定&lt;/strong&gt;按钮，则弹出&lt;strong&gt;新窗口&lt;/strong&gt;提醒用户先选择图片&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;初步效果&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;img-wrap&#34;&gt;&lt;div class=&#34;img-bg&#34;&gt;&lt;img class=&#34;img lazyload&#34; src=&#34;https://raw.githubusercontent.com/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%BD%AC%E6%88%98Qt/%E5%88%9D%E6%AD%A5%E7%AA%97%E5%8F%A3%E7%95%8C%E9%9D%A2.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.githubusercontent.com/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E8%BD%AC%E6%88%98Qt/%E5%88%9D%E6%AD%A5%E7%AA%97%E5%8F%A3%E7%95%8C%E9%9D%A2.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;初步效果&#34; style=&#34;width:800px;&#34;&gt;&lt;/div&gt;&lt;span class=&#34;image-caption&#34;&gt;初步效果&lt;/span&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;font size=&#34;1&#34;&gt;（小声逼逼）&lt;/font&gt;界面确实是丑，因为还没有放上&lt;code&gt;qss&lt;/code&gt;文件，界面的&lt;a href=&#34;#end&#34;&gt;↓↓美化后的最终效果↓↓&lt;/a&gt;要留到最后一步，关键的还是各个功能的实现，让我下面细说&lt;/p&gt;
+&lt;h1 id=&#34;四、功能的实现&#34;&gt;&lt;a href=&#34;#四、功能的实现&#34; class=&#34;headerlink&#34; title=&#34;四、功能的实现&#34;&gt;&lt;/a&gt;四、功能的实现&lt;/h1&gt;&lt;p&gt;&lt;span id=&#34;end&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;五、界面的美化&#34;&gt;&lt;a href=&#34;#五、界面的美化&#34; class=&#34;headerlink&#34; title=&#34;五、界面的美化&#34;&gt;&lt;/a&gt;五、界面的美化&lt;/h1&gt;&lt;br&gt;
+......这部分过后再写吧,累多.......
+
+&lt;p&gt;先假装展示一下最终效果图&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最终效果图&lt;/strong&gt; &lt;/p&gt;
+&lt;div class=&#34;img-wrap&#34;&gt;&lt;div class=&#34;img-bg&#34;&gt;&lt;img class=&#34;img lazyload&#34; src=&#34;https://raw.githubusercontent.com/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BE%8E%E5%8C%96%E7%95%8C%E9%9D%A2/%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C%E5%9B%BE.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://raw.githubusercontent.com/zztqsh/picture/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BE%8E%E5%8C%96%E7%95%8C%E9%9D%A2/%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C%E5%9B%BE.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34; alt=&#34;最终效果图&#34;&gt;&lt;/div&gt;&lt;span class=&#34;image-caption&#34;&gt;最终效果图&lt;/span&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;码字真的太累了，没写的内容明天再继续更新吧 ，先去玩几局斗地主…..&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;#head&#34;&gt;↑↑点击返回开头↑↑&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;&lt;div class=&#34;tag link&#34;&gt;&lt;a class=&#34;link-card&#34; title=&#34;百度AI开放平台&#34; href=&#34;https://ai.baidu.com/ai-doc/IMAGERECOGNITION/8k3e7f69o&#34;&gt;&lt;div class=&#34;left&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; class=&#34;lazyload&#34; data-srcset=&#34;https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png&#34; srcset=&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=&#34;&gt;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&lt;p class=&#34;text&#34;&gt;百度AI开放平台&lt;/p&gt;&lt;p class=&#34;url&#34;&gt;https://ai.baidu.com/ai-doc/IMAGERECOGNITION/8k3e7f69o&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;/center&gt;   
+
+
+
+ ]]></description>
+        </item>
+    </channel>
+</rss>

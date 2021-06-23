@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://zztqsh.github.io</id>
+    <id>https://qshzzt.com</id>
     <title>THEO • Posts by &#34;学习计划&#34; category</title>
-    <link href="https://zztqsh.github.io" />
+    <link href="https://qshzzt.com" />
     <updated>2021-03-06T16:00:00.000Z</updated>
     <category term="学习笔记" />
     <category term="Qss" />
@@ -19,9 +19,9 @@
     <category term="课程设计" />
     <category term="react" />
     <entry>
-        <id>https://zztqsh.github.io/2021/03/07/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</id>
+        <id>https://qshzzt.com/2021/03/07/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</id>
         <title>学习计划</title>
-        <link rel="alternate" href="https://zztqsh.github.io/2021/03/07/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/"/>
+        <link rel="alternate" href="https://qshzzt.com/2021/03/07/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/"/>
         <content type="html">&lt;h2 id=&#34;学习计划&#34;&gt;&lt;a href=&#34;#学习计划&#34; class=&#34;headerlink&#34; title=&#34;学习计划&#34;&gt;&lt;/a&gt;学习计划&lt;/h2&gt;&lt;h3 id=&#34;一、移动端页面制作和响应式实现&#34;&gt;&lt;a href=&#34;#一、移动端页面制作和响应式实现&#34; class=&#34;headerlink&#34; title=&#34;一、移动端页面制作和响应式实现&#34;&gt;&lt;/a&gt;一、移动端页面制作和响应式实现&lt;/h3&gt;&lt;h4 id=&#34;1-1-学习响应式开发相关知识点&#34;&gt;&lt;a href=&#34;#1-1-学习响应式开发相关知识点&#34; class=&#34;headerlink&#34; title=&#34;1.1 学习响应式开发相关知识点&#34;&gt;&lt;/a&gt;1.1 学习响应式开发相关知识点&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;viewport试口&lt;/li&gt;
 &lt;li&gt;移动端适配方案&lt;/li&gt;

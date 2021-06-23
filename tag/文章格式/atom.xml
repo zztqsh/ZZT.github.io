@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://zztqsh.github.io</id>
+    <id>https://qshzzt.com</id>
     <title>THEO • Posts by &#34;文章格式&#34; tag</title>
-    <link href="https://zztqsh.github.io" />
+    <link href="https://qshzzt.com" />
     <updated>2020-08-13T16:00:00.000Z</updated>
     <category term="学习笔记" />
     <category term="Qss" />
@@ -19,9 +19,9 @@
     <category term="课程设计" />
     <category term="react" />
     <entry>
-        <id>https://zztqsh.github.io/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/</id>
+        <id>https://qshzzt.com/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/</id>
         <title>markdown写博客</title>
-        <link rel="alternate" href="https://zztqsh.github.io/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
+        <link rel="alternate" href="https://qshzzt.com/2020/08/14/markdown%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
         <content type="html">&lt;h2 id=&#34;第一部分-文章格式&#34;&gt;&lt;a href=&#34;#第一部分-文章格式&#34; class=&#34;headerlink&#34; title=&#34;第一部分 文章格式&#34;&gt;&lt;/a&gt;第一部分 文章格式&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;---
 layout:     //可选post
 title: 博客

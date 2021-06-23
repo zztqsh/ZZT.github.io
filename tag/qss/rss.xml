@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>THEO • Posts by &#34;qss&#34; tag</title>
-        <link>https://zztqsh.github.io</link>
+        <link>https://qshzzt.com</link>
         <description></description>
         <language>zh-CN,en,zh-HK,zh-TW,default</language>
         <pubDate>Sat, 19 Jun 2021 00:00:00 +0800</pubDate>
@@ -22,9 +22,9 @@
         <category>课程设计</category>
         <category>react</category>
         <item>
-            <guid isPermalink="true">https://zztqsh.github.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</guid>
+            <guid isPermalink="true">https://qshzzt.com/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</guid>
             <title>Qss修饰Qt</title>
-            <link>https://zztqsh.github.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</link>
+            <link>https://qshzzt.com/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</link>
             <category>学习笔记</category>
             <category>Qss</category>
             <category>pyqt</category>

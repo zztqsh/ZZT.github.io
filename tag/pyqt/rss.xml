@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>THEO • Posts by &#34;pyqt&#34; tag</title>
-        <link>https://zztqsh.github.io</link>
+        <link>https://qshzzt.com</link>
         <description></description>
         <language>zh-CN,en,zh-HK,zh-TW,default</language>
         <pubDate>Sat, 19 Jun 2021 00:00:00 +0800</pubDate>
@@ -22,9 +22,9 @@
         <category>课程设计</category>
         <category>react</category>
         <item>
-            <guid isPermalink="true">https://zztqsh.github.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</guid>
+            <guid isPermalink="true">https://qshzzt.com/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</guid>
             <title>Qss修饰Qt</title>
-            <link>https://zztqsh.github.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</link>
+            <link>https://qshzzt.com/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</link>
             <category>学习笔记</category>
             <category>Qss</category>
             <category>pyqt</category>
@@ -195,9 +195,9 @@ background:rgba(196,255,255,0);
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://zztqsh.github.io/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+            <guid isPermalink="true">https://qshzzt.com/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
             <title>pyqt使用方法</title>
-            <link>https://zztqsh.github.io/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+            <link>https://qshzzt.com/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
             <category>pyqt</category>
             <category>学习分享</category>
             <category>python</category>
